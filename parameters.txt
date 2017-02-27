@@ -1,0 +1,28 @@
+<ECF>
+	<Algorithm>
+	    <QIGA>
+
+	    </QIGA>
+
+		<SteadyStateTournament>
+			<Entry key="tsize">3</Entry>
+		</SteadyStateTournament>
+
+	</Algorithm>
+	<Genotype>
+		<QuantumRegister>
+
+		</QuantumRegister>
+	</Genotype>
+
+	<Registry>
+		<Entry key="population.size">1</Entry>
+		<Entry key="mutation.indprob">0.7</Entry>
+		<Entry key="term.fitnessval">0.01</Entry>
+		<Entry key="term.maxtime">20</Entry>
+		<Entry key="term.maxgen">1000000</Entry>
+		<Entry key="log.frequency">1000</Entry>
+		<Entry key="log.level">3</Entry>
+		<Entry key="log.filename">Testing/log.txt</Entry>
+	</Registry>
+</ECF>

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lirfu/zavrsni/QIGA/QIGA.cpp
+QIGA.h
+/home/lirfu/zavrsni/QIGA/QIGA.h
+
+/home/lirfu/zavrsni/QIGA/QIGA.h
+ecf/ECF.h
+/home/lirfu/zavrsni/QIGA/ecf/ECF.h
+
+/home/lirfu/zavrsni/QIGA/QuantumRegister.cpp
+QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
+
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
+ecf/ECF.h
+/home/lirfu/zavrsni/QIGA/ecf/ECF.h
+
+/home/lirfu/zavrsni/QIGA/main.cpp
+ecf/ECF.h
+-
+

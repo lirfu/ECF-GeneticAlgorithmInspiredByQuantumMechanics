@@ -1,0 +1,5 @@
+/usr/local/clion-2016.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lirfu/zavrsni/QIGA
+-- Boost version: 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lirfu/zavrsni/QIGA/cmake-build-debug

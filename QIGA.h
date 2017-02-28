@@ -11,6 +11,8 @@ class QIGA : public Algorithm {
 public:
     QIGA() { name_ = "QIGA"; }
 
+    bool advanceGeneration(StateP, DemeP);
+
 };
 
 typedef boost::shared_ptr<QIGA> QIGAP;

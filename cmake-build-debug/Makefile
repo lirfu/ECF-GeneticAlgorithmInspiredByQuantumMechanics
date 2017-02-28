@@ -123,6 +123,33 @@ QuantumInspiredGeneticAlgorithm/fast:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build
 .PHONY : QuantumInspiredGeneticAlgorithm/fast
 
+FunctionMinEvalOp.o: FunctionMinEvalOp.cpp.o
+
+.PHONY : FunctionMinEvalOp.o
+
+# target to build an object file
+FunctionMinEvalOp.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
+.PHONY : FunctionMinEvalOp.cpp.o
+
+FunctionMinEvalOp.i: FunctionMinEvalOp.cpp.i
+
+.PHONY : FunctionMinEvalOp.i
+
+# target to preprocess a source file
+FunctionMinEvalOp.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.i
+.PHONY : FunctionMinEvalOp.cpp.i
+
+FunctionMinEvalOp.s: FunctionMinEvalOp.cpp.s
+
+.PHONY : FunctionMinEvalOp.s
+
+# target to generate assembly for a file
+FunctionMinEvalOp.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.s
+.PHONY : FunctionMinEvalOp.cpp.s
+
 QIGA.o: QIGA.cpp.o
 
 .PHONY : QIGA.o
@@ -213,6 +240,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... QuantumInspiredGeneticAlgorithm"
+	@echo "... FunctionMinEvalOp.o"
+	@echo "... FunctionMinEvalOp.i"
+	@echo "... FunctionMinEvalOp.s"
 	@echo "... QIGA.o"
 	@echo "... QIGA.i"
 	@echo "... QIGA.s"

@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
         main.cpp
-        QIGA.cpp QIGA.h QuantumRegister.cpp QuantumRegister.h)
+        QIGA.cpp QIGA.h
+        QuantumRegister.cpp QuantumRegister.h
+        FunctionMinEvalOp.cpp FunctionMinEvalOp.h)
 
 find_package(Boost)
 if(Boost_FOUND)

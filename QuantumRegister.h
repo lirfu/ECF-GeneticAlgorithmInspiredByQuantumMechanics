@@ -7,21 +7,28 @@
 
 #include "ecf/ECF.h"
 
-class QuantumRegister : public RealValueGenotype {
+class QuantumRegister : public FloatingPoint::FloatingPoint {
 
 public:
 
-    QuantumRegister() { name_ = "QuantumRegister"; }
+    QuantumRegister();
 
-    bool initialize(StateP state) { return true; }
+    bool initialize(StateP state);
+
+    void registerParameters(StateP state);
 
     QuantumRegister *copy() {
         QuantumRegister *newObject = new QuantumRegister(*this);
         return newObject;
     }
 
-    void write(XMLNode& xQuantumRegister);
-    void read(XMLNode& xQuantumRegister);
+    void write(XMLNode &xQuantumRegister);
+
+    void read(XMLNode &xQuantumRegister);
+
+    void measure(vector<bool> &classicalBits);
+
+    void measure(BinaryP &classicalBits);
 };
 
 typedef boost::shared_ptr<QuantumRegister> QuantumRegisterP;

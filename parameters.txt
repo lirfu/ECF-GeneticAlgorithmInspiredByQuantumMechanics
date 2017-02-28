@@ -11,18 +11,18 @@
 	</Algorithm>
 	<Genotype>
 		<QuantumRegister>
-
+            <Entry key="dimension">3</Entry>
 		</QuantumRegister>
 	</Genotype>
 
 	<Registry>
-		<Entry key="population.size">1</Entry>
+	    <Entry key="function">6</Entry>
+		<Entry key="population.size">400</Entry>
 		<Entry key="mutation.indprob">0.7</Entry>
-		<Entry key="term.fitnessval">0.01</Entry>
+		<Entry key="term.fitnessval">1e-3</Entry>
 		<Entry key="term.maxtime">20</Entry>
 		<Entry key="term.maxgen">1000000</Entry>
-		<Entry key="log.frequency">1000</Entry>
+		<Entry key="log.frequency">100</Entry>
 		<Entry key="log.level">3</Entry>
-		<Entry key="log.filename">Testing/log.txt</Entry>
 	</Registry>
 </ECF>

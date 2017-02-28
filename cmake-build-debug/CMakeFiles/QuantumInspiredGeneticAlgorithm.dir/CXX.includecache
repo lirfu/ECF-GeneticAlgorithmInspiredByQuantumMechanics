@@ -6,15 +6,29 @@
 
 #IncludeRegexTransform: 
 
+/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp
+ecf/ECF.h
+-
+FunctionMinEvalOp.h
+/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
+
+/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
+cmath
+-
+
 /home/lirfu/zavrsni/QIGA/QIGA.cpp
 QIGA.h
 /home/lirfu/zavrsni/QIGA/QIGA.h
+QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
 /home/lirfu/zavrsni/QIGA/QIGA.h
 ecf/ECF.h
 /home/lirfu/zavrsni/QIGA/ecf/ECF.h
 
 /home/lirfu/zavrsni/QIGA/QuantumRegister.cpp
+math.h
+-
 QuantumRegister.h
 /home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
@@ -25,4 +39,10 @@ ecf/ECF.h
 /home/lirfu/zavrsni/QIGA/main.cpp
 ecf/ECF.h
 -
+QIGA.h
+/home/lirfu/zavrsni/QIGA/QIGA.h
+QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
+FunctionMinEvalOp.h
+/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
 

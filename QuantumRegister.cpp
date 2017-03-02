@@ -10,22 +10,24 @@ QuantumRegister::QuantumRegister() {
 }
 
 void QuantumRegister::registerParameters(StateP state) {
-    FloatingPoint::registerParameters(state);
-
-    registerParameter(state, "dimension", (voidP) new uint(1), ECF::UINT, "number of qbits in register (mandatory).");
+    Binary::registerParameters(state);
 }
 
 bool QuantumRegister::initialize(StateP state) {
     // The bounds are set for percentages [0, 1].
-    Genotype::setParameterValue(state, std::string("lbound"), (voidP) (new double(0)));
-    Genotype::setParameterValue(state, std::string("ubound"), (voidP) (new double(1)));
+//    Genotype::setParameterValue(state, std::string("lbound"), (voidP) (new double(0)));
+//    Genotype::setParameterValue(state, std::string("ubound"), (voidP) (new double(1)));
 
-    FloatingPoint::initialize(state);
+    if (!isParameterDefined(state, "precision"))
+        Genotype::setParameterValue(state, std::string("precision"), (voidP) (new double(2)));
+
+    Binary::initialize(state);
 
     // Set all qbits into superposition.
-    for (uint i = 0; i < nDimension_; i++) {
-        realValue.push_back(1. / sqrt(2));
-    }
+    for (uint i = 0; i < variables.size() * nBits_; i++)
+        alphas_.push_back(1. / sqrt(2));
+
+    measure(state);
 
     return true;
 }
@@ -52,32 +54,16 @@ bool QuantumRegister::initialize(StateP state) {
 //    }
 //}
 
-void QuantumRegister::measure(vector<bool> &classicalBits) {
-    // Initialize the distribution.
-    std::default_random_engine generator;
-    std::uniform_real_distribution<double> distribution(0.0, 1.0);
-
+void QuantumRegister::measure(StateP state) {
     // Collapse the qbit superpositions to classical binary string.
     bool result;
-    for (int i = 0; i < nDimension_; i++) {
-        // Measure the qbit state based on alpha squared.
-        result = distribution(generator) > pow(realValue[i], 2);
+    for (uint variable = 0; variable < nDimension_; variable++) {
+        for (uint bit = 0; bit < nBits_; bit++) {
+            // Measure the qbit state based on alpha squared.
+            result = state->getRandomizer()->getRandomDouble() > pow(alphas_[variable * bit], 2);
 
-        classicalBits.push_back(result);
+            variables[variable][bit] = result;
+        }
     }
-}
 
-void QuantumRegister::measure(BinaryP &classicalBits) {
-    // Initialize the distribution.
-    std::default_random_engine generator;
-    std::uniform_real_distribution<double> distribution(0.0, 1.0);
-
-    // Collapse the qbit superpositions to classical binary string.
-    int result;
-    for (int i = 0; i < nDimension_; i++) {
-        // Measure the qbit state based on alpha squared.
-        result = distribution(generator) > pow(realValue[i], 2) ? 1 : 0;
-
-        classicalBits->realValue.push_back(result);
-    }
 }

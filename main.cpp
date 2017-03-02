@@ -4,16 +4,18 @@
 #include "FunctionMinEvalOp.h"
 
 int main(int argc, char **argv) {
-	StateP state(new State);
+    StateP state(new State);
 
     FunctionMinEvalOpP eval(new FunctionMinEvalOp);
     QuantumRegisterP reg(new QuantumRegister);
-    QIGAP qga(new QIGA);
+
+    QuantumLookupTable *lookup = new QuantumLookupTable;
+    QIGAP qga(new QIGA(lookup));
 
     state->setEvalOp(eval);
     state->addGenotype(reg);
     state->addAlgorithm(qga);
 
-	state->initialize(argc, argv);
-	state->run();
+    state->initialize(argc, argv);
+    state->run();
 }

@@ -7,28 +7,35 @@
 
 #include "ecf/ECF.h"
 
-class QuantumRegister : public FloatingPoint::FloatingPoint {
+class QuantumRegister : public Binary::Binary {
 
 public:
 
     QuantumRegister();
 
-    bool initialize(StateP state);
+    bool initialize(StateP);
 
-    void registerParameters(StateP state);
+    void registerParameters(StateP);
 
     QuantumRegister *copy() {
         QuantumRegister *newObject = new QuantumRegister(*this);
         return newObject;
     }
 
-    void write(XMLNode &xQuantumRegister);
+//    void write(XMLNode &xQuantumRegister);
 
-    void read(XMLNode &xQuantumRegister);
+//    void read(XMLNode &xQuantumRegister);
 
-    void measure(vector<bool> &classicalBits);
+//    void measure(vector<bool> &);
 
-    void measure(BinaryP &classicalBits);
+    void measure(StateP);
+
+private:
+
+    vector<double> alphas_;
+
+//    std::default_random_engine generator;
+//    std::uniform_real_distribution<double> distribution(0.0, 1.0);
 };
 
 typedef boost::shared_ptr<QuantumRegister> QuantumRegisterP;

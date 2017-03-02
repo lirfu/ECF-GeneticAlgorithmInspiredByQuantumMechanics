@@ -2,6 +2,7 @@
 #define FUNCTIONMINEVALOP_H_
 
 #include <cmath>
+#include <typeinfo>
 
 
 /**

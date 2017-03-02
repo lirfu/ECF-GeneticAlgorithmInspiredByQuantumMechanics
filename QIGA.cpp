@@ -5,25 +5,39 @@
 #include "QIGA.h"
 #include "QuantumRegister.h"
 
+QIGA::QIGA(QuantumLookupTable *lookupTable) {
+    name_ = "QIGA";
+    rotationGate_ = lookupTable;
+}
+
 bool QIGA::advanceGeneration(StateP state, DemeP deme) {
-    vector<BinaryP> bitStrings;
 
-    // Measure the population to get classical bit strings.
+    // Measure the population to generate the classical bit strings.
     for (uint i = 0; i < deme->size(); i++) {
-        BinaryP reg;
-
-        ((QuantumRegister *) deme->at(i)->getGenotype().get())->measure(reg);
-
-        bitStrings.push_back(reg);
+        ((QuantumRegister *) deme->at(i)->getGenotype().get())->measure(state);
     }
 
     // Evaluate the population.
+    for (uint i = 0; i < deme->size(); i++)
+        evaluate(deme->at(i));
 
-    // Store the best solution and temporarily exclude from population.
+    // Store the best solution.
+    IndividualP best = (deme->hof_->getBest().at(0)); // Guess best.
+
+    // Find actual best.
+    for (uint i = 1; i < deme->size(); i++) {
+        IndividualP temp = (deme->at(i));
+        if (temp->fitness->isBetterThan(best->fitness))
+            best = temp;
+    }
 
     // Update the rest of the population with rotation gates.
+    for (uint i = 1; i < deme->size(); i++)
+        rotationGate_->performQuantumGateRotation(deme->at(i), best);
 
-    // Return the best to the population.
+    // For new population measure binaries.
+    for (uint i = 1; i < deme->size(); i++)
+        ((QuantumRegister *) deme->at(i)->getGenotype().get())->update();
 
     return true;
 }

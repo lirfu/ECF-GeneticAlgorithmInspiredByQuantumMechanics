@@ -177,6 +177,33 @@ QIGA.cpp.s:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.s
 .PHONY : QIGA.cpp.s
 
+QuantumLookupTable.o: QuantumLookupTable.cpp.o
+
+.PHONY : QuantumLookupTable.o
+
+# target to build an object file
+QuantumLookupTable.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o
+.PHONY : QuantumLookupTable.cpp.o
+
+QuantumLookupTable.i: QuantumLookupTable.cpp.i
+
+.PHONY : QuantumLookupTable.i
+
+# target to preprocess a source file
+QuantumLookupTable.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.i
+.PHONY : QuantumLookupTable.cpp.i
+
+QuantumLookupTable.s: QuantumLookupTable.cpp.s
+
+.PHONY : QuantumLookupTable.s
+
+# target to generate assembly for a file
+QuantumLookupTable.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.s
+.PHONY : QuantumLookupTable.cpp.s
+
 QuantumRegister.o: QuantumRegister.cpp.o
 
 .PHONY : QuantumRegister.o
@@ -246,6 +273,9 @@ help:
 	@echo "... QIGA.o"
 	@echo "... QIGA.i"
 	@echo "... QIGA.s"
+	@echo "... QuantumLookupTable.o"
+	@echo "... QuantumLookupTable.i"
+	@echo "... QuantumLookupTable.s"
 	@echo "... QuantumRegister.o"
 	@echo "... QuantumRegister.i"
 	@echo "... QuantumRegister.s"

@@ -20,6 +20,8 @@ FitnessP FunctionMinEvalOp::evaluate(IndividualP individual) {
     // in our case, we try to minimize the function value, so we use FitnessMin fitness (for minimization problems)
     FitnessP fitness(new FitnessMin);
 
+//    RealValueGenotypeP gen = boost::dynamic_pointer_cast<RealValueGenotype>(individual->getGenotype());
+
     // we define FloatingPoint as the only genotype (in the configuration file)
 //	FloatingPoint::FloatingPoint* gen = (FloatingPoint::FloatingPoint*) individual->getGenotype().get();
     // (you can also use boost smart pointers:)

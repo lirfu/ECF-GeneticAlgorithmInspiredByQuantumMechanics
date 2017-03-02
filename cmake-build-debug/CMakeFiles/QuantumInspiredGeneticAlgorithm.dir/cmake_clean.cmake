@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o"
   "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o"
   "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o"
+  "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o"
   "QuantumInspiredGeneticAlgorithm.pdb"
   "QuantumInspiredGeneticAlgorithm"
 )

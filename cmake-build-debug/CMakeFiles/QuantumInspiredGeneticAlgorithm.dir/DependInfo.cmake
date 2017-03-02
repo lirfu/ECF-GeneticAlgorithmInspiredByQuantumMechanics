@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp" "/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o"
   "/home/lirfu/zavrsni/QIGA/QIGA.cpp" "/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o"
+  "/home/lirfu/zavrsni/QIGA/QuantumLookupTable.cpp" "/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o"
   "/home/lirfu/zavrsni/QIGA/QuantumRegister.cpp" "/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o"
   "/home/lirfu/zavrsni/QIGA/main.cpp" "/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o"
   )

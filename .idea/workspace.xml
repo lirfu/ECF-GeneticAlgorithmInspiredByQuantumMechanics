@@ -11,35 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c87d2a9-b731-427d-8dde-d2bed3b1bbcf" name="Default" comment="Add QuantumLookupTable, implement the QIGA, problems with Binary&#10;&#10;Added the QuantumLookupTable class and an empty method.&#10;Implemented the QIGA adding necessary method calls and evaluations.&#10;Made QuantumRegister extend Binary and hold a vector&lt;double&gt; alphas_. When running the program it randomizes correctly (I guess) and finds awesome fitness results, but the calculated and found solution for function 1 don't add up.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/QuantumLookupTable.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/QuantumLookupTable.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" />
+    <list default="true" id="9c87d2a9-b731-427d-8dde-d2bed3b1bbcf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm" afterPath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunctionMinEvalOp.cpp" afterPath="$PROJECT_DIR$/FunctionMinEvalOp.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunctionMinEvalOp.h" afterPath="$PROJECT_DIR$/FunctionMinEvalOp.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QIGA.cpp" afterPath="$PROJECT_DIR$/QIGA.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QIGA.h" afterPath="$PROJECT_DIR$/QIGA.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumRegister.cpp" afterPath="$PROJECT_DIR$/QuantumRegister.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumRegister.h" afterPath="$PROJECT_DIR$/QuantumRegister.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parameters.txt" afterPath="$PROJECT_DIR$/parameters.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,19 +33,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QIGA.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/QIGA.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding>
-                <element signature="e#41#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuantumLookupTable.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuantumLookupTable.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QuantumLookupTable.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -79,8 +46,8 @@
       <file leaf-file-name="QuantumRegister.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumRegister.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="17" column="66" lean-forward="false" selection-start-line="17" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+            <state relative-caret-position="810">
+              <caret line="66" column="104" lean-forward="false" selection-start-line="66" selection-start-column="104" selection-end-line="66" selection-end-column="104" />
               <folding>
                 <element signature="e#41#58#0" expanded="true" />
               </folding>
@@ -91,18 +58,8 @@
       <file leaf-file-name="QuantumRegister.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FunctionMinEvalOp.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FunctionMinEvalOp.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="31" column="89" lean-forward="false" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+            <state relative-caret-position="274">
+              <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -140,11 +97,11 @@
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/QIGA.h" />
         <option value="$PROJECT_DIR$/FunctionMinEvalOp.h" />
-        <option value="$PROJECT_DIR$/QuantumRegister.h" />
-        <option value="$PROJECT_DIR$/QuantumRegister.cpp" />
         <option value="$PROJECT_DIR$/parameters.txt" />
         <option value="$PROJECT_DIR$/FunctionMinEvalOp.cpp" />
         <option value="$PROJECT_DIR$/QIGA.cpp" />
+        <option value="$PROJECT_DIR$/QuantumRegister.h" />
+        <option value="$PROJECT_DIR$/QuantumRegister.cpp" />
       </list>
     </option>
   </component>
@@ -419,7 +376,8 @@
       <workItem from="1488316795823" duration="343000" />
       <workItem from="1488404188185" duration="690000" />
       <workItem from="1488441230562" duration="20433000" />
-      <workItem from="1488490107518" duration="5137000" />
+      <workItem from="1488490107518" duration="5819000" />
+      <workItem from="1488914660233" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="Add README.md">
       <created>1488220049508</created>
@@ -435,34 +393,41 @@
       <option name="project" value="LOCAL" />
       <updated>1488241405025</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add QuantumLookupTable, implement the QIGA, problems with Binary&#10;&#10;Added the QuantumLookupTable class and an empty method.&#10;Implemented the QIGA adding necessary method calls and evaluations.&#10;Made QuantumRegister extend Binary and hold a vector&lt;double&gt; alphas_. When running the program it randomizes correctly (I guess) and finds awesome fitness results, but the calculated and found solution for function 1 don't add up.">
+      <created>1488495297665</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1488495297665</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52761000" />
+    <option name="totallyTimeSpent" value="56473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39970502" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39970502" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -726,14 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuantumLookupTable.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/ecf/State.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="737">
@@ -746,25 +703,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
+    <entry file="file://$PROJECT_DIR$/QIGA.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QuantumRegister.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="17" column="66" lean-forward="false" selection-start-line="17" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        <state relative-caret-position="40">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#41#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FunctionMinEvalOp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -776,21 +732,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FunctionMinEvalOp.cpp">
+    <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="31" column="89" lean-forward="false" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+        <state relative-caret-position="274">
+          <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QIGA.cpp">
+    <entry file="file://$PROJECT_DIR$/QuantumRegister.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="810">
+          <caret line="66" column="104" lean-forward="false" selection-start-line="66" selection-start-column="104" selection-end-line="66" selection-end-column="104" />
           <folding>
             <element signature="e#41#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuantumLookupTable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>

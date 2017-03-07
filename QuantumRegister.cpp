@@ -19,15 +19,19 @@ bool QuantumRegister::initialize(StateP state) {
 //    Genotype::setParameterValue(state, std::string("ubound"), (voidP) (new double(1)));
 
     if (!isParameterDefined(state, "precision"))
-        Genotype::setParameterValue(state, std::string("precision"), (voidP) (new double(2)));
+        Genotype::setParameterValue(state, std::string("precision"), (voidP) (new double(3)));
 
     Binary::initialize(state);
 
     // Set all qbits into superposition.
     for (uint i = 0; i < variables.size() * nBits_; i++)
-        alphas_.push_back(1. / sqrt(2));
+        thetas_.push_back(M_PI / 2);
 
+    // Turn into a bit string.
     measure(state);
+
+    // Calculate the real values from the bit string.
+    update();
 
     return true;
 }
@@ -60,7 +64,7 @@ void QuantumRegister::measure(StateP state) {
     for (uint variable = 0; variable < nDimension_; variable++) {
         for (uint bit = 0; bit < nBits_; bit++) {
             // Measure the qbit state based on alpha squared.
-            result = state->getRandomizer()->getRandomDouble() > pow(alphas_[variable * bit], 2);
+            result = state->getRandomizer()->getRandomDouble() > pow(cos(thetas_[variable * bit] / 2), 2);
 
             variables[variable][bit] = result;
         }

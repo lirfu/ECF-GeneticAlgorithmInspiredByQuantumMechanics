@@ -11,7 +11,7 @@
 	</Algorithm>
 	<Genotype>
 		<QuantumRegister>
-            <Entry key="dimension">1</Entry>
+            <Entry key="dimension">10</Entry>
             <Entry key="ubound">10</Entry>
             <Entry key="lbound">-10</Entry>
 		</QuantumRegister>

@@ -28,9 +28,9 @@ public:
 
     void measure(StateP);
 
-private:
-
     vector<double> thetas_;
+
+private:
 
 //    std::default_random_engine generator;
 //    std::uniform_real_distribution<double> distribution(0.0, 1.0);

@@ -11,14 +11,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c87d2a9-b731-427d-8dde-d2bed3b1bbcf" name="Default" comment="">
+    <list default="true" id="9c87d2a9-b731-427d-8dde-d2bed3b1bbcf" name="Default" comment="Initialize the quantum rotation gate basics&#10;&#10;Added the standard direction">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm" afterPath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunctionMinEvalOp.cpp" afterPath="$PROJECT_DIR$/FunctionMinEvalOp.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunctionMinEvalOp.h" afterPath="$PROJECT_DIR$/FunctionMinEvalOp.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QIGA.cpp" afterPath="$PROJECT_DIR$/QIGA.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumLookupTable.cpp" afterPath="$PROJECT_DIR$/QuantumLookupTable.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumLookupTable.h" afterPath="$PROJECT_DIR$/QuantumLookupTable.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumRegister.cpp" afterPath="$PROJECT_DIR$/QuantumRegister.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumRegister.h" afterPath="$PROJECT_DIR$/QuantumRegister.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parameters.txt" afterPath="$PROJECT_DIR$/parameters.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,33 +36,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QuantumLookupTable.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuantumLookupTable.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumLookupTable.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuantumRegister.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QuantumRegister.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="66" column="104" lean-forward="false" selection-start-line="66" selection-start-column="104" selection-end-line="66" selection-end-column="104" />
+            <state relative-caret-position="274">
+              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding>
-                <element signature="e#41#58#0" expanded="true" />
+                <element signature="e#165#185#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuantumRegister.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
+      <file leaf-file-name="QuantumLookupTable.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/QuantumLookupTable.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="267">
+              <caret line="57" column="12" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -69,7 +62,27 @@
         <entry file="file://$PROJECT_DIR$/parameters.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuantumRegister.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -92,16 +105,16 @@
         <option value="$PROJECT_DIR$/Mutations/MutScaleNeuron.cpp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/QuantumLookupTable.cpp" />
-        <option value="$PROJECT_DIR$/QuantumLookupTable.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/QIGA.h" />
         <option value="$PROJECT_DIR$/FunctionMinEvalOp.h" />
-        <option value="$PROJECT_DIR$/parameters.txt" />
         <option value="$PROJECT_DIR$/FunctionMinEvalOp.cpp" />
         <option value="$PROJECT_DIR$/QIGA.cpp" />
-        <option value="$PROJECT_DIR$/QuantumRegister.h" />
         <option value="$PROJECT_DIR$/QuantumRegister.cpp" />
+        <option value="$PROJECT_DIR$/QuantumRegister.h" />
+        <option value="$PROJECT_DIR$/QuantumLookupTable.h" />
+        <option value="$PROJECT_DIR$/parameters.txt" />
+        <option value="$PROJECT_DIR$/QuantumLookupTable.cpp" />
       </list>
     </option>
   </component>
@@ -377,7 +390,7 @@
       <workItem from="1488404188185" duration="690000" />
       <workItem from="1488441230562" duration="20433000" />
       <workItem from="1488490107518" duration="5819000" />
-      <workItem from="1488914660233" duration="3030000" />
+      <workItem from="1488914660233" duration="7589000" />
     </task>
     <task id="LOCAL-00001" summary="Add README.md">
       <created>1488220049508</created>
@@ -400,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488495297665</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update the algorithm&#10;&#10;The algorithm was reorganized to match the one from Wiki page.&#10;The register is also tweaked to suffice ECF's runtime workflow and replaced the alphas variable with thetas, adjusting with the initializer and measurment methods.&#10;&#10;The quantum rotation gate still needs implementation.">
+      <created>1488928120442</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488928120442</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56473000" />
+    <option name="totallyTimeSpent" value="61032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -412,22 +432,22 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890856" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39970502" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39970502" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +460,8 @@
     <MESSAGE value="Add README.md" />
     <MESSAGE value="Create the basic functions in algorithm and genotype&#10;&#10;Created the wave function measurement for all individuals and added comments for TODO things.&#10;Created the initialization of parameters fo genotype and added the measure function for measuring the qRegister state.&#10;Questions arised about the measurement vector type. If a bool vector is used, it's harder to use this algorithm in existing problems. The solution is 'Binary' but it's storage method is weird and unintuitive. Further investigation is needed." />
     <MESSAGE value="Add QuantumLookupTable, implement the QIGA, problems with Binary&#10;&#10;Added the QuantumLookupTable class and an empty method.&#10;Implemented the QIGA adding necessary method calls and evaluations.&#10;Made QuantumRegister extend Binary and hold a vector&lt;double&gt; alphas_. When running the program it randomizes correctly (I guess) and finds awesome fitness results, but the calculated and found solution for function 1 don't add up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add QuantumLookupTable, implement the QIGA, problems with Binary&#10;&#10;Added the QuantumLookupTable class and an empty method.&#10;Implemented the QIGA adding necessary method calls and evaluations.&#10;Made QuantumRegister extend Binary and hold a vector&lt;double&gt; alphas_. When running the program it randomizes correctly (I guess) and finds awesome fitness results, but the calculated and found solution for function 1 don't add up." />
+    <MESSAGE value="Update the algorithm&#10;&#10;The algorithm was reorganized to match the one from Wiki page.&#10;The register is also tweaked to suffice ECF's runtime workflow and replaced the alphas variable with thetas, adjusting with the initializer and measurment methods.&#10;&#10;The quantum rotation gate still needs implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the algorithm&#10;&#10;The algorithm was reorganized to match the one from Wiki page.&#10;The register is also tweaked to suffice ECF's runtime workflow and replaced the alphas variable with thetas, adjusting with the initializer and measurment methods.&#10;&#10;The quantum rotation gate still needs implementation." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -455,7 +476,7 @@
         <state relative-caret-position="810">
           <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding>
-            <element signature="e#41#58#0" expanded="true" />
+            <element signature="e#41#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -464,7 +485,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding />
+          <folding>
+            <element signature="e#165#185#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -491,7 +514,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#41#58#0" expanded="true" />
+            <element signature="e#41#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -501,7 +524,7 @@
         <state relative-caret-position="648">
           <caret line="36" column="57" lean-forward="false" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
           <folding>
-            <element signature="e#41#58#0" expanded="true" />
+            <element signature="e#41#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -518,7 +541,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#165#185#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -553,7 +578,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#41#58#0" expanded="true" />
+            <element signature="e#41#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,7 +588,7 @@
         <state relative-caret-position="216">
           <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
-            <element signature="e#41#58#0" expanded="true" />
+            <element signature="e#41#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -645,30 +670,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuantumLookupTable.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FunctionMinEvalOp.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#59#75#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -711,7 +718,7 @@
         <state relative-caret-position="40">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#41#58#0" expanded="true" />
+            <element signature="e#41#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -724,36 +731,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parameters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QuantumRegister.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="66" column="104" lean-forward="false" selection-start-line="66" selection-start-column="104" selection-end-line="66" selection-end-column="104" />
+        <state relative-caret-position="321">
+          <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="e#41#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/QuantumLookupTable.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+        <state relative-caret-position="274">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="e#165#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuantumLookupTable.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="57" column="12" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
           <folding />
         </state>
       </provider>

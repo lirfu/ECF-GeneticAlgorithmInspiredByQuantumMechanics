@@ -153,28 +153,28 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides:
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
 
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o: ../QuantumLookupTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o -c /home/lirfu/zavrsni/QIGA/QuantumLookupTable.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o: ../QuantumRotationGate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o -c /home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/QuantumLookupTable.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.i
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.i
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/QuantumLookupTable.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.s
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.s
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.requires:
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires:
 
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.requires
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.requires
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.provides.build
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.provides
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o
 
 
 # Object files for target QuantumInspiredGeneticAlgorithm
@@ -183,7 +183,7 @@ QuantumInspiredGeneticAlgorithm_OBJECTS = \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o"
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o"
 
 # External object files for target QuantumInspiredGeneticAlgorithm
 QuantumInspiredGeneticAlgorithm_EXTERNAL_OBJECTS =
@@ -192,7 +192,7 @@ QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
-QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make
 QuantumInspiredGeneticAlgorithm: /home/lirfu/zavrsni/ECF_lib/release/libECF.a
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt
@@ -208,7 +208,7 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspi
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.requires
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires
 
 .PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires
 

@@ -7,7 +7,7 @@ set(SOURCE_FILES
         main.cpp
         QIGA.cpp QIGA.h
         QuantumRegister.cpp QuantumRegister.h
-        FunctionMinEvalOp.cpp FunctionMinEvalOp.h QuantumLookupTable.cpp QuantumLookupTable.h)
+        FunctionMinEvalOp.cpp FunctionMinEvalOp.h QuantumRotationGate.cpp QuantumRotationGate.h)
 
 find_package(Boost)
 if(Boost_FOUND)

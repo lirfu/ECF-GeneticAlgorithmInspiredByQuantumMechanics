@@ -27,16 +27,8 @@ QuantumRegister.h
 /home/lirfu/zavrsni/QIGA/QIGA.h
 ecf/ECF.h
 /home/lirfu/zavrsni/QIGA/ecf/ECF.h
-QuantumLookupTable.h
-/home/lirfu/zavrsni/QIGA/QuantumLookupTable.h
-
-/home/lirfu/zavrsni/QIGA/QuantumLookupTable.cpp
-QuantumLookupTable.h
-/home/lirfu/zavrsni/QIGA/QuantumLookupTable.h
-
-/home/lirfu/zavrsni/QIGA/QuantumLookupTable.h
-ecf/ECF.h
-/home/lirfu/zavrsni/QIGA/ecf/ECF.h
+QuantumRotationGate.h
+/home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
 
 /home/lirfu/zavrsni/QIGA/QuantumRegister.cpp
 math.h
@@ -47,6 +39,16 @@ QuantumRegister.h
 /home/lirfu/zavrsni/QIGA/QuantumRegister.h
 ecf/ECF.h
 /home/lirfu/zavrsni/QIGA/ecf/ECF.h
+
+/home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp
+QuantumRotationGate.h
+/home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
+
+/home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
+ecf/ECF.h
+/home/lirfu/zavrsni/QIGA/ecf/ECF.h
+QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
 /home/lirfu/zavrsni/QIGA/main.cpp
 ecf/ECF.h

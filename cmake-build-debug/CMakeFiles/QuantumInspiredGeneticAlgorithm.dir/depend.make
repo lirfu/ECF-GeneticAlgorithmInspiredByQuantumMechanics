@@ -6,18 +6,19 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o: ../Funct
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o: ../QIGA.cpp
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o: ../QIGA.h
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o: ../QuantumLookupTable.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o: ../QuantumRegister.h
-
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o: ../QuantumLookupTable.cpp
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o: ../QuantumLookupTable.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o: ../QuantumRotationGate.h
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o: ../QuantumRegister.cpp
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o: ../QuantumRegister.h
 
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o: ../QuantumRegister.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o: ../QuantumRotationGate.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o: ../QuantumRotationGate.h
+
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o: ../FunctionMinEvalOp.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o: ../QIGA.h
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o: ../QuantumLookupTable.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o: ../QuantumRegister.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o: ../QuantumRotationGate.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o: ../main.cpp
 

@@ -1,0 +1,27 @@
+<ECF>
+	<Algorithm>
+		<SteadyStateTournament>
+			<Entry key="tsize">3</Entry>
+		</SteadyStateTournament>
+
+	</Algorithm>
+	<Genotype>
+		<Binary>
+            <Entry key="dimension">3</Entry>
+            <Entry key="ubound">10</Entry>
+            <Entry key="lbound">-10</Entry>
+            <Entry key="precision">3</Entry>
+		</Binary>
+	</Genotype>
+
+	<Registry>
+	    <Entry key="function">1</Entry>
+		<Entry key="population.size">300</Entry>
+		<Entry key="mutation.indprob">0.7</Entry>
+		<Entry key="term.fitnessval">1e-6</Entry>
+		<Entry key="term.maxtime">20</Entry>
+		<Entry key="term.maxgen">100000</Entry>
+		<Entry key="log.frequency">100</Entry>
+		<Entry key="log.level">3</Entry>
+	</Registry>
+</ECF>

@@ -14,18 +14,23 @@ void QuantumRegister::registerParameters(StateP state) {
 }
 
 bool QuantumRegister::initialize(StateP state) {
-    // The bounds are set for percentages [0, 1].
-//    Genotype::setParameterValue(state, std::string("lbound"), (voidP) (new double(0)));
-//    Genotype::setParameterValue(state, std::string("ubound"), (voidP) (new double(1)));
-
     if (!isParameterDefined(state, "precision"))
         Genotype::setParameterValue(state, std::string("precision"), (voidP) (new double(3)));
 
     Binary::initialize(state);
 
+    double superpositionThetaValue = M_PI / 2;
+    ulong qbitsRequired = variables.size() * nBits_;
+
     // Set all qbits into superposition.
-    for (uint i = 0; i < variables.size() * nBits_; i++)
-        thetas_.push_back(M_PI / 2);
+    for (uint i = 0; i < qbitsRequired; i++) {
+
+        // Choose a positive or negative superposition state.
+        if (state->getRandomizer()->getRandomInteger(2) == 0)
+            thetas_.push_back(superpositionThetaValue);
+        else
+            thetas_.push_back(-1 * superpositionThetaValue);
+    }
 
     // Turn into a bit string.
     measure(state);
@@ -72,5 +77,17 @@ void QuantumRegister::measure(StateP state) {
             index++;
         }
     }
+}
 
+void QuantumRegister::printOut() {
+    cout << "[";
+
+    for (uint i = 0; i < thetas_.size(); i++) {
+        if (i > 0)
+            cout << ", ";
+
+        cout << thetas_[i];
+    }
+
+    cout << "]" << endl;
 }

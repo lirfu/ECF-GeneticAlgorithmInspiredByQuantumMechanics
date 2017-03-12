@@ -96,16 +96,16 @@
 		<Unit filename="/home/lirfu/zavrsni/QIGA/QIGA.h">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumLookupTable.cpp">
-			<Option target="QuantumInspiredGeneticAlgorithm"/>
-		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumLookupTable.h">
-			<Option target="QuantumInspiredGeneticAlgorithm"/>
-		</Unit>
 		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumRegister.cpp">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumRegister.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumRotationGate.h">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/home/lirfu/zavrsni/QIGA/main.cpp">

@@ -5,41 +5,61 @@
 #include "QIGA.h"
 #include "QuantumRegister.h"
 
-QIGA::QIGA(QuantumLookupTable *lookupTable) {
+QIGA::QIGA(QuantumRotationGate *lookupTable) {
     name_ = "QIGA";
     rotationGate_ = lookupTable;
 }
 
 bool QIGA::advanceGeneration(StateP state, DemeP deme) {
 
+//    for (uint i = 0; i < deme->size(); i++)
+//    {
+//        ((QuantumRegister *) deme->at(i)->getGenotype().get())->printOut();
+//    }
+
     // Store the best solution.
     IndividualP best = (deme->hof_->getBest().at(0)); // Guess the best.
+    uint indexOfBest = 0;
 
-    // Find the actual best.
-    for (uint i = 1; i < deme->size(); i++) {
+    for (uint i = 1; i < deme->size(); i++) // Find the actual best.
+    {
         IndividualP temp = (deme->at(i));
-        if (temp->fitness->isBetterThan(best->fitness))
+        if (temp->fitness->isBetterThan(best->fitness)) {
             best = temp;
+            indexOfBest = i;
+        }
     }
 
+//    cout<<"Best: ";
+//    ((QuantumRegister *) best->getGenotype().get())->printOut();
 
-    // Update the rest of the population with rotation gates.
-    for (uint i = 1; i < deme->size(); i++)
-        rotationGate_->performQuantumGateRotation(deme->at(i), best);
+    // Update the rest of the population with quantum operators.
+    for (uint i = 0; i < deme->size(); i++) {
+
+        // Skip the best (elitism).
+        if (i == indexOfBest)
+            continue;
+
+        // Use the quantum rotation gate.
+        rotationGate_->performQuantumGateRotation(state, deme->at(i), best);
+
+
+    }
 
 
     // Measure the population to generate the classical bit strings.
-    for (uint i = 0; i < deme->size(); i++) {
+    for (uint i = 0; i < deme->size(); i++)
         ((QuantumRegister *) deme->at(i)->getGenotype().get())->measure(state);
-    }
 
-    // For new population update real values.
+    // Update the register's real values for evaluation.
     for (uint i = 1; i < deme->size(); i++)
         ((QuantumRegister *) deme->at(i)->getGenotype().get())->update();
 
-//    // Evaluate the population.
-//    for (uint i = 0; i < deme->size(); i++)
-//        evaluate(deme->at(i));
+
+    // Evaluate the population.
+    for (uint i = 0; i < deme->size(); i++)
+        evaluate(deme->at(i));
+
 
     return true;
 }

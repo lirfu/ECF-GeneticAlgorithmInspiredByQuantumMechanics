@@ -30,6 +30,8 @@ public:
 
     vector<double> thetas_;
 
+    void printOut();
+
 private:
 
 //    std::default_random_engine generator;

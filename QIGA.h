@@ -6,16 +6,16 @@
 #define QUANTUMINSPIREDGENETICALGORITHM_QIGA_H
 
 #include "ecf/ECF.h"
-#include "QuantumLookupTable.h"
+#include "QuantumRotationGate.h"
 
 class QIGA : public Algorithm {
 public:
-    QIGA(QuantumLookupTable *);
+    QIGA(QuantumRotationGate *);
 
     bool advanceGeneration(StateP, DemeP);
 
 private:
-    QuantumLookupTable *rotationGate_;
+    QuantumRotationGate *rotationGate_;
 
 };
 

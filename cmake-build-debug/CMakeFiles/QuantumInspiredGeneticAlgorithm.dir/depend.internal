@@ -7,17 +7,18 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o
  /home/lirfu/zavrsni/QIGA/QIGA.cpp
  /home/lirfu/zavrsni/QIGA/QIGA.h
- /home/lirfu/zavrsni/QIGA/QuantumLookupTable.h
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumLookupTable.cpp.o
- /home/lirfu/zavrsni/QIGA/QuantumLookupTable.cpp
- /home/lirfu/zavrsni/QIGA/QuantumLookupTable.h
+ /home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
  /home/lirfu/zavrsni/QIGA/QuantumRegister.cpp
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o
+ /home/lirfu/zavrsni/QIGA/QuantumRegister.h
+ /home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp
+ /home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
  /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
  /home/lirfu/zavrsni/QIGA/QIGA.h
- /home/lirfu/zavrsni/QIGA/QuantumLookupTable.h
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
+ /home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
  /home/lirfu/zavrsni/QIGA/main.cpp

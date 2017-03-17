@@ -2,11 +2,28 @@
 // Created by lirfu on 27.02.17..
 //
 
-#include <math.h>
+#include "math.h"
 #include "QuantumRegister.h"
+#include "Operators/MutQuantumInversion.h"
+#include "Operators/MutQuantumSwap.h"
 
 QuantumRegister::QuantumRegister() {
     name_ = "QuantumRegister";
+}
+
+std::vector<MutationOpP> QuantumRegister::getMutationOp() {
+    std::vector<MutationOpP> mut;
+
+    mut.push_back(static_cast<MutationOpP> (new MutQuantumInversion));
+    mut.push_back(static_cast<MutationOpP> (new MutQuantumSwap));
+
+    return mut;
+}
+
+std::vector<CrossoverOpP> QuantumRegister::getCrossoverOp() {
+    std::vector<CrossoverOpP> crx;
+
+    return crx;
 }
 
 void QuantumRegister::registerParameters(StateP state) {

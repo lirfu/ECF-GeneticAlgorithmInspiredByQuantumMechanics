@@ -6,7 +6,7 @@
 #define QUANTUMINSPIREDGENETICALGORITHM_QIGA_H
 
 #include "ecf/ECF.h"
-#include "QuantumRotationGate.h"
+#include "../Operators/QuantumRotationGate.h"
 
 class QIGA : public Algorithm {
 public:

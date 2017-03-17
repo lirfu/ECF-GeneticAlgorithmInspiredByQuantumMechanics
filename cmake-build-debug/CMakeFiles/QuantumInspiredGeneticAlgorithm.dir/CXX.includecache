@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp
+QIGA.h
+/home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
+../QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
+
+/home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
+ecf/ECF.h
+/home/lirfu/zavrsni/QIGA/Algorithms/ecf/ECF.h
+../Operators/QuantumRotationGate.h
+/home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
+
 /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp
 ecf/ECF.h
 -
@@ -18,43 +30,55 @@ cmath
 typeinfo
 -
 
-/home/lirfu/zavrsni/QIGA/QIGA.cpp
-QIGA.h
-/home/lirfu/zavrsni/QIGA/QIGA.h
-QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp
+MutQuantumInversion.h
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.h
+../QuantumRegister.h
 /home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
-/home/lirfu/zavrsni/QIGA/QIGA.h
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.h
 ecf/ECF.h
-/home/lirfu/zavrsni/QIGA/ecf/ECF.h
+-
+
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.cpp
+MutQuantumSwap.h
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.h
+../QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
+
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.h
+ecf/ECF.h
+-
+
+/home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.cpp
 QuantumRotationGate.h
-/home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
+/home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
+
+/home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
+ecf/ECF.h
+/home/lirfu/zavrsni/QIGA/Operators/ecf/ECF.h
+../QuantumRegister.h
+/home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
 /home/lirfu/zavrsni/QIGA/QuantumRegister.cpp
 math.h
--
+/home/lirfu/zavrsni/QIGA/math.h
 QuantumRegister.h
 /home/lirfu/zavrsni/QIGA/QuantumRegister.h
+Operators/MutQuantumInversion.h
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.h
+Operators/MutQuantumSwap.h
+/home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.h
 
 /home/lirfu/zavrsni/QIGA/QuantumRegister.h
 ecf/ECF.h
 /home/lirfu/zavrsni/QIGA/ecf/ECF.h
-
-/home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp
-QuantumRotationGate.h
-/home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
-
-/home/lirfu/zavrsni/QIGA/QuantumRotationGate.h
-ecf/ECF.h
-/home/lirfu/zavrsni/QIGA/ecf/ECF.h
-QuantumRegister.h
-/home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
 /home/lirfu/zavrsni/QIGA/main.cpp
 ecf/ECF.h
 -
-QIGA.h
-/home/lirfu/zavrsni/QIGA/QIGA.h
+Algorithms/QIGA.h
+/home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
 QuantumRegister.h
 /home/lirfu/zavrsni/QIGA/QuantumRegister.h
 FunctionMinEvalOp.h

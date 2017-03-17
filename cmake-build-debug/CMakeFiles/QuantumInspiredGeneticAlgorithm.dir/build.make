@@ -81,28 +81,28 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o.provides: CMakeFiles/Q
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
 
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o: ../QIGA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o -c /home/lirfu/zavrsni/QIGA/QIGA.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o: ../Algorithms/QIGA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o -c /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/QIGA.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.i
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/QIGA.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.s
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.requires:
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires:
 
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.requires
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.requires
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.provides.build
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.provides
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
 
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
@@ -153,50 +153,102 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides:
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
 
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o: ../QuantumRotationGate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o -c /home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o: ../Operators/QuantumRotationGate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o -c /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.cpp
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.i
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.i
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/QuantumRotationGate.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.s
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.s
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires:
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.requires:
 
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.requires
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides.build
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.provides
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o: ../Operators/MutQuantumInversion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o -c /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o: ../Operators/MutQuantumSwap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o -c /home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o
 
 
 # Object files for target QuantumInspiredGeneticAlgorithm
 QuantumInspiredGeneticAlgorithm_OBJECTS = \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o"
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o"
 
 # External object files for target QuantumInspiredGeneticAlgorithm
 QuantumInspiredGeneticAlgorithm_EXTERNAL_OBJECTS =
 
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
-QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
-QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make
 QuantumInspiredGeneticAlgorithm: /home/lirfu/zavrsni/ECF_lib/release/libECF.a
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable QuantumInspiredGeneticAlgorithm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable QuantumInspiredGeneticAlgorithm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,10 +257,12 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build: QuantumInspiredGeneticAlgo
 .PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o.requires
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.requires
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.requires
 
 .PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires
 

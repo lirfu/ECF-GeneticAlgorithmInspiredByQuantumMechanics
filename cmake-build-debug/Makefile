@@ -123,6 +123,33 @@ QuantumInspiredGeneticAlgorithm/fast:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build
 .PHONY : QuantumInspiredGeneticAlgorithm/fast
 
+Algorithms/QIGA.o: Algorithms/QIGA.cpp.o
+
+.PHONY : Algorithms/QIGA.o
+
+# target to build an object file
+Algorithms/QIGA.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
+.PHONY : Algorithms/QIGA.cpp.o
+
+Algorithms/QIGA.i: Algorithms/QIGA.cpp.i
+
+.PHONY : Algorithms/QIGA.i
+
+# target to preprocess a source file
+Algorithms/QIGA.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i
+.PHONY : Algorithms/QIGA.cpp.i
+
+Algorithms/QIGA.s: Algorithms/QIGA.cpp.s
+
+.PHONY : Algorithms/QIGA.s
+
+# target to generate assembly for a file
+Algorithms/QIGA.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s
+.PHONY : Algorithms/QIGA.cpp.s
+
 FunctionMinEvalOp.o: FunctionMinEvalOp.cpp.o
 
 .PHONY : FunctionMinEvalOp.o
@@ -150,32 +177,86 @@ FunctionMinEvalOp.cpp.s:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.s
 .PHONY : FunctionMinEvalOp.cpp.s
 
-QIGA.o: QIGA.cpp.o
+Operators/MutQuantumInversion.o: Operators/MutQuantumInversion.cpp.o
 
-.PHONY : QIGA.o
+.PHONY : Operators/MutQuantumInversion.o
 
 # target to build an object file
-QIGA.cpp.o:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.o
-.PHONY : QIGA.cpp.o
+Operators/MutQuantumInversion.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o
+.PHONY : Operators/MutQuantumInversion.cpp.o
 
-QIGA.i: QIGA.cpp.i
+Operators/MutQuantumInversion.i: Operators/MutQuantumInversion.cpp.i
 
-.PHONY : QIGA.i
+.PHONY : Operators/MutQuantumInversion.i
 
 # target to preprocess a source file
-QIGA.cpp.i:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.i
-.PHONY : QIGA.cpp.i
+Operators/MutQuantumInversion.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.i
+.PHONY : Operators/MutQuantumInversion.cpp.i
 
-QIGA.s: QIGA.cpp.s
+Operators/MutQuantumInversion.s: Operators/MutQuantumInversion.cpp.s
 
-.PHONY : QIGA.s
+.PHONY : Operators/MutQuantumInversion.s
 
 # target to generate assembly for a file
-QIGA.cpp.s:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QIGA.cpp.s
-.PHONY : QIGA.cpp.s
+Operators/MutQuantumInversion.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.s
+.PHONY : Operators/MutQuantumInversion.cpp.s
+
+Operators/MutQuantumSwap.o: Operators/MutQuantumSwap.cpp.o
+
+.PHONY : Operators/MutQuantumSwap.o
+
+# target to build an object file
+Operators/MutQuantumSwap.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o
+.PHONY : Operators/MutQuantumSwap.cpp.o
+
+Operators/MutQuantumSwap.i: Operators/MutQuantumSwap.cpp.i
+
+.PHONY : Operators/MutQuantumSwap.i
+
+# target to preprocess a source file
+Operators/MutQuantumSwap.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.i
+.PHONY : Operators/MutQuantumSwap.cpp.i
+
+Operators/MutQuantumSwap.s: Operators/MutQuantumSwap.cpp.s
+
+.PHONY : Operators/MutQuantumSwap.s
+
+# target to generate assembly for a file
+Operators/MutQuantumSwap.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.s
+.PHONY : Operators/MutQuantumSwap.cpp.s
+
+Operators/QuantumRotationGate.o: Operators/QuantumRotationGate.cpp.o
+
+.PHONY : Operators/QuantumRotationGate.o
+
+# target to build an object file
+Operators/QuantumRotationGate.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o
+.PHONY : Operators/QuantumRotationGate.cpp.o
+
+Operators/QuantumRotationGate.i: Operators/QuantumRotationGate.cpp.i
+
+.PHONY : Operators/QuantumRotationGate.i
+
+# target to preprocess a source file
+Operators/QuantumRotationGate.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.i
+.PHONY : Operators/QuantumRotationGate.cpp.i
+
+Operators/QuantumRotationGate.s: Operators/QuantumRotationGate.cpp.s
+
+.PHONY : Operators/QuantumRotationGate.s
+
+# target to generate assembly for a file
+Operators/QuantumRotationGate.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.s
+.PHONY : Operators/QuantumRotationGate.cpp.s
 
 QuantumRegister.o: QuantumRegister.cpp.o
 
@@ -203,33 +284,6 @@ QuantumRegister.s: QuantumRegister.cpp.s
 QuantumRegister.cpp.s:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.s
 .PHONY : QuantumRegister.cpp.s
-
-QuantumRotationGate.o: QuantumRotationGate.cpp.o
-
-.PHONY : QuantumRotationGate.o
-
-# target to build an object file
-QuantumRotationGate.cpp.o:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.o
-.PHONY : QuantumRotationGate.cpp.o
-
-QuantumRotationGate.i: QuantumRotationGate.cpp.i
-
-.PHONY : QuantumRotationGate.i
-
-# target to preprocess a source file
-QuantumRotationGate.cpp.i:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.i
-.PHONY : QuantumRotationGate.cpp.i
-
-QuantumRotationGate.s: QuantumRotationGate.cpp.s
-
-.PHONY : QuantumRotationGate.s
-
-# target to generate assembly for a file
-QuantumRotationGate.cpp.s:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRotationGate.cpp.s
-.PHONY : QuantumRotationGate.cpp.s
 
 main.o: main.cpp.o
 
@@ -267,18 +321,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... QuantumInspiredGeneticAlgorithm"
+	@echo "... Algorithms/QIGA.o"
+	@echo "... Algorithms/QIGA.i"
+	@echo "... Algorithms/QIGA.s"
 	@echo "... FunctionMinEvalOp.o"
 	@echo "... FunctionMinEvalOp.i"
 	@echo "... FunctionMinEvalOp.s"
-	@echo "... QIGA.o"
-	@echo "... QIGA.i"
-	@echo "... QIGA.s"
+	@echo "... Operators/MutQuantumInversion.o"
+	@echo "... Operators/MutQuantumInversion.i"
+	@echo "... Operators/MutQuantumInversion.s"
+	@echo "... Operators/MutQuantumSwap.o"
+	@echo "... Operators/MutQuantumSwap.i"
+	@echo "... Operators/MutQuantumSwap.s"
+	@echo "... Operators/QuantumRotationGate.o"
+	@echo "... Operators/QuantumRotationGate.i"
+	@echo "... Operators/QuantumRotationGate.s"
 	@echo "... QuantumRegister.o"
 	@echo "... QuantumRegister.i"
 	@echo "... QuantumRegister.s"
-	@echo "... QuantumRotationGate.o"
-	@echo "... QuantumRotationGate.i"
-	@echo "... QuantumRotationGate.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

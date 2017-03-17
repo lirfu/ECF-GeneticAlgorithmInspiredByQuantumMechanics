@@ -15,6 +15,10 @@ public:
 
     bool initialize(StateP);
 
+    std::vector<MutationOpP> getMutationOp();
+
+    std::vector<CrossoverOpP> getCrossoverOp();
+
     void registerParameters(StateP);
 
     QuantumRegister *copy() {

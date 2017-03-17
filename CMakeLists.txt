@@ -5,9 +5,9 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
         main.cpp
-        QIGA.cpp QIGA.h
+        Algorithms/QIGA.cpp Algorithms/QIGA.h
         QuantumRegister.cpp QuantumRegister.h
-        FunctionMinEvalOp.cpp FunctionMinEvalOp.h QuantumRotationGate.cpp QuantumRotationGate.h)
+        FunctionMinEvalOp.cpp FunctionMinEvalOp.h Operators/QuantumRotationGate.cpp Operators/QuantumRotationGate.h Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h Operators/MutQuantumSwap.cpp Operators/MutQuantumSwap.h)
 
 find_package(Boost)
 if(Boost_FOUND)

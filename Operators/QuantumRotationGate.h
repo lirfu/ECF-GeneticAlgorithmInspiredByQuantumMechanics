@@ -7,7 +7,7 @@
 
 
 #include "ecf/ECF.h"
-#include "QuantumRegister.h"
+#include "../QuantumRegister.h"
 
 class QuantumRotationGate {
 public:

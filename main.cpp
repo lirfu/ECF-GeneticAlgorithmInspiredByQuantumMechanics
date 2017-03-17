@@ -1,5 +1,5 @@
 #include <ecf/ECF.h>
-#include "QIGA.h"
+#include "Algorithms/QIGA.h"
 #include "QuantumRegister.h"
 #include "FunctionMinEvalOp.h"
 

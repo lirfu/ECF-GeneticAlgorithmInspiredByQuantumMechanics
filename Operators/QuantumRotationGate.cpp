@@ -5,6 +5,7 @@
 #include "QuantumRotationGate.h"
 
 
+// TODO Slowpoke bottleneck. Y U NO FASTER?
 void QuantumRotationGate::performQuantumGateRotation(StateP state, IndividualP reg, IndividualP best) {
     double fitnessX = reg->fitness->getValue();
     double fitnessB = best->fitness->getValue();

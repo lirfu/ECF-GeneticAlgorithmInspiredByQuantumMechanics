@@ -90,12 +90,6 @@
 		<Unit filename="/home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp">
-			<Option target="QuantumInspiredGeneticAlgorithm"/>
-		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h">
-			<Option target="QuantumInspiredGeneticAlgorithm"/>
-		</Unit>
 		<Unit filename="/home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
@@ -112,6 +106,18 @@
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumRegister.cpp">

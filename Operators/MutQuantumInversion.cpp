@@ -22,7 +22,7 @@ bool MutQuantumInversion::mutate(GenotypeP gene) {
     std::default_random_engine generator(std::random_device{}());
 
     // If a mutation occurs.
-    if (std::rand() % (int) (100 + 100 * probability_) > 100) { // TODO Doesn't work for probabilities smaller than 0.01
+    if (state_->getRandomizer()->getRandomDouble() < probability_) {
         // Select a qbit to invert.
         uint index = (uint) ((std::rand()) % reg->thetas_.size());
 

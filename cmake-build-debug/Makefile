@@ -150,33 +150,6 @@ Algorithms/QIGA.cpp.s:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s
 .PHONY : Algorithms/QIGA.cpp.s
 
-FunctionMinEvalOp.o: FunctionMinEvalOp.cpp.o
-
-.PHONY : FunctionMinEvalOp.o
-
-# target to build an object file
-FunctionMinEvalOp.cpp.o:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
-.PHONY : FunctionMinEvalOp.cpp.o
-
-FunctionMinEvalOp.i: FunctionMinEvalOp.cpp.i
-
-.PHONY : FunctionMinEvalOp.i
-
-# target to preprocess a source file
-FunctionMinEvalOp.cpp.i:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.i
-.PHONY : FunctionMinEvalOp.cpp.i
-
-FunctionMinEvalOp.s: FunctionMinEvalOp.cpp.s
-
-.PHONY : FunctionMinEvalOp.s
-
-# target to generate assembly for a file
-FunctionMinEvalOp.cpp.s:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.s
-.PHONY : FunctionMinEvalOp.cpp.s
-
 Operators/MutQuantumInversion.o: Operators/MutQuantumInversion.cpp.o
 
 .PHONY : Operators/MutQuantumInversion.o
@@ -258,6 +231,60 @@ Operators/QuantumRotationGate.cpp.s:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.s
 .PHONY : Operators/QuantumRotationGate.cpp.s
 
+Problems/FunctionMinEvalOp.o: Problems/FunctionMinEvalOp.cpp.o
+
+.PHONY : Problems/FunctionMinEvalOp.o
+
+# target to build an object file
+Problems/FunctionMinEvalOp.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
+.PHONY : Problems/FunctionMinEvalOp.cpp.o
+
+Problems/FunctionMinEvalOp.i: Problems/FunctionMinEvalOp.cpp.i
+
+.PHONY : Problems/FunctionMinEvalOp.i
+
+# target to preprocess a source file
+Problems/FunctionMinEvalOp.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i
+.PHONY : Problems/FunctionMinEvalOp.cpp.i
+
+Problems/FunctionMinEvalOp.s: Problems/FunctionMinEvalOp.cpp.s
+
+.PHONY : Problems/FunctionMinEvalOp.s
+
+# target to generate assembly for a file
+Problems/FunctionMinEvalOp.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s
+.PHONY : Problems/FunctionMinEvalOp.cpp.s
+
+Problems/KnapsackEvalOp.o: Problems/KnapsackEvalOp.cpp.o
+
+.PHONY : Problems/KnapsackEvalOp.o
+
+# target to build an object file
+Problems/KnapsackEvalOp.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
+.PHONY : Problems/KnapsackEvalOp.cpp.o
+
+Problems/KnapsackEvalOp.i: Problems/KnapsackEvalOp.cpp.i
+
+.PHONY : Problems/KnapsackEvalOp.i
+
+# target to preprocess a source file
+Problems/KnapsackEvalOp.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i
+.PHONY : Problems/KnapsackEvalOp.cpp.i
+
+Problems/KnapsackEvalOp.s: Problems/KnapsackEvalOp.cpp.s
+
+.PHONY : Problems/KnapsackEvalOp.s
+
+# target to generate assembly for a file
+Problems/KnapsackEvalOp.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s
+.PHONY : Problems/KnapsackEvalOp.cpp.s
+
 QuantumRegister.o: QuantumRegister.cpp.o
 
 .PHONY : QuantumRegister.o
@@ -324,9 +351,6 @@ help:
 	@echo "... Algorithms/QIGA.o"
 	@echo "... Algorithms/QIGA.i"
 	@echo "... Algorithms/QIGA.s"
-	@echo "... FunctionMinEvalOp.o"
-	@echo "... FunctionMinEvalOp.i"
-	@echo "... FunctionMinEvalOp.s"
 	@echo "... Operators/MutQuantumInversion.o"
 	@echo "... Operators/MutQuantumInversion.i"
 	@echo "... Operators/MutQuantumInversion.s"
@@ -336,6 +360,12 @@ help:
 	@echo "... Operators/QuantumRotationGate.o"
 	@echo "... Operators/QuantumRotationGate.i"
 	@echo "... Operators/QuantumRotationGate.s"
+	@echo "... Problems/FunctionMinEvalOp.o"
+	@echo "... Problems/FunctionMinEvalOp.i"
+	@echo "... Problems/FunctionMinEvalOp.s"
+	@echo "... Problems/KnapsackEvalOp.o"
+	@echo "... Problems/KnapsackEvalOp.i"
+	@echo "... Problems/KnapsackEvalOp.s"
 	@echo "... QuantumRegister.o"
 	@echo "... QuantumRegister.i"
 	@echo "... QuantumRegister.s"

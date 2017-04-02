@@ -6,9 +6,6 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
  /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
  /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
- /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp
- /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o
  /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp
  /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.h
@@ -21,6 +18,12 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp
  /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.cpp
  /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
  /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.h
  /home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.h
@@ -28,7 +31,8 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
  /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
- /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
  /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
+ /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h
+ /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
  /home/lirfu/zavrsni/QIGA/main.cpp

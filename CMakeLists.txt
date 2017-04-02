@@ -7,7 +7,7 @@ set(SOURCE_FILES
         main.cpp
         Algorithms/QIGA.cpp Algorithms/QIGA.h
         QuantumRegister.cpp QuantumRegister.h
-        FunctionMinEvalOp.cpp FunctionMinEvalOp.h Operators/QuantumRotationGate.cpp Operators/QuantumRotationGate.h Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h Operators/MutQuantumSwap.cpp Operators/MutQuantumSwap.h)
+        Problems/FunctionMinEvalOp.cpp Problems/FunctionMinEvalOp.h Operators/QuantumRotationGate.cpp Operators/QuantumRotationGate.h Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h Operators/MutQuantumSwap.cpp Operators/MutQuantumSwap.h Problems/KnapsackEvalOp.cpp Problems/KnapsackEvalOp.h)
 
 find_package(Boost)
 if(Boost_FOUND)

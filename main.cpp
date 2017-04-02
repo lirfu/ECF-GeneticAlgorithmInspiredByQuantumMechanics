@@ -1,16 +1,17 @@
 #include <ecf/ECF.h>
 #include "Algorithms/QIGA.h"
-#include "QuantumRegister.h"
-#include "FunctionMinEvalOp.h"
+#include "Problems/FunctionMinEvalOp.h"
+#include "Problems/KnapsackEvalOp.h"
 
 int main(int argc, char **argv) {
     StateP state(new State);
 
-    FunctionMinEvalOpP eval(new FunctionMinEvalOp);
+//    FunctionMinEvalOpP eval(new FunctionMinEvalOp);
+    KnapsackEvalOpP eval(new KnapsackEvalOp);
+
     QuantumRegisterP reg(new QuantumRegister);
 
-    QuantumRotationGate *lookup = new QuantumRotationGate;
-    QIGAP qga(new QIGA(lookup));
+    QIGAP qga(new QIGA);
 
     state->setEvalOp(eval);
     state->addGenotype(reg);

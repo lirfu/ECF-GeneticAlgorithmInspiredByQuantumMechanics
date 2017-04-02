@@ -12,30 +12,18 @@
 class QuantumRotationGate {
 public:
 
-    QuantumRotationGate() {};
+    QuantumRotationGate(double lbound, double ubound);
 
     // Performs the rotation on each register qbit.
     void performQuantumGateRotation(StateP, IndividualP, IndividualP best);
 
 private:
-    double rotationH_ = 0.05 * M_PI, rotationL_ = 0.005 * M_PI;
+    double rotationH_, rotationL_;
 
-    int getDirection(StateP, bool xi, bool bi, double a, double b, double fitnessX, double fitnessB);
+    int getDirection(StateP, bool qi, bool bi, double a, double b);
 
 
     double getRotation(double fitX, double fitB);
-
-    // Value 10 means +-1 (random direction).
-    int standardDirectionTable_[32] = {
-            0, 0, 0, 0,
-            0, 0, 0, 0,
-            1, -1, 0, 10,
-            -1, 1, 10, 0,
-            -1, 1, 10, 0,
-            1, -1, 0, 10,
-            0, 0, 0, 0,
-            0, 0, 0, 0
-    };
 };
 
 typedef boost::shared_ptr<QuantumRotationGate> QuantumLookupTableP;

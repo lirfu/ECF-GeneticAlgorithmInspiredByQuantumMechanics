@@ -10,12 +10,23 @@
 
 class QIGA : public Algorithm {
 public:
-    QIGA(QuantumRotationGate *);
+    QIGA();
+
+    void registerParameters(StateP state);
+
+    bool initialize(StateP state);
 
     bool advanceGeneration(StateP, DemeP);
 
 private:
-    QuantumRotationGate *rotationGate_;
+    bool disasterEnabled_ = false;
+    uint disasterTrigger_ = 0;
+    uint disasterCouter_ = 0;
+    double disasterBestFitness_ = 0;
+
+    bool isDisasterTriggered(double bestFitness);
+
+    QuantumRotationGate *rotationGate_ = NULL;
 
 };
 

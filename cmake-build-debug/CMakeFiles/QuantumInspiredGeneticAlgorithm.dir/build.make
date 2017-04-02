@@ -129,28 +129,28 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.provides: C
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
 
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o: ../FunctionMinEvalOp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o: ../Problems/FunctionMinEvalOp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.i
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.s
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.requires:
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires:
 
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.requires
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.requires
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides.build
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
 
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
@@ -225,15 +225,40 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.pr
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o
 
 
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o: ../Problems/KnapsackEvalOp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
+
+
 # Object files for target QuantumInspiredGeneticAlgorithm
 QuantumInspiredGeneticAlgorithm_OBJECTS = \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o"
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o"
 
 # External object files for target QuantumInspiredGeneticAlgorithm
 QuantumInspiredGeneticAlgorithm_EXTERNAL_OBJECTS =
@@ -241,14 +266,15 @@ QuantumInspiredGeneticAlgorithm_EXTERNAL_OBJECTS =
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
-QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make
 QuantumInspiredGeneticAlgorithm: /home/lirfu/zavrsni/ECF_lib/release/libECF.a
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable QuantumInspiredGeneticAlgorithm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable QuantumInspiredGeneticAlgorithm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -259,10 +285,11 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build: QuantumInspiredGeneticAlgo
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.requires
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/FunctionMinEvalOp.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires
 
 .PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires
 

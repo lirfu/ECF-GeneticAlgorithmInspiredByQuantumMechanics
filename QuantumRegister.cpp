@@ -28,6 +28,9 @@ std::vector<CrossoverOpP> QuantumRegister::getCrossoverOp() {
 
 void QuantumRegister::registerParameters(StateP state) {
     Binary::registerParameters(state);
+
+    registerParameter(state, "initAngle", (voidP) (new double(0.5)), ECF::DOUBLE,
+                      "the initial angle of every qbit (must be from [0, 1])(gets multiplied with M_PI)(default: 0.5).");
 }
 
 bool QuantumRegister::initialize(StateP state) {
@@ -36,7 +39,8 @@ bool QuantumRegister::initialize(StateP state) {
 
     Binary::initialize(state);
 
-    double superpositionThetaValue = M_PI / 2;
+    double superpositionThetaValue = (*(double *) getParameterValue(state, "initAngle").get()) * M_PI;
+
     ulong qbitsRequired = variables.size() * nBits_;
 
     // Set all qbits into superposition.

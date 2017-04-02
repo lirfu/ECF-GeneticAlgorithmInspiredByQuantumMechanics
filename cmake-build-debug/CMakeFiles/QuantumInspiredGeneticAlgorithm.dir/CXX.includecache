@@ -9,26 +9,12 @@
 /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp
 QIGA.h
 /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
-../QuantumRegister.h
-/home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
 /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
 ecf/ECF.h
 /home/lirfu/zavrsni/QIGA/Algorithms/ecf/ECF.h
 ../Operators/QuantumRotationGate.h
 /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
-
-/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.cpp
-ecf/ECF.h
--
-FunctionMinEvalOp.h
-/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
-
-/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
-cmath
--
-typeinfo
--
 
 /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp
 MutQuantumInversion.h
@@ -60,6 +46,26 @@ ecf/ECF.h
 ../QuantumRegister.h
 /home/lirfu/zavrsni/QIGA/QuantumRegister.h
 
+/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp
+ecf/ECF.h
+-
+FunctionMinEvalOp.h
+/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h
+
+/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h
+cmath
+-
+typeinfo
+-
+
+/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp
+KnapsackEvalOp.h
+/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h
+
+/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h
+ecf/ECF.h
+-
+
 /home/lirfu/zavrsni/QIGA/QuantumRegister.cpp
 math.h
 /home/lirfu/zavrsni/QIGA/math.h
@@ -79,8 +85,8 @@ ecf/ECF.h
 -
 Algorithms/QIGA.h
 /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
-QuantumRegister.h
-/home/lirfu/zavrsni/QIGA/QuantumRegister.h
-FunctionMinEvalOp.h
-/home/lirfu/zavrsni/QIGA/FunctionMinEvalOp.h
+Problems/FunctionMinEvalOp.h
+/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h
+Problems/KnapsackEvalOp.h
+/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h
 

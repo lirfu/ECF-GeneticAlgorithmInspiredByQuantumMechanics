@@ -54,13 +54,12 @@ bool QIGA::advanceGeneration(StateP state, DemeP deme) {
 
     // Update the rest of the population with quantum operators.
     for (uint i = 0; i < deme->size(); i++) {
-
         // Best individual is left intact (elitism).
         if (i != indexOfBest) {
 
             // Execute the disaster operator if needed.
             if (triggerDisaster) {
-                ((QuantumRegister *) deme->at(i)->getGenotype().get())->initialize(state);
+                ((QuantumRegister *) deme->at(i)->getGenotype().get())->superpositionQubits(state);
             }
 
             // Use the quantum rotation gate to converge the individual toward the best, performs local space search.

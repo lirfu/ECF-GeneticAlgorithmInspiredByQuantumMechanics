@@ -1,0 +1,27 @@
+<ECF>
+	<Algorithm>
+		<SteadyStateTournament>
+            <Entry key="tsize">3</Entry>
+        </SteadyStateTournament>
+	</Algorithm>
+
+	<Genotype>
+		<Binary>
+            <Entry key="dimension">24</Entry>
+            <Entry key="ubound">1</Entry>
+            <Entry key="lbound">0</Entry>
+            <Entry key="precision">0</Entry>
+        </Binary>
+	</Genotype>
+
+	<Registry>
+	    <Entry key="eval.knapsackSize">6404180</Entry>
+		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/QIGA/Problems/KnapsackTest2</Entry>
+        <Entry key="population.size">100</Entry>
+		<Entry key="mutation.indprob">0.01</Entry>
+		<Entry key="term.maxtime">60</Entry>
+		<Entry key="log.frequency">100</Entry>
+		<Entry key="log.level">3</Entry>
+	</Registry>
+
+</ECF>

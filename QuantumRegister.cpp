@@ -27,7 +27,7 @@ std::vector<CrossoverOpP> QuantumRegister::getCrossoverOp() {
 }
 
 void QuantumRegister::registerParameters(StateP state) {
-    Binary::registerParameters(state);
+    Binary::Binary::registerParameters(state);
 
     registerParameter(state, "initAngle", (voidP) (new double(0.5)), ECF::DOUBLE,
                       "the initial angle of every qbit (must be from [0, 1])(gets multiplied with M_PI)(default: 0.5).");
@@ -37,27 +37,9 @@ bool QuantumRegister::initialize(StateP state) {
     if (!isParameterDefined(state, "precision"))
         Genotype::setParameterValue(state, std::string("precision"), (voidP) (new double(3)));
 
-    Binary::initialize(state);
+    Binary::Binary::initialize(state);
 
-    double superpositionThetaValue = (*(double *) getParameterValue(state, "initAngle").get()) * M_PI;
-
-    ulong qbitsRequired = variables.size() * nBits_;
-
-    // Set all qbits into superposition.
-    for (uint i = 0; i < qbitsRequired; i++) {
-
-        // Choose a positive or negative superposition state.
-        if (state->getRandomizer()->getRandomInteger(2) == 0)
-            thetas_.push_back(superpositionThetaValue);
-        else
-            thetas_.push_back(-1 * superpositionThetaValue);
-    }
-
-    // Turn into a bit string.
-    measure(state);
-
-    // Calculate the real values from the bit string.
-    update();
+    superpositionQubits(state);
 
     return true;
 }
@@ -111,4 +93,26 @@ void QuantumRegister::printOut() {
     }
 
     cout << "]" << endl;
+}
+
+void QuantumRegister::superpositionQubits(StateP state) {
+    double superpositionThetaValue = (*(double *) getParameterValue(state, "initAngle").get()) * M_PI;
+
+    ulong qbitsRequired = variables.size() * nBits_;
+
+    // Set all qbits into superposition.
+    for (uint i = 0; i < qbitsRequired; i++) {
+
+        // Choose a positive or negative superposition state.
+        if (state->getRandomizer()->getRandomInteger(2) == 0)
+            thetas_.push_back(superpositionThetaValue);
+        else
+            thetas_.push_back(-1 * superpositionThetaValue);
+    }
+
+    // Turn into a bit string.
+    measure(state);
+
+    // Calculate the real values from the bit string.
+    update();
 }

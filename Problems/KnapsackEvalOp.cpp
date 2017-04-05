@@ -29,13 +29,21 @@ bool KnapsackEvalOp::initialize(StateP state) {
 
         // For each item read and store weights and profits.
         std::vector<double> values;
-        while (getline(file, line) && !line.empty()) {
+        while (getline(file, line)) {
 
             string buffer = "";
             uint index = 0;
 
             // Skip spaces.
             while (isspace(line[index])) index++;
+
+            // Skip empty lines.
+            if (line.substr(index, line.length()).empty())
+                continue;
+
+            // The # character starts a line comment (skip).
+            if (line[index] == '#')
+                continue;
 
             // Read item weight.
             while (!isspace(line[index])) {
@@ -63,6 +71,9 @@ bool KnapsackEvalOp::initialize(StateP state) {
         return false;
     }
 
+//    for(uint i=0; i<itemProfits_.size(); i++)
+//        cout<<"Item "<<i<<" weights "<<itemWeights_[i]<<" and has profit "<<itemProfits_[i]<<endl;
+
     return true;
 }
 
@@ -74,11 +85,14 @@ FitnessP KnapsackEvalOp::evaluate(IndividualP individual) {
     double value = 0;
     double weight = 0;
 
+//    cout<<"Ind: ";
     for (uint i = 0; i < gen->variables.size(); i++)
         for (uint j = 0; j < gen->getNumBits(); j++) {
+//            cout<<gen->variables[i][j];
             value += itemProfits_[i * gen->getNumBits() + j] * gen->variables[i][j];
             weight += itemWeights_[i * gen->getNumBits() + j] * gen->variables[i][j];
         }
+//    cout<<endl;
 
     if (weight > knapsackSize_) {
         value -= (weight - knapsackSize_) * 5;

@@ -30,6 +30,8 @@ public:
 
 //    void read(XMLNode &xQuantumRegister);
 
+    void superpositionQubits(StateP);
+
     void measure(StateP);
 
     vector<double> thetas_;

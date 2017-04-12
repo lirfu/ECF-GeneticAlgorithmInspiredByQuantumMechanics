@@ -11,22 +11,95 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c87d2a9-b731-427d-8dde-d2bed3b1bbcf" name="Default" comment="Fix QIGA disaster bug and update graphs&#10;&#10;The QIGA disaster operator called the initialize method which kept increasing the thetas array size, resulting in a exponential slowdown of the algorithm. Now that it's fixed, algorithm purrs like a kitten.&#10;&#10;Updated the scripts and jars for graphs, removed extras.&#10;Script can now be called with a 'only display results' mode (-d) and send notification on Slack upon completion (-n).&#10;Those .log and .tmp files are used for the graph and should not be edited. They'll get removed and updated when starting a new comparison test.&#10;BE SURE TO CHANGE THE HOOK ID AND CHANNEL NAME BEFORE UPLOADING TO SLACK.&#10;&#10;Knapsack problem works for QIGA.&#10;The classical knapsack however, doesn't work. It gets stuck on the first iteration.&#10;&#10;Finally, added some knapsack testing files.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/KnapsackTest3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/parametersKnapsackQuantum.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGround/GenerateKnapsack.c" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/KnapsackTest1.txt" afterPath="$PROJECT_DIR$/Problems/KnapsackTest1.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/parametersKnapsack.txt" afterPath="$PROJECT_DIR$/Problems/parametersKnapsackClassical.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/parametersClassical.txt" afterPath="$PROJECT_DIR$/Problems/parametersFMinClassical.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/parametersQuantum.txt" afterPath="$PROJECT_DIR$/Problems/parametersFMinQuantum.txt" />
+    <list default="true" id="9c87d2a9-b731-427d-8dde-d2bed3b1bbcf" name="Default" comment="Fix cast adapter a bug in Knapsack and add NN&#10;&#10;Fixed the casting and value copying from the qRegisters in QIGA to the user defined genotipe.&#10;Supporting Binary, BitString and FloatingPoint.&#10;&#10;Knapsack had iteration problems, now it's fixed.&#10;Added support for BitString.&#10;SteadyStateTournament doesn't work (loops somewhere in the algorithm).&#10;&#10;Added the NeuralNetwork genotype and created the test parameters for QIGA. Classical outperforms quantum in both fitness and generation.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/SineFunction.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Algorithms/Backpropagation.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsLayer.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsNeuron.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGround/GeneralGraphPlotter.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/Knapsack/KnapsackTest2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/Knapsack/parametersQuantumBS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Algorithms/Backpropagation.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsLayer.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsNeuron.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutGauss.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutGauss.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutNeuron.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutNeuron.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutNeuronN.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutScale.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutScale.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/NNErrorEvalOp.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/NNErrorEvalOp.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/NeuralNetwork.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/NeuralNetwork.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(XOR)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(sin(x))" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(sin(x)byx)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(tg(x))" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(x)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(x+3sin(x))" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(x+y)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(x2)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(x2+y2)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data_1var.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data_2var.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/parametersClassical.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/NeuralNetwork/parametersQuantum.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGround/compare.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGround/multipleCompare.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/FunctionMinEvalOp.cpp" afterPath="$PROJECT_DIR$/Problems/FunctionMin/FunctionMinEvalOp.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/FunctionMinEvalOp.h" afterPath="$PROJECT_DIR$/Problems/FunctionMin/FunctionMinEvalOp.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/KnapsackEvalOp.cpp" afterPath="$PROJECT_DIR$/Problems/Knapsack/KnapsackEvalOp.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/KnapsackEvalOp.h" afterPath="$PROJECT_DIR$/Problems/Knapsack/KnapsackEvalOp.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/KnapsackTest1.sh" afterPath="$PROJECT_DIR$/Problems/Knapsack/KnapsackTest1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/KnapsackTest3" afterPath="$PROJECT_DIR$/Problems/Knapsack/KnapsackTest3" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/parametersFMinClassical.txt" afterPath="$PROJECT_DIR$/Problems/FunctionMin/parametersClassical.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/parametersFMinQuantum.txt" afterPath="$PROJECT_DIR$/Problems/FunctionMin/parametersQuantum.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/parametersKnapsackClassical.txt" afterPath="$PROJECT_DIR$/Problems/Knapsack/parametersClassical.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/parametersKnapsackQuantum.txt" afterPath="$PROJECT_DIR$/Problems/Knapsack/parametersQuantum.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm" afterPath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/QIGA.cpp" afterPath="$PROJECT_DIR$/Algorithms/QIGA.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/KnapsackEvalOp.cpp" afterPath="$PROJECT_DIR$/Problems/KnapsackEvalOp.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/QIGA.h" afterPath="$PROJECT_DIR$/Algorithms/QIGA.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Operators/QuantumRotationGate.cpp" afterPath="$PROJECT_DIR$/Operators/QuantumRotationGate.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Operators/QuantumRotationGate.h" afterPath="$PROJECT_DIR$/Operators/QuantumRotationGate.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumRegister.cpp" afterPath="$PROJECT_DIR$/QuantumRegister.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumRegister.h" afterPath="$PROJECT_DIR$/QuantumRegister.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/QuantumInspiredGeneticAlgorithm.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +115,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file leaf-file-name="parametersClassical.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/parametersClassical.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="26">
+              <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parametersQuantum.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/parametersQuantum.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="97" lean-forward="false" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -55,8 +138,8 @@
       <file leaf-file-name="compare.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestGround/compare.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="98" column="2" lean-forward="true" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
+            <state relative-caret-position="108">
+              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -67,6 +150,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>binary</find>
+      <find>disas</find>
+      <find>disaste</find>
+      <find>disaster</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,16 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Mutations/MutGauss.cpp" />
-        <option value="$PROJECT_DIR$/Mutations/MutScaleNeuron.cpp" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/FunctionMinEvalOp.h" />
-        <option value="$PROJECT_DIR$/FunctionMinEvalOp.cpp" />
-        <option value="$PROJECT_DIR$/QuantumLookupTable.cpp" />
-        <option value="$PROJECT_DIR$/parameters.txt" />
-        <option value="$PROJECT_DIR$/QuantumLookupTable.h" />
-        <option value="$PROJECT_DIR$/QIGA.h" />
         <option value="$PROJECT_DIR$/resultsFitness.txt" />
         <option value="$PROJECT_DIR$/resultsFitnessQuantum.txt" />
         <option value="$PROJECT_DIR$/QuantumRotationGate.cpp" />
@@ -102,9 +178,6 @@
         <option value="$PROJECT_DIR$/QuantumRotationGate.h" />
         <option value="$PROJECT_DIR$/Operators/MutQuantumInversion.h" />
         <option value="$PROJECT_DIR$/Operators/MutQuantumSwap.h" />
-        <option value="$PROJECT_DIR$/Operators/QuantumRotationGate.h" />
-        <option value="$PROJECT_DIR$/Operators/QuantumRotationGate.cpp" />
-        <option value="$PROJECT_DIR$/Algorithms/QIGA.h" />
         <option value="$PROJECT_DIR$/Operators/MutQuantumInversion.cpp" />
         <option value="$PROJECT_DIR$/Operators/MutQuantumSwap.cpp" />
         <option value="$PROJECT_DIR$/Problems/KnapsackEvalOp.h" />
@@ -119,16 +192,36 @@
         <option value="$PROJECT_DIR$/Problems/KnapsackTest3" />
         <option value="$PROJECT_DIR$/Problems/KnapsackTest2" />
         <option value="$PROJECT_DIR$/QuantumRegister.h" />
-        <option value="$PROJECT_DIR$/QuantumRegister.cpp" />
-        <option value="$PROJECT_DIR$/Algorithms/QIGA.cpp" />
         <option value="$PROJECT_DIR$/Problems/KnapsackEvalOp.cpp" />
         <option value="$PROJECT_DIR$/Problems/parametersKnapsackQuantum.txt" />
         <option value="$PROJECT_DIR$/quantum_full.log" />
         <option value="$PROJECT_DIR$/parametersQuantum.txt" />
         <option value="$PROJECT_DIR$/parametersClassical.txt" />
         <option value="$PROJECT_DIR$/compare.sh" />
-        <option value="$PROJECT_DIR$/TestGround/compare.sh" />
+        <option value="$PROJECT_DIR$/TestGround/MultipleCompare.h" />
+        <option value="$PROJECT_DIR$/TestGround/multipleCompare.sh" />
+        <option value="$PROJECT_DIR$/Operators/QuantumRotationGate.h" />
+        <option value="$PROJECT_DIR$/Algorithms/QIGA.h" />
+        <option value="$PROJECT_DIR$/Problems/FunctionMin/parametersClassical.txt" />
+        <option value="$PROJECT_DIR$/Problems/FunctionMin/parametersQuantum.txt" />
+        <option value="$PROJECT_DIR$/QuantumRegister.cpp" />
+        <option value="$PROJECT_DIR$/Operators/QuantumRotationGate.cpp" />
+        <option value="$PROJECT_DIR$/Problems/Knapsack/parametersQuantumBS.txt" />
+        <option value="$PROJECT_DIR$/Problems/Knapsack/KnapsackEvalOp.cpp" />
+        <option value="$PROJECT_DIR$/Problems/Knapsack/parametersClassical.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Problems/NeuralNetwork/FunctionMinEvalOp.h" />
+        <option value="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutGauss.cpp" />
+        <option value="$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp" />
+        <option value="$PROJECT_DIR$/Problems/FunctionMin/FunctionMinEvalOp.cpp" />
+        <option value="$PROJECT_DIR$/Problems/FunctionMin/FunctionMinEvalOp.h" />
+        <option value="$PROJECT_DIR$/Problems/NeuralNetwork/NNErrorEvalOp.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Algorithms/QIGA.cpp" />
+        <option value="$PROJECT_DIR$/Problems/Knapsack/parametersQuantum.txt" />
+        <option value="$PROJECT_DIR$/Problems/NeuralNetwork/parametersQuantum.txt" />
+        <option value="$PROJECT_DIR$/Problems/NeuralNetwork/parametersClassical.txt" />
+        <option value="$PROJECT_DIR$/TestGround/compare.sh" />
       </list>
     </option>
   </component>
@@ -140,9 +233,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="y" value="19" />
     <option name="width" value="1366" />
-    <option name="height" value="772" />
+    <option name="height" value="749" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -218,6 +311,42 @@
               <option name="myItemId" value="Problems" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralNetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QIGA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QIGA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Problems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Knapsack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QIGA" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QIGA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Problems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -246,19 +375,21 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Problems" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Problems/Knapsack" />
+      <recent name="$PROJECT_DIR$/Problems/FMin" />
       <recent name="$PROJECT_DIR$/Problems" />
       <recent name="$PROJECT_DIR$/TestGround" />
       <recent name="$PROJECT_DIR$/Algorithms" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Problems/Knapsack" />
+      <recent name="$PROJECT_DIR$/Problems/NeuralNetwork" />
+      <recent name="$PROJECT_DIR$/Problems" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Operators" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FuncMinQuantum">
+  <component name="RunManager" selected="Application.NNClassical">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -437,15 +568,23 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="FuncMinQuantum" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="parametersQuantum.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration default="false" name="FuncMinQuantum" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/FunctionMin/parametersQuantum.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="KnapsackQuantum" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/parametersKnapsackQuantum.txt" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QuantumInspiredGeneticAlgorithm" TARGET_NAME="QuantumInspiredGeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm">
+    <configuration default="false" name="KnapsackQuantum" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/Knapsack/parametersQuantum.txt" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QuantumInspiredGeneticAlgorithm" TARGET_NAME="QuantumInspiredGeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm">
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="KnapsackClassical" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/parametersKnapsackClassical.txt" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QuantumInspiredGeneticAlgorithm" TARGET_NAME="QuantumInspiredGeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm">
+    <configuration default="false" name="KnapsackClassical" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/Knapsack/parametersClassical.txt" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QuantumInspiredGeneticAlgorithm" TARGET_NAME="QuantumInspiredGeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NNClassical" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/NeuralNetwork/parametersClassical.txt" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QuantumInspiredGeneticAlgorithm" TARGET_NAME="QuantumInspiredGeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NNQuantum" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/NeuralNetwork/parametersQuantum.txt" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QuantumInspiredGeneticAlgorithm" TARGET_NAME="QuantumInspiredGeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm">
       <envs />
       <method />
     </configuration>
@@ -453,11 +592,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <configuration default="false" name="KnapsackQuantumBS" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/Problems/Knapsack/parametersQuantumBS.txt" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QuantumInspiredGeneticAlgorithm" TARGET_NAME="QuantumInspiredGeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QuantumInspiredGeneticAlgorithm" RUN_TARGET_NAME="QuantumInspiredGeneticAlgorithm">
+      <envs />
+      <method />
+    </configuration>
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Application.FuncMinQuantum" />
       <item index="1" class="java.lang.String" itemvalue="Application.KnapsackQuantum" />
       <item index="2" class="java.lang.String" itemvalue="Application.KnapsackClassical" />
-      <item index="3" class="java.lang.String" itemvalue="Application.FuncMinClassical" />
+      <item index="3" class="java.lang.String" itemvalue="Application.NNClassical" />
+      <item index="4" class="java.lang.String" itemvalue="Application.NNQuantum" />
+      <item index="5" class="java.lang.String" itemvalue="Application.FuncMinClassical" />
+      <item index="6" class="java.lang.String" itemvalue="Application.KnapsackQuantumBS" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -497,7 +643,19 @@
       <workItem from="1491293744965" duration="614000" />
       <workItem from="1491305312325" duration="5415000" />
       <workItem from="1491312089762" duration="33000" />
-      <workItem from="1491379610529" duration="14150000" />
+      <workItem from="1491379610529" duration="22017000" />
+      <workItem from="1491417167717" duration="216000" />
+      <workItem from="1491486677880" duration="7559000" />
+      <workItem from="1491494495842" duration="596000" />
+      <workItem from="1491558763624" duration="1142000" />
+      <workItem from="1491562819529" duration="8214000" />
+      <workItem from="1491640394398" duration="235000" />
+      <workItem from="1491646295818" duration="1189000" />
+      <workItem from="1491679468560" duration="66000" />
+      <workItem from="1491759651811" duration="105000" />
+      <workItem from="1491947350067" duration="33000" />
+      <workItem from="1491982234346" duration="3606000" />
+      <workItem from="1491991849513" duration="20226000" />
     </task>
     <task id="LOCAL-00001" summary="Add README.md">
       <created>1488220049508</created>
@@ -548,35 +706,62 @@
       <option name="project" value="LOCAL" />
       <updated>1491172058468</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix QIGA disaster bug and update graphs&#10;&#10;The QIGA disaster operator called the initialize method which kept increasing the thetas array size, resulting in a exponential slowdown of the algorithm. Now that it's fixed, algorithm purrs like a kitten.&#10;&#10;Updated the scripts and jars for graphs, removed extras.&#10;Script can now be called with a 'only display results' mode (-d) and send notification on Slack upon completion (-n).&#10;Those .log and .tmp files are used for the graph and should not be edited. They'll get removed and updated when starting a new comparison test.&#10;BE SURE TO CHANGE THE HOOK ID AND CHANNEL NAME BEFORE UPLOADING TO SLACK.&#10;&#10;Knapsack problem works for QIGA.&#10;The classical knapsack however, doesn't work. It gets stuck on the first iteration.&#10;&#10;Finally, added some knapsack testing files and reorganized the project.">
+      <created>1491400778473</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491400778473</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144230000" />
+    <option name="totallyTimeSpent" value="195284000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="19" width="1366" height="749" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18791947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.511041" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51755726" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45899054" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2949527" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984733" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39747635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58044165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22712934" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18791947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39747635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -592,118 +777,58 @@
     <MESSAGE value="Initialize the quantum rotation gate basics&#10;&#10;Added the standard direction table and the adaptive rotation calculator.&#10;&#10;Still need to calculate and implement the qRotation gate for register with thetas and resolve some issues with the look-up table." />
     <MESSAGE value="Implement the quantum rotation gate and perform first tests&#10;&#10;Implemented the test version of the quantum rotation gate. The program now runs.&#10;Still need to enable extraction of some variables into the config file.&#10;&#10;The first tests are quite sad. The algorithm bounces around the best solution as expected. On first look it behaves like a completely random space search.&#10; The algorithm still needs some additions like crossover and mutation to help it, but I have little hope about it. I think it needs some 'focusing' operators to stabilize the randomness.&#10; &#10; Also, it needs a complete theory debugging. Something about the directions table makes me uncomfortable so I'll compute a few examples on paper." />
     <MESSAGE value="Add the Knapsack evaluator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the Knapsack evaluator" />
+    <MESSAGE value="Fix QIGA disaster bug and update graphs&#10;&#10;The QIGA disaster operator called the initialize method which kept increasing the thetas array size, resulting in a exponential slowdown of the algorithm. Now that it's fixed, algorithm purrs like a kitten.&#10;&#10;Updated the scripts and jars for graphs, removed extras.&#10;Script can now be called with a 'only display results' mode (-d) and send notification on Slack upon completion (-n).&#10;Those .log and .tmp files are used for the graph and should not be edited. They'll get removed and updated when starting a new comparison test.&#10;BE SURE TO CHANGE THE HOOK ID AND CHANNEL NAME BEFORE UPLOADING TO SLACK.&#10;&#10;Knapsack problem works for QIGA.&#10;The classical knapsack however, doesn't work. It gets stuck on the first iteration.&#10;&#10;Finally, added some knapsack testing files and reorganized the project." />
+    <MESSAGE value="Fix cast adapter a bug in Knapsack and add NN&#10;&#10;Fixed the casting and value copying from the qRegisters in QIGA to the user defined genotipe.&#10;Supporting Binary, BitString and FloatingPoint.&#10;&#10;Knapsack had iteration problems, now it's fixed.&#10;Added support for BitString.&#10;SteadyStateTournament doesn't work (loops somewhere in the algorithm).&#10;&#10;Added the NeuralNetwork genotype and created the test parameters for QIGA. Classical outperforms quantum in both fitness and generation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix cast adapter a bug in Knapsack and add NN&#10;&#10;Fixed the casting and value copying from the qRegisters in QIGA to the user defined genotipe.&#10;Supporting Binary, BitString and FloatingPoint.&#10;&#10;Knapsack had iteration problems, now it's fixed.&#10;Added support for BitString.&#10;SteadyStateTournament doesn't work (loops somewhere in the algorithm).&#10;&#10;Added the NeuralNetwork genotype and created the test parameters for QIGA. Classical outperforms quantum in both fitness and generation." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="63" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="102" lean-forward="false" selection-start-line="17" selection-start-column="102" selection-end-line="17" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mutations/MutGauss.cpp" />
-    <entry file="file://$PROJECT_DIR$/Mutations/MutNeuron.cpp" />
-    <entry file="file://$PROJECT_DIR$/Mutations/MutScaleNeuron.cpp" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="36">
-            <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/KnapsackTest3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/ecf/State.h">
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/KnapsackTest1">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="187" column="16" lean-forward="false" selection-start-line="187" selection-start-column="16" selection-end-line="187" selection-end-column="16" />
+        <state relative-caret-position="-113">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/4.8/bits/stl_vector.h">
+    <entry file="file://$PROJECT_DIR$/TestGround/MultipleCompare.h" />
+    <entry file="file:///usr/local/include/ecf/floatingpoint/FloatingPoint.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-667">
-          <caret line="854" column="6" lean-forward="false" selection-start-line="854" selection-start-column="6" selection-end-line="854" selection-end-column="6" />
+        <state relative-caret-position="359">
+          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/ecf/Deme.h">
+    <entry file="file:///usr/local/include/ecf/Individual.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="576">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/ecf/StatCalc.h">
+    <entry file="file:///usr/local/include/ecf/Communicator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/ecf/Population.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resultsFitnessClassical.txt" />
-    <entry file="file:///usr/local/include/ecf/Randomizer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Operators/MutQuantumInversion.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="20" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Operators/MutQuantumSwap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Operators/QuantumRotationGate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="22" column="65" lean-forward="false" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        <state relative-caret-position="72">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -714,233 +839,353 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Operators/MutQuantumSwap.cpp">
+    <entry file="file://$PROJECT_DIR$/Algorithms/QIGA.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        <state relative-caret-position="342">
+          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/FunctionMin/parametersClassical.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/FunctionMin/parametersQuantum.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/local/include/ecf/Algorithm.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resultsFitnessQuantum.txt" />
-    <entry file="file://$PROJECT_DIR$/Operators/QuantumRotationGate.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/QIGA.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/FunctionMinEvalOp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="45" column="64" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="45" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/KnapsackEvalOp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/ecf/binary/Binary.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resultsFitness.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1566">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="117">
+          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/local/include/ecf/Genotype.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="97" column="16" lean-forward="false" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGround/weights">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGround/profits">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/KnapsackTest2.sh" />
-    <entry file="file://$PROJECT_DIR$/Problems/KnapsackTest1.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGround/joined">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGround/GenerateKnapsack.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/FunctionMinEvalOp.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/parametersKnapsackClassical.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        <state relative-caret-position="117">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QuantumRegister.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        <state relative-caret-position="117">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/ecf/RealValueGenotype.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.8/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="770" column="0" lean-forward="false" selection-start-line="770" selection-start-column="0" selection-end-line="770" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operators/QuantumRotationGate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="17" column="86" lean-forward="false" selection-start-line="17" selection-start-column="86" selection-end-line="17" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operators/MutQuantumSwap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QuantumRegister.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="155">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/KnapsackTest3">
+    <entry file="file://$PROJECT_DIR$/Operators/QuantumRotationGate.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="1098">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/KnapsackEvalOp.cpp">
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/KnapsackEvalOp.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="91" column="26" lean-forward="false" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+        <state relative-caret-position="293">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/KnapsackTest2">
+    <entry file="file:///usr/local/include/ecf/binary/Binary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/KnapsackTest2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/parametersQuantumBS.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/parametersClassical.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/KnapsackEvalOp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="106" column="7" lean-forward="false" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutGauss.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="37" column="46" lean-forward="false" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#16#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/FunctionMin/FunctionMinEvalOp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1717">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/NeuralNetwork.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#110#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/NeuralNetwork.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/NNErrorEvalOp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/FunctionMin/FunctionMinEvalOp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="43" column="2" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="29" column="83" lean-forward="false" selection-start-line="15" selection-start-column="83" selection-end-line="29" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/NNErrorEvalOp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/configFile(sin(x))">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="39" />
+          <caret line="2" column="217" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="217" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/configFile(x)">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/configFile(x+y)">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/configFile(x2)">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/configFile(XOR)">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/configFile_2var">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/configFile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="129" lean-forward="false" selection-start-line="2" selection-start-column="129" selection-end-line="2" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Knapsack/parametersQuantum.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/QIGA.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/parametersKnapsackQuantum.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/joinedMin.tmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantum.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantum_full.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/parametersFMinQuantum.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/parametersFMinClassical.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="202">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="396">
+          <caret line="22" column="19" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/resultsData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/Testing/data(sin(x))">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/parametersClassical.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGround/multipleCompare.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NeuralNetwork/parametersQuantum.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="97" lean-forward="false" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestGround/compare.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="98" column="2" lean-forward="true" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
+        <state relative-caret-position="108">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding />
         </state>
       </provider>

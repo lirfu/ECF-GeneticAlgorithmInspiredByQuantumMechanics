@@ -99,6 +99,7 @@ void QuantumRegister::superpositionQubits(StateP state) {
     double superpositionThetaValue = (*(double *) getParameterValue(state, "initAngle").get()) * M_PI;
 
     ulong qbitsRequired = variables.size() * nBits_;
+    thetas_.clear();
 
     // Set all qbits into superposition.
     for (uint i = 0; i < qbitsRequired; i++) {

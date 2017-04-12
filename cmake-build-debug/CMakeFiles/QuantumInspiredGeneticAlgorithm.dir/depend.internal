@@ -18,12 +18,193 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp
  /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.cpp
  /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
- /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp
- /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
- /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp
- /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Algorithms/Backpropagation.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.cpp
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
  /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.h
  /home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.h
@@ -32,7 +213,21 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
  /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.h
  /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h
- /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h
- /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h
+ /home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.h
+ /home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.h
+ /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h
  /home/lirfu/zavrsni/QIGA/QuantumRegister.h
  /home/lirfu/zavrsni/QIGA/main.cpp

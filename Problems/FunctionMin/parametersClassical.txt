@@ -15,12 +15,14 @@
 	</Genotype>
 
 	<Registry>
-	    <Entry key="function">7</Entry>
-		<Entry key="population.size">100</Entry>
-		<Entry key="mutation.indprob">0.3</Entry>
+	    <Entry key="function">2</Entry>
+		<Entry key="population.size">170</Entry>
+
 		<Entry key="term.fitnessval">1e-6</Entry>
 		<Entry key="term.maxtime">30</Entry>
-		<Entry key="log.frequency">100</Entry>
+		<Entry key="term.stagnation">400</Entry>
+
+		<Entry key="log.frequency">1</Entry>
 		<Entry key="log.level">3</Entry>
 	</Registry>
 </ECF>

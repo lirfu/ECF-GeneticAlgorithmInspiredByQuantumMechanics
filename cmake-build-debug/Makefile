@@ -231,59 +231,464 @@ Operators/QuantumRotationGate.cpp.s:
 	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.s
 .PHONY : Operators/QuantumRotationGate.cpp.s
 
-Problems/FunctionMinEvalOp.o: Problems/FunctionMinEvalOp.cpp.o
+Problems/FunctionMin/FunctionMinEvalOp.o: Problems/FunctionMin/FunctionMinEvalOp.cpp.o
 
-.PHONY : Problems/FunctionMinEvalOp.o
-
-# target to build an object file
-Problems/FunctionMinEvalOp.cpp.o:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
-.PHONY : Problems/FunctionMinEvalOp.cpp.o
-
-Problems/FunctionMinEvalOp.i: Problems/FunctionMinEvalOp.cpp.i
-
-.PHONY : Problems/FunctionMinEvalOp.i
-
-# target to preprocess a source file
-Problems/FunctionMinEvalOp.cpp.i:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i
-.PHONY : Problems/FunctionMinEvalOp.cpp.i
-
-Problems/FunctionMinEvalOp.s: Problems/FunctionMinEvalOp.cpp.s
-
-.PHONY : Problems/FunctionMinEvalOp.s
-
-# target to generate assembly for a file
-Problems/FunctionMinEvalOp.cpp.s:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s
-.PHONY : Problems/FunctionMinEvalOp.cpp.s
-
-Problems/KnapsackEvalOp.o: Problems/KnapsackEvalOp.cpp.o
-
-.PHONY : Problems/KnapsackEvalOp.o
+.PHONY : Problems/FunctionMin/FunctionMinEvalOp.o
 
 # target to build an object file
-Problems/KnapsackEvalOp.cpp.o:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
-.PHONY : Problems/KnapsackEvalOp.cpp.o
+Problems/FunctionMin/FunctionMinEvalOp.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o
+.PHONY : Problems/FunctionMin/FunctionMinEvalOp.cpp.o
 
-Problems/KnapsackEvalOp.i: Problems/KnapsackEvalOp.cpp.i
+Problems/FunctionMin/FunctionMinEvalOp.i: Problems/FunctionMin/FunctionMinEvalOp.cpp.i
 
-.PHONY : Problems/KnapsackEvalOp.i
+.PHONY : Problems/FunctionMin/FunctionMinEvalOp.i
 
 # target to preprocess a source file
-Problems/KnapsackEvalOp.cpp.i:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i
-.PHONY : Problems/KnapsackEvalOp.cpp.i
+Problems/FunctionMin/FunctionMinEvalOp.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.i
+.PHONY : Problems/FunctionMin/FunctionMinEvalOp.cpp.i
 
-Problems/KnapsackEvalOp.s: Problems/KnapsackEvalOp.cpp.s
+Problems/FunctionMin/FunctionMinEvalOp.s: Problems/FunctionMin/FunctionMinEvalOp.cpp.s
 
-.PHONY : Problems/KnapsackEvalOp.s
+.PHONY : Problems/FunctionMin/FunctionMinEvalOp.s
 
 # target to generate assembly for a file
-Problems/KnapsackEvalOp.cpp.s:
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s
-.PHONY : Problems/KnapsackEvalOp.cpp.s
+Problems/FunctionMin/FunctionMinEvalOp.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.s
+.PHONY : Problems/FunctionMin/FunctionMinEvalOp.cpp.s
+
+Problems/Knapsack/KnapsackEvalOp.o: Problems/Knapsack/KnapsackEvalOp.cpp.o
+
+.PHONY : Problems/Knapsack/KnapsackEvalOp.o
+
+# target to build an object file
+Problems/Knapsack/KnapsackEvalOp.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o
+.PHONY : Problems/Knapsack/KnapsackEvalOp.cpp.o
+
+Problems/Knapsack/KnapsackEvalOp.i: Problems/Knapsack/KnapsackEvalOp.cpp.i
+
+.PHONY : Problems/Knapsack/KnapsackEvalOp.i
+
+# target to preprocess a source file
+Problems/Knapsack/KnapsackEvalOp.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.i
+.PHONY : Problems/Knapsack/KnapsackEvalOp.cpp.i
+
+Problems/Knapsack/KnapsackEvalOp.s: Problems/Knapsack/KnapsackEvalOp.cpp.s
+
+.PHONY : Problems/Knapsack/KnapsackEvalOp.s
+
+# target to generate assembly for a file
+Problems/Knapsack/KnapsackEvalOp.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.s
+.PHONY : Problems/Knapsack/KnapsackEvalOp.cpp.s
+
+Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.o: Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.o
+
+# target to build an object file
+Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o
+
+Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.i: Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.i
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.i
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.i
+
+Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.s: Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.s
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.s
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.s
+
+Problems/NeuralNetwork/ActivationFunctions/LinearFunction.o: Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/LinearFunction.o
+
+# target to build an object file
+Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o
+
+Problems/NeuralNetwork/ActivationFunctions/LinearFunction.i: Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.i
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/LinearFunction.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.i
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.i
+
+Problems/NeuralNetwork/ActivationFunctions/LinearFunction.s: Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.s
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/LinearFunction.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.s
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.s
+
+Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.o: Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.o
+
+# target to build an object file
+Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o
+
+Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.i: Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.i
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.i
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.i
+
+Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.s: Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.s
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.s
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.s
+
+Problems/NeuralNetwork/ActivationFunctions/SineFunction.o: Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SineFunction.o
+
+# target to build an object file
+Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o
+
+Problems/NeuralNetwork/ActivationFunctions/SineFunction.i: Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.i
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SineFunction.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.i
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.i
+
+Problems/NeuralNetwork/ActivationFunctions/SineFunction.s: Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.s
+
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SineFunction.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.s
+.PHONY : Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.s
+
+Problems/NeuralNetwork/Algorithms/Backpropagation.o: Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Algorithms/Backpropagation.o
+
+# target to build an object file
+Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o
+.PHONY : Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o
+
+Problems/NeuralNetwork/Algorithms/Backpropagation.i: Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Algorithms/Backpropagation.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.i
+.PHONY : Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.i
+
+Problems/NeuralNetwork/Algorithms/Backpropagation.s: Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Algorithms/Backpropagation.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.s
+.PHONY : Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.s
+
+Problems/NeuralNetwork/Crossovers/CrsLayer.o: Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsLayer.o
+
+# target to build an object file
+Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o
+
+Problems/NeuralNetwork/Crossovers/CrsLayer.i: Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsLayer.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.i
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.i
+
+Problems/NeuralNetwork/Crossovers/CrsLayer.s: Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsLayer.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.s
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.s
+
+Problems/NeuralNetwork/Crossovers/CrsNeuron.o: Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuron.o
+
+# target to build an object file
+Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o
+
+Problems/NeuralNetwork/Crossovers/CrsNeuron.i: Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuron.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.i
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.i
+
+Problems/NeuralNetwork/Crossovers/CrsNeuron.s: Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuron.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.s
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.s
+
+Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.o: Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.o
+
+# target to build an object file
+Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o
+
+Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.i: Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.i
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.i
+
+Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.s: Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.s
+.PHONY : Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.s
+
+Problems/NeuralNetwork/Mutations/MutGauss.o: Problems/NeuralNetwork/Mutations/MutGauss.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutGauss.o
+
+# target to build an object file
+Problems/NeuralNetwork/Mutations/MutGauss.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o
+.PHONY : Problems/NeuralNetwork/Mutations/MutGauss.cpp.o
+
+Problems/NeuralNetwork/Mutations/MutGauss.i: Problems/NeuralNetwork/Mutations/MutGauss.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutGauss.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Mutations/MutGauss.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.i
+.PHONY : Problems/NeuralNetwork/Mutations/MutGauss.cpp.i
+
+Problems/NeuralNetwork/Mutations/MutGauss.s: Problems/NeuralNetwork/Mutations/MutGauss.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutGauss.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Mutations/MutGauss.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.s
+.PHONY : Problems/NeuralNetwork/Mutations/MutGauss.cpp.s
+
+Problems/NeuralNetwork/Mutations/MutNeuron.o: Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuron.o
+
+# target to build an object file
+Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o
+
+Problems/NeuralNetwork/Mutations/MutNeuron.i: Problems/NeuralNetwork/Mutations/MutNeuron.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuron.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Mutations/MutNeuron.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.i
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuron.cpp.i
+
+Problems/NeuralNetwork/Mutations/MutNeuron.s: Problems/NeuralNetwork/Mutations/MutNeuron.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuron.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Mutations/MutNeuron.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.s
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuron.cpp.s
+
+Problems/NeuralNetwork/Mutations/MutNeuronN.o: Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuronN.o
+
+# target to build an object file
+Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o
+
+Problems/NeuralNetwork/Mutations/MutNeuronN.i: Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuronN.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.i
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.i
+
+Problems/NeuralNetwork/Mutations/MutNeuronN.s: Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuronN.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.s
+.PHONY : Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.s
+
+Problems/NeuralNetwork/Mutations/MutScale.o: Problems/NeuralNetwork/Mutations/MutScale.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutScale.o
+
+# target to build an object file
+Problems/NeuralNetwork/Mutations/MutScale.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o
+.PHONY : Problems/NeuralNetwork/Mutations/MutScale.cpp.o
+
+Problems/NeuralNetwork/Mutations/MutScale.i: Problems/NeuralNetwork/Mutations/MutScale.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutScale.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Mutations/MutScale.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.i
+.PHONY : Problems/NeuralNetwork/Mutations/MutScale.cpp.i
+
+Problems/NeuralNetwork/Mutations/MutScale.s: Problems/NeuralNetwork/Mutations/MutScale.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutScale.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Mutations/MutScale.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.s
+.PHONY : Problems/NeuralNetwork/Mutations/MutScale.cpp.s
+
+Problems/NeuralNetwork/Mutations/MutScaleNeuron.o: Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutScaleNeuron.o
+
+# target to build an object file
+Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o
+.PHONY : Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o
+
+Problems/NeuralNetwork/Mutations/MutScaleNeuron.i: Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.i
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutScaleNeuron.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.i
+.PHONY : Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.i
+
+Problems/NeuralNetwork/Mutations/MutScaleNeuron.s: Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.s
+
+.PHONY : Problems/NeuralNetwork/Mutations/MutScaleNeuron.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.s
+.PHONY : Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.s
+
+Problems/NeuralNetwork/NNErrorEvalOp.o: Problems/NeuralNetwork/NNErrorEvalOp.cpp.o
+
+.PHONY : Problems/NeuralNetwork/NNErrorEvalOp.o
+
+# target to build an object file
+Problems/NeuralNetwork/NNErrorEvalOp.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o
+.PHONY : Problems/NeuralNetwork/NNErrorEvalOp.cpp.o
+
+Problems/NeuralNetwork/NNErrorEvalOp.i: Problems/NeuralNetwork/NNErrorEvalOp.cpp.i
+
+.PHONY : Problems/NeuralNetwork/NNErrorEvalOp.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/NNErrorEvalOp.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.i
+.PHONY : Problems/NeuralNetwork/NNErrorEvalOp.cpp.i
+
+Problems/NeuralNetwork/NNErrorEvalOp.s: Problems/NeuralNetwork/NNErrorEvalOp.cpp.s
+
+.PHONY : Problems/NeuralNetwork/NNErrorEvalOp.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/NNErrorEvalOp.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.s
+.PHONY : Problems/NeuralNetwork/NNErrorEvalOp.cpp.s
+
+Problems/NeuralNetwork/NeuralNetwork.o: Problems/NeuralNetwork/NeuralNetwork.cpp.o
+
+.PHONY : Problems/NeuralNetwork/NeuralNetwork.o
+
+# target to build an object file
+Problems/NeuralNetwork/NeuralNetwork.cpp.o:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o
+.PHONY : Problems/NeuralNetwork/NeuralNetwork.cpp.o
+
+Problems/NeuralNetwork/NeuralNetwork.i: Problems/NeuralNetwork/NeuralNetwork.cpp.i
+
+.PHONY : Problems/NeuralNetwork/NeuralNetwork.i
+
+# target to preprocess a source file
+Problems/NeuralNetwork/NeuralNetwork.cpp.i:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.i
+.PHONY : Problems/NeuralNetwork/NeuralNetwork.cpp.i
+
+Problems/NeuralNetwork/NeuralNetwork.s: Problems/NeuralNetwork/NeuralNetwork.cpp.s
+
+.PHONY : Problems/NeuralNetwork/NeuralNetwork.s
+
+# target to generate assembly for a file
+Problems/NeuralNetwork/NeuralNetwork.cpp.s:
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.s
+.PHONY : Problems/NeuralNetwork/NeuralNetwork.cpp.s
 
 QuantumRegister.o: QuantumRegister.cpp.o
 
@@ -360,12 +765,57 @@ help:
 	@echo "... Operators/QuantumRotationGate.o"
 	@echo "... Operators/QuantumRotationGate.i"
 	@echo "... Operators/QuantumRotationGate.s"
-	@echo "... Problems/FunctionMinEvalOp.o"
-	@echo "... Problems/FunctionMinEvalOp.i"
-	@echo "... Problems/FunctionMinEvalOp.s"
-	@echo "... Problems/KnapsackEvalOp.o"
-	@echo "... Problems/KnapsackEvalOp.i"
-	@echo "... Problems/KnapsackEvalOp.s"
+	@echo "... Problems/FunctionMin/FunctionMinEvalOp.o"
+	@echo "... Problems/FunctionMin/FunctionMinEvalOp.i"
+	@echo "... Problems/FunctionMin/FunctionMinEvalOp.s"
+	@echo "... Problems/Knapsack/KnapsackEvalOp.o"
+	@echo "... Problems/Knapsack/KnapsackEvalOp.i"
+	@echo "... Problems/Knapsack/KnapsackEvalOp.s"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.o"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.i"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.s"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/LinearFunction.o"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/LinearFunction.i"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/LinearFunction.s"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.o"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.i"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.s"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/SineFunction.o"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/SineFunction.i"
+	@echo "... Problems/NeuralNetwork/ActivationFunctions/SineFunction.s"
+	@echo "... Problems/NeuralNetwork/Algorithms/Backpropagation.o"
+	@echo "... Problems/NeuralNetwork/Algorithms/Backpropagation.i"
+	@echo "... Problems/NeuralNetwork/Algorithms/Backpropagation.s"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsLayer.o"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsLayer.i"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsLayer.s"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsNeuron.o"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsNeuron.i"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsNeuron.s"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.o"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.i"
+	@echo "... Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.s"
+	@echo "... Problems/NeuralNetwork/Mutations/MutGauss.o"
+	@echo "... Problems/NeuralNetwork/Mutations/MutGauss.i"
+	@echo "... Problems/NeuralNetwork/Mutations/MutGauss.s"
+	@echo "... Problems/NeuralNetwork/Mutations/MutNeuron.o"
+	@echo "... Problems/NeuralNetwork/Mutations/MutNeuron.i"
+	@echo "... Problems/NeuralNetwork/Mutations/MutNeuron.s"
+	@echo "... Problems/NeuralNetwork/Mutations/MutNeuronN.o"
+	@echo "... Problems/NeuralNetwork/Mutations/MutNeuronN.i"
+	@echo "... Problems/NeuralNetwork/Mutations/MutNeuronN.s"
+	@echo "... Problems/NeuralNetwork/Mutations/MutScale.o"
+	@echo "... Problems/NeuralNetwork/Mutations/MutScale.i"
+	@echo "... Problems/NeuralNetwork/Mutations/MutScale.s"
+	@echo "... Problems/NeuralNetwork/Mutations/MutScaleNeuron.o"
+	@echo "... Problems/NeuralNetwork/Mutations/MutScaleNeuron.i"
+	@echo "... Problems/NeuralNetwork/Mutations/MutScaleNeuron.s"
+	@echo "... Problems/NeuralNetwork/NNErrorEvalOp.o"
+	@echo "... Problems/NeuralNetwork/NNErrorEvalOp.i"
+	@echo "... Problems/NeuralNetwork/NNErrorEvalOp.s"
+	@echo "... Problems/NeuralNetwork/NeuralNetwork.o"
+	@echo "... Problems/NeuralNetwork/NeuralNetwork.i"
+	@echo "... Problems/NeuralNetwork/NeuralNetwork.s"
 	@echo "... QuantumRegister.o"
 	@echo "... QuantumRegister.i"
 	@echo "... QuantumRegister.s"

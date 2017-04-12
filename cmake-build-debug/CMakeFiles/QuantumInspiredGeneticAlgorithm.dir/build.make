@@ -81,33 +81,9 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o.provides: CMakeFiles/Q
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
 
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o: ../Algorithms/QIGA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o -c /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp
-
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i
-
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s
-
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires:
-
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
-
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides.build
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides
-
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
-
-
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o: ../QuantumRegister.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o -c /home/lirfu/zavrsni/QIGA/QuantumRegister.cpp
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.i: cmake_force
@@ -129,33 +105,33 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.provides: C
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
 
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o: ../Problems/FunctionMinEvalOp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o: ../Algorithms/QIGA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o -c /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.i
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.i
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.s
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Algorithms/QIGA.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.s
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires:
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires:
 
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides.build
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
 
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o: ../Operators/QuantumRotationGate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o -c /home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.cpp
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o: ../Operators/MutQuantumInversion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o -c /home/lirfu/zavrsni/QIGA/Operators/MutQuantumInversion.cpp
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o: ../Operators/MutQuantumSwap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o -c /home/lirfu/zavrsni/QIGA/Operators/MutQuantumSwap.cpp
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.i: cmake_force
@@ -225,56 +201,470 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.pr
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o
 
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o: ../Problems/KnapsackEvalOp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o: ../Problems/FunctionMin/FunctionMinEvalOp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.cpp
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.i
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.i
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.s
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.s
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires:
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.requires:
 
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.requires
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires
-	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides.build
-.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.provides
 
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o: ../Problems/Knapsack/KnapsackEvalOp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o: ../Problems/NeuralNetwork/NeuralNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o: ../Problems/NeuralNetwork/NNErrorEvalOp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o: ../Problems/NeuralNetwork/Algorithms/Backpropagation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o: ../Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o: ../Problems/NeuralNetwork/Crossovers/CrsLayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o: ../Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o: ../Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o: ../Problems/NeuralNetwork/Mutations/MutScale.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o: ../Problems/NeuralNetwork/Mutations/MutGauss.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o: ../Problems/NeuralNetwork/Mutations/MutNeuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o: ../Problems/NeuralNetwork/Mutations/MutNeuronN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o: ../Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o: ../Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o: ../Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o
+
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/flags.make
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o: ../Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o -c /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp > CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.i
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp -o CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.s
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.requires:
+
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.requires
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.provides: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.requires
+	$(MAKE) -f CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.provides.build
+.PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.provides
+
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.provides.build: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o
 
 
 # Object files for target QuantumInspiredGeneticAlgorithm
 QuantumInspiredGeneticAlgorithm_OBJECTS = \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o" \
 "CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o" \
-"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o"
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o" \
+"CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o"
 
 # External object files for target QuantumInspiredGeneticAlgorithm
 QuantumInspiredGeneticAlgorithm_EXTERNAL_OBJECTS =
 
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o
-QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o
-QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o
-QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o
+QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build.make
 QuantumInspiredGeneticAlgorithm: /home/lirfu/zavrsni/ECF_lib/release/libECF.a
 QuantumInspiredGeneticAlgorithm: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable QuantumInspiredGeneticAlgorithm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable QuantumInspiredGeneticAlgorithm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -283,13 +673,28 @@ CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build: QuantumInspiredGeneticAlgo
 .PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/build
 
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/main.cpp.o.requires
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/QuantumRegister.cpp.o.requires
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMinEvalOp.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Algorithms/QIGA.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/QuantumRotationGate.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumInversion.cpp.o.requires
 CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Operators/MutQuantumSwap.cpp.o.requires
-CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/KnapsackEvalOp.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/FunctionMin/FunctionMinEvalOp.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/Knapsack/KnapsackEvalOp.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NeuralNetwork.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/NNErrorEvalOp.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutScale.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutGauss.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuron.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp.o.requires
+CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires: CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp.o.requires
 
 .PHONY : CMakeFiles/QuantumInspiredGeneticAlgorithm.dir/requires
 

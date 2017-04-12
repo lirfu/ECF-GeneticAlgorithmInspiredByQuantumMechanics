@@ -9,12 +9,10 @@ QuantumRotationGate::QuantumRotationGate(double lbound, double ubound) {
     rotationH_ = ubound * M_PI;
 }
 
-// TODO Slowpoke bottleneck. Y U NO FASTER?
-void QuantumRotationGate::performQuantumGateRotation(StateP state, IndividualP reg, IndividualP best) {
-    double fitnessX = reg->fitness->getValue();
-    double fitnessB = best->fitness->getValue();
-    QuantumRegister *registerX = (QuantumRegister *) reg->getGenotype().get();
-    QuantumRegister *registerB = (QuantumRegister *) best->getGenotype().get();
+void QuantumRotationGate::performQuantumGateRotation(StateP state, QuantumRegisterP reg, double fitnessX,
+                                                     QuantumRegisterP best, double fitnessB) {
+    QuantumRegister *registerX = reg.get();
+    QuantumRegister *registerB = best.get();
 
     uint index = 0; // Thetas array iterator.
 
@@ -72,6 +70,9 @@ int QuantumRotationGate::getDirection(StateP state, bool qi, bool bi, double a, 
 }
 
 double QuantumRotationGate::getRotation(double fitX, double fitB) {
+    if (fitX == 0 && fitB == 0)
+        return rotationH_;
+
     return rotationL_ + (rotationH_ - rotationL_) *
                         abs(fitX - fitB) / max(fitX, fitB);
 }

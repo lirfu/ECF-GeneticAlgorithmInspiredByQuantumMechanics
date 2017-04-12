@@ -28,6 +28,7 @@ private:
 
     QuantumRotationGate *rotationGate_ = NULL;
 
+    void adapter(IndividualP, uint);
 };
 
 typedef boost::shared_ptr<QIGA> QIGAP;

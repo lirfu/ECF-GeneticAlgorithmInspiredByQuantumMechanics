@@ -108,16 +108,106 @@
 		<Unit filename="/home/lirfu/zavrsni/QIGA/Operators/QuantumRotationGate.h">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.cpp">
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.cpp">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/FunctionMinEvalOp.h">
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/FunctionMin/FunctionMinEvalOp.h">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.cpp">
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.cpp">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/KnapsackEvalOp.h">
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackEvalOp.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/AbstractActivationFunction.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/LinearFunction.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SigmoidFunction.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/ActivationFunctions/SineFunction.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Algorithms/Backpropagation.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Algorithms/Backpropagation.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsLayer.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuron.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Crossovers/CrsNeuronUniform.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutGauss.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuron.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutNeuronN.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScale.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Mutations/MutScaleNeuron.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NNErrorEvalOp.h">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.cpp">
+			<Option target="QuantumInspiredGeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/NeuralNetwork.h">
 			<Option target="QuantumInspiredGeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/home/lirfu/zavrsni/QIGA/QuantumRegister.cpp">

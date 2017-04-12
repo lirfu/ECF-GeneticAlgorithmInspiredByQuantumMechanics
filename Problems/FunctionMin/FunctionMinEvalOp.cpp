@@ -114,7 +114,7 @@ FitnessP FunctionMinEvalOp::evaluate(IndividualP individual) {
             break;
 
         default:
-            throw ("FunctionMinEvalOp: invalid function index in configuration!");
+            throw ("NNErrorEvalOp: invalid function index in configuration!");
     }
 
     fitness->setValue(value);

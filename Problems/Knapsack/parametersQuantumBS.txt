@@ -1,20 +1,24 @@
 <ECF>
 	<Algorithm>
 		<QIGA>
-			<Entry key="qrot.ubound">0.2</Entry>
-            <Entry key="qrot.lbound">0.08</Entry>
-            <Entry key="disaster">-1</Entry>
+			<Entry key="qrot.ubound">0.15</Entry>
+            <Entry key="qrot.lbound">0.06</Entry>
+            <Entry key="disaster">200</Entry>
 		</QIGA>
 
 	</Algorithm>
 	<Genotype>
+	    <BitString>
+            <Entry key="size">24</Entry>
+        </BitString>
+
 		<QuantumRegister>
             <Entry key="dimension">24</Entry>
             <Entry key="ubound">1</Entry>
             <Entry key="lbound">0</Entry>
             <Entry key="precision">0</Entry>
 
-            <Entry key="initAngle">0.3</Entry>
+            <Entry key="initAngle">0.2</Entry>
 
             <Entry key="mut.quantum_inversion">0.8</Entry>
             <Entry key="mut.quantum_swap">0.2</Entry>
@@ -23,10 +27,17 @@
 
 	<Registry>
 	    <Entry key="eval.knapsackSize">6404180</Entry>
-		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/QIGA/Problems/KnapsackTest2</Entry>
+		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackTest2</Entry>
         <Entry key="population.size">3</Entry>
+
+        <Entry key="crossover.genotypes">all</Entry>
+        <Entry key="crossover.protected">0</Entry>
+        <Entry key="mutation.genotypes">all</Entry>
+        <Entry key="mutation.protected">0</Entry>
 		<Entry key="mutation.indprob">0.3</Entry>
-		<Entry key="term.maxtime">10</Entry>
+
+		<Entry key="term.maxtime">20</Entry>
+
 		<Entry key="log.frequency">100</Entry>
 		<Entry key="log.level">3</Entry>
 	</Registry>

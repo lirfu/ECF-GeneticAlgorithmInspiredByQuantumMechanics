@@ -1,3 +1,0 @@
-/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/lirfu/zavrsni/QIGA/cmake-build-debug/CMakeFiles/QuantumInspiredGeneticAlgorithm.dir

@@ -32,7 +32,6 @@ bool QIGA::initialize(StateP state) {
     return true;
 }
 
-// FIXME Breaks after the first Knapsack generation.
 bool QIGA::advanceGeneration(StateP state, DemeP deme) {
 
     // Store the best solution.
@@ -50,8 +49,10 @@ bool QIGA::advanceGeneration(StateP state, DemeP deme) {
 
     // Check if disaster operator is needed (when the algorithm is stuck in a local optimum).
     bool triggerDisaster = disasterEnabled_ && isDisasterTriggered(best->fitness->getValue());
-    if (triggerDisaster)
-        cout << "Performing disaster" << endl;
+    if (triggerDisaster) {
+        cout << "COUT: Performing population disaster!" << endl;
+        ECF_LOG(state, 3, "Performing population disaster!"); // FIXME Doesn't work??
+    }
 
     uint indexOfQReg; // The index of the QuantumRegister genotype in the Individual is always the last one.
 
@@ -101,7 +102,7 @@ bool QIGA::advanceGeneration(StateP state, DemeP deme) {
 
 bool QIGA::isDisasterTriggered(double bestFitness) {
 
-    if (bestFitness != bestFitness) { // Fitness changed, no local optimal detected.
+    if (bestFitness > disasterBestFitness_) { // Fitness changed, no local optimal detected.
 
         disasterCouter_ = 0;
         disasterBestFitness_ = bestFitness;

@@ -15,20 +15,20 @@ void QuantumRotationGate::performQuantumGateRotation(StateP state, QuantumRegist
     QuantumRegister *registerB = best.get();
 
     uint index = 0; // Thetas array iterator.
+    double rotationAmount = 2 * getRotation(fitnessX, fitnessB); // Rotation angle.
 
     for (uint var = 0; var < registerX->variables.size(); var++)
         for (uint bit = 0; bit < registerX->variables[var].size(); bit++) {
             // Update the thetas with the new recalculated values.
             registerX->thetas_[index] = registerX->thetas_[index]
-                                        + 2
-                                          * getRotation(fitnessX, fitnessB)
+                                        + rotationAmount
                                           * getDirection(
                     state,
                     registerX->variables[var][bit],
                     registerB->variables[var][bit],
                     cos(registerX->thetas_[index] / 2),
                     sin(registerX->thetas_[index] / 2)
-                    );
+            );
 
             index++;
         }
@@ -70,7 +70,7 @@ int QuantumRotationGate::getDirection(StateP state, bool qi, bool bi, double a, 
 }
 
 double QuantumRotationGate::getRotation(double fitX, double fitB) {
-    if (fitX == 0 && fitB == 0)
+    if (max(fitX, fitB) == 0)
         return rotationH_;
 
     return rotationL_ + (rotationH_ - rotationL_) *

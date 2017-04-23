@@ -9,8 +9,8 @@ int main(int argc, char **argv) {
     StateP state(new State);
 
 //    FunctionMinEvalOpP eval(new FunctionMinEvalOp);
-//    KnapsackEvalOpP eval(new KnapsackEvalOp);
-    NNErrorEvalOpP eval(new NNErrorEvalOp);
+    KnapsackEvalOpP eval(new KnapsackEvalOp);
+//    NNErrorEvalOpP eval(new NNErrorEvalOp);
     state->setEvalOp(eval);
 
     NeuralNetworkP nn(new NeuralNetwork);

@@ -79,36 +79,32 @@ bool KnapsackEvalOp::initialize(StateP state) {
 
 
 FitnessP KnapsackEvalOp::evaluate(IndividualP individual) {
-    cout << "ENTER" << endl;
+//    cout << "ENTER" << endl;
 
     FitnessP fitness(new FitnessMax);
 
     double profit = 0;
     double weight = 0;
 
-    cout << "Ind: ";
-    BinaryP gen = boost::dynamic_pointer_cast<Binary::Binary>(individual->getGenotype());
-    for (uint i = 0; i < gen->variables.size(); i++) {
-        for (uint j = 0; j < gen->variables[i].size(); j++) {
-            profit += itemProfits_[i * gen->getNumBits() + j] * gen->variables[i][j];
-            weight += itemWeights_[i * gen->getNumBits() + j] * gen->variables[i][j];
-            cout << gen->variables[i][j] << " ";
-        }
-    }
-    cout << endl;
-
-//    BitStringP gen = boost::dynamic_pointer_cast<BitString::BitString>(individual->getGenotype());
-//    for (uint i = 0; i < gen->bits.size(); i++) {
-//        profit += itemProfits_[i] * gen->bits[i];
-//        weight += itemWeights_[i] * gen->bits[i];
+//    BinaryP gen = boost::dynamic_pointer_cast<Binary::Binary>(individual->getGenotype());
+//    for (uint i = 0; i < gen->variables.size(); i++) {
+//        for (uint j = 0; j < gen->variables[i].size(); j++) {
+//            profit += itemProfits_[i * gen->getNumBits() + j] * gen->variables[i][j];
+//            weight += itemWeights_[i * gen->getNumBits() + j] * gen->variables[i][j];
+//        }
 //    }
+
+    BitStringP gen = boost::dynamic_pointer_cast<BitString::BitString>(individual->getGenotype());
+    for (uint i = 0; i < gen->bits.size(); i++) {
+        profit += itemProfits_[i] * gen->bits[i];
+        weight += itemWeights_[i] * gen->bits[i];
+    }
 
 //     Punish overfilling.
     if (weight > knapsackSize_) {
         profit -= (weight - knapsackSize_) * 5;
     }
 
-    cout << profit << endl;
     fitness->setValue(profit);
     return fitness;
 }

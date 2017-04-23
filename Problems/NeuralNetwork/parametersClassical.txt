@@ -17,12 +17,12 @@
 	</Genotype>
 
 	<Registry>
-		<Entry key="population.size">60</Entry>
+		<Entry key="population.size">70</Entry>
 
-		<Entry key="mutation.indprob">0.3</Entry>
+		<Entry key="mutation.indprob">0.01</Entry>
 
 		<Entry key="term.fitnessval">1e-6</Entry>
-		<Entry key="term.maxtime">120</Entry>
+		<Entry key="term.maxtime">300</Entry>
 		<Entry key="log.frequency">100</Entry>
 		<Entry key="log.level">3</Entry>
 	</Registry>

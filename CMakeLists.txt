@@ -7,12 +7,14 @@ set(SOURCE_FILES
         main.cpp
         QuantumRegister.cpp QuantumRegister.h
         Algorithms/QIGA.cpp Algorithms/QIGA.h
+
         Operators/QuantumRotationGate.cpp Operators/QuantumRotationGate.h
         Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h
-        Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h
         Operators/MutQuantumSwap.cpp Operators/MutQuantumSwap.h
+
         Problems/FunctionMin/FunctionMinEvalOp.cpp Problems/FunctionMin/FunctionMinEvalOp.h
         Problems/Knapsack/KnapsackEvalOp.cpp Problems/Knapsack/KnapsackEvalOp.h
+
         Problems/NeuralNetwork/NeuralNetwork.cpp Problems/NeuralNetwork/NeuralNetwork.h
         Problems/NeuralNetwork/NNErrorEvalOp.cpp Problems/NeuralNetwork/NNErrorEvalOp.h
         Problems/NeuralNetwork/Algorithms/Backpropagation.cpp Problems/NeuralNetwork/Algorithms/Backpropagation.h

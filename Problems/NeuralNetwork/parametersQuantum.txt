@@ -1,9 +1,9 @@
 <ECF>
 	<Algorithm>
 		<QIGA>
-            <Entry key="qrot.ubound">0.15</Entry>
-            <Entry key="qrot.lbound">0.02</Entry>
-            <Entry key="disaster">1000</Entry>
+            <Entry key="qrot.ubound">0.3</Entry>
+            <Entry key="qrot.lbound">0.008</Entry>
+            <Entry key="disaster">800</Entry>
         </QIGA>
 
 	</Algorithm>
@@ -31,16 +31,16 @@
 	</Genotype>
 
 	<Registry>
-		<Entry key="population.size">10</Entry>
+		<Entry key="population.size">5</Entry>
 
 		<Entry key="crossover.genotypes">all</Entry>
         <Entry key="crossover.protected">0</Entry>
         <Entry key="mutation.genotypes">all</Entry>
         <Entry key="mutation.protected">0</Entry>
-        <Entry key="mutation.indprob">0.3</Entry>
+        <Entry key="mutation.indprob">0.01</Entry>
 
 		<Entry key="term.fitnessval">1e-6</Entry>
-		<Entry key="term.maxtime">120</Entry>
+		<Entry key="term.maxtime">300</Entry>
 		<Entry key="log.frequency">100</Entry>
 		<Entry key="log.level">3</Entry>
 	</Registry>

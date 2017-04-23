@@ -1,6 +1,10 @@
 #!/bin/bash
 
-problemName="NeuralNetwork"
+#problemName="FunctionMin"
+problemName="Knapsack"
+#problemName="NeuralNetwork"
+
+workspace="/home/lirfu/zavrsni/QIGA"
 
 compute=false
 display=true
@@ -42,18 +46,21 @@ do
 	shift # Past argument.
 done
 
+mkdir results 2> /dev/null
+cd results
+
 if $compute
 then
-
     # Remove old logs.
-    rm classical_full.log quantum_full.log classicalMin.log classicalMax.log quantumMin.log quantumMax.log joinedMin.tmp joinedMax.tmp 2> /dev/null
+#    rm classical_full.log quantum_full.log classicalMin.log classicalMax.log quantumMin.log quantumMax.log joinedMin.tmp joinedMax.tmp 2> /dev/null
+    rm *
 
     echo "Starting the programs!"
 
     # Start the threads.
-    ../cmake-build-debug/QuantumInspiredGeneticAlgorithm ../Problems/"$problemName"/parametersClassical.txt > classical_full.log &
+    ${workspace}/cmake-build-debug/QuantumInspiredGeneticAlgorithm ${workspace}/Problems/"$problemName"/parametersClassical.txt > classical_full.log &
     class=$!
-    ../cmake-build-debug/QuantumInspiredGeneticAlgorithm ../Problems/"$problemName"/parametersQuantum.txt > quantum_full.log &
+    ${workspace}/cmake-build-debug/QuantumInspiredGeneticAlgorithm ${workspace}/Problems/"$problemName"/parametersQuantum.txt > quantum_full.log &
     quant=$!
 
     # Print out the PIDs, in case of processor overkill.
@@ -112,5 +119,7 @@ fi
 if $display
 then
 # Display the fitness comparison graph.
-java -jar GeneralGraphPlotter.jar joinedMin.tmp joinedMax.tmp joinedAvg.tmp joinedStdev.tmp &
+java -jar ../GeneralGraphPlotter.jar joinedMin.tmp joinedMax.tmp joinedAvg.tmp joinedStdev.tmp &
 fi
+
+cd ..

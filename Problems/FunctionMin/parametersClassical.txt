@@ -15,10 +15,10 @@
 	</Genotype>
 
 	<Registry>
-	    <Entry key="function">2</Entry>
+	    <Entry key="function">6</Entry>
 		<Entry key="population.size">170</Entry>
 
-		<Entry key="term.fitnessval">1e-6</Entry>
+		<Entry key="term.fitnessval">1e-8</Entry>
 		<Entry key="term.maxtime">30</Entry>
 		<Entry key="term.stagnation">400</Entry>
 

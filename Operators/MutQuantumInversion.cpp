@@ -19,8 +19,6 @@ bool MutQuantumInversion::initialize(StateP state) {
 bool MutQuantumInversion::mutate(GenotypeP gene) {
     QuantumRegister *reg = (QuantumRegister *) (gene.get());
 
-    std::default_random_engine generator(std::random_device{}());
-
     // If a mutation occurs.
     if (state_->getRandomizer()->getRandomDouble() < probability_) {
         // Select a qbit to invert.

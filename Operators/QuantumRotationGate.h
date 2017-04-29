@@ -17,7 +17,7 @@ public:
     // Performs the rotation on each register qbit.
     void performQuantumGateRotation(StateP, QuantumRegisterP, double, QuantumRegisterP, double);
 
-private:
+public:
     double rotationH_, rotationL_;
 
     int getDirection(StateP, bool qi, bool bi, double a, double b);

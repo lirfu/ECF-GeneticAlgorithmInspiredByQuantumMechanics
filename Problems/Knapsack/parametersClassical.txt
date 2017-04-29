@@ -13,11 +13,11 @@
 
 	<Registry>
 	    <Entry key="eval.knapsackSize">100</Entry>
-		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackTestMedium</Entry>
+		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackTest1000</Entry>
         <Entry key="population.size">200</Entry>
         <Entry key="mutation.indprob">0.1</Entry>
 
-		<Entry key="term.maxtime">60</Entry>
+		<Entry key="term.maxtime">30</Entry>
 
 		<Entry key="log.frequency">100</Entry>
 		<Entry key="log.level">3</Entry>

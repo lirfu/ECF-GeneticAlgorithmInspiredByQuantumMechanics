@@ -10,7 +10,9 @@
 
 class KnapsackEvalOp : public EvaluateOp {
 protected:
+    StateP state_;
     double knapsackSize_;
+    double punishmentFactor_;
     vector<double> itemWeights_;
     vector<double> itemProfits_;
 public:

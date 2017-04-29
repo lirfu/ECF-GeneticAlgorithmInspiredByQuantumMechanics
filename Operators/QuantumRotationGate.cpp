@@ -26,8 +26,8 @@ void QuantumRotationGate::performQuantumGateRotation(StateP state, QuantumRegist
                     state,
                     registerX->variables[var][bit],
                     registerB->variables[var][bit],
-                    cos(registerX->thetas_[index] / 2),
-                    sin(registerX->thetas_[index] / 2)
+                    cos(registerX->thetas_[index] / 2.),
+                    sin(registerX->thetas_[index] / 2.)
             );
 
             index++;
@@ -44,8 +44,7 @@ int QuantumRotationGate::getDirection(StateP state, bool qi, bool bi, double a, 
             return 1;
         else if (product < 0)
             return -1;
-        else if (a == 0)
-            return 0;
+        else if (a == 0); // Jump to random direction.
 
     } else if (qi > bi) {
         // Qbit is 1 but must be 0.
@@ -54,15 +53,14 @@ int QuantumRotationGate::getDirection(StateP state, bool qi, bool bi, double a, 
             return -1;
         else if (product < 0)
             return 1;
-        else if (b == 0)
-            return 0;
+        else if (b == 0);// Jump to random direction.
 
     } else {
-        // Qbit matches best, no change needed.
+        // Qbit result matches best, no change needed.
         return 0;
     }
 
-    // Return a random direction, can't get any worse.
+    // Return a random direction, improvement in any case.
     if (state->getRandomizer()->getRandomInteger(2) == 0)
         return 1;
     else

@@ -9,16 +9,16 @@
 	</Algorithm>
 	<Genotype>
 	    <BitString>
-            <Entry key="size">1000</Entry>
+            <Entry key="size">10</Entry>
         </BitString>
 
 		<QuantumRegister>
-            <Entry key="dimension">1000</Entry>
+            <Entry key="dimension">10</Entry>
             <Entry key="ubound">1</Entry>
             <Entry key="lbound">0</Entry>
             <Entry key="precision">0</Entry>
 
-            <Entry key="initAngle">0.012</Entry>
+            <Entry key="initAngle">0.01</Entry>
 
             <Entry key="mut.quantum_inversion">0.4</Entry>
             <Entry key="mut.quantum_swap">0.6</Entry>
@@ -26,9 +26,7 @@
 	</Genotype>
 
 	<Registry>
-	    <Entry key="eval.knapsackSize">100</Entry>
-		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackTest1000</Entry>
-        <Entry key="population.size">8</Entry>
+        <Entry key="population.size">3</Entry>
 
         <Entry key="crossover.genotypes">all</Entry>
         <Entry key="crossover.protected">0</Entry>

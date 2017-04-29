@@ -22,7 +22,7 @@ std::vector<MutationOpP> QuantumRegister::getMutationOp() {
 
 std::vector<CrossoverOpP> QuantumRegister::getCrossoverOp() {
     std::vector<CrossoverOpP> crx;
-
+// No crossover needed.
     return crx;
 }
 
@@ -39,7 +39,7 @@ bool QuantumRegister::initialize(StateP state) {
 
     Binary::Binary::initialize(state);
 
-    superpositionQubits(state);
+    resetQbits(state);
 
     return true;
 }
@@ -67,7 +67,7 @@ bool QuantumRegister::initialize(StateP state) {
 //}
 
 void QuantumRegister::measure(StateP state) {
-    // Collapse the qbit superpositions to classical binary string.
+    // Collapse the superpositions of qbits to a classical binary string.
     bool result;
     uint index = 0;
     for (uint variable = 0; variable < nDimension_; variable++) {
@@ -95,7 +95,7 @@ void QuantumRegister::printOut() {
     cout << "]" << endl;
 }
 
-void QuantumRegister::superpositionQubits(StateP state) {
+void QuantumRegister::resetQbits(StateP state) {
     double superpositionThetaValue = (*(double *) getParameterValue(state, "initAngle").get()) * M_PI;
 
     ulong qbitsRequired = variables.size() * nBits_;

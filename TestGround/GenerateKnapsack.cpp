@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <fstream>
 #include <vector>
+#include <string>
 
 using namespace std;
 //
@@ -10,8 +11,8 @@ using namespace std;
 //
 
 int main() {
-    int MAXPRO = 100, ITEMNUM = 100, SIZE;
-    int i, wght, pro;
+    uint MAXPRO = 100, ITEMNUM = 100, SIZE, UBOUND;
+    int wght, pro;
     // Statictics
     int min, max;
     double avg;
@@ -23,6 +24,10 @@ int main() {
     cin >> ITEMNUM;
     cout << "Please enter the maximum profit: ";
     cin >> MAXPRO;
+    cout << "Please enter the items upper weight bound (to use knapsack size enter negative): ";
+    cin >> UBOUND;
+    if (UBOUND <= 0)
+        UBOUND = SIZE;
 
     ofstream file("KnapsackTest");
     if (file.is_open()) {
@@ -31,7 +36,7 @@ int main() {
         vector<int> profits;
 
         // First.
-        wght = rand() % SIZE + 1;
+        wght = rand() % UBOUND + 1;
         pro = rand() % MAXPRO + 1;
         weights.push_back(wght);
         profits.push_back(pro);
@@ -40,8 +45,8 @@ int main() {
         avg = wght;
         min = max = wght;
 
-        for (i = 1; i < ITEMNUM; i++) {
-            wght = rand() % SIZE + 1;
+        for (uint i = 1; i < ITEMNUM; i++) {
+            wght = rand() % UBOUND + 1;
             pro = rand() % MAXPRO + 1;
             weights.push_back(wght);
             profits.push_back(pro);
@@ -61,7 +66,7 @@ int main() {
         file << "# \tmax: " << max << endl;
         file << "# \tavg: " << avg << endl;
 
-        for (i = 0; i < weights.size(); i++) {
+        for (uint i = 0; i < weights.size(); i++) {
             file << weights[i] << " " << profits[i] << endl;
         }
 

@@ -16,6 +16,8 @@ public:
 
     bool initialize(StateP state);
 
+    bool initializePopulation(StateP);
+
     bool advanceGeneration(StateP, DemeP);
 
 private:

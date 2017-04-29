@@ -30,7 +30,7 @@ public:
 
 //    void read(XMLNode &xQuantumRegister);
 
-    void superpositionQubits(StateP);
+    void resetQbits(StateP);
 
     void measure(StateP);
 

@@ -32,6 +32,17 @@ bool QIGA::initialize(StateP state) {
     return true;
 }
 
+bool QIGA::initializePopulation(StateP state) {
+    Algorithm::initializePopulation(state);
+
+    DemeP deme = state->getPopulation()->getLocalDeme();
+
+    for (uint i = 0; i < deme->size(); i++) {
+        adapter(deme->at(i), (uint) deme->at(i)->size() - 1);
+    }
+
+}
+
 bool QIGA::advanceGeneration(StateP state, DemeP deme) {
 
     // Store the best solution.
@@ -50,23 +61,24 @@ bool QIGA::advanceGeneration(StateP state, DemeP deme) {
     // Check if disaster operator is needed (when the algorithm is stuck in a local optimum).
     bool triggerDisaster = disasterEnabled_ && isDisasterTriggered(best->fitness->getValue());
     if (triggerDisaster) {
-        cout << "COUT: Performing population disaster!" << endl;
+        cout << "Performing population disaster!" << endl;
         ECF_LOG(state, 3, "Performing population disaster!"); // FIXME Doesn't work??
     }
 
     uint indexOfQReg; // The index of the QuantumRegister genotype in the Individual is always the last one.
+    QuantumRegister *quantumRegister;
 
     // Update the rest of the population with quantum operators.
     for (uint i = 0; i < deme->size(); i++) {
         indexOfQReg = (uint) deme->at(i)->size() - 1; // Find the index of the last genotype.
+        quantumRegister = (QuantumRegister *) deme->at(i)->getGenotype(indexOfQReg).get();
 
         // Best individual is left intact (elitism).
         if (i != indexOfBest) {
 
             // Execute the disaster operator if needed.
-            if (triggerDisaster) {
-                ((QuantumRegister *) deme->at(i)->getGenotype(indexOfQReg).get())->superpositionQubits(state);
-            }
+            if (triggerDisaster)
+                quantumRegister->resetQbits(state);
 
             // Use the quantum rotation gate to converge the individual toward the best, performs local space search.
             rotationGate_->performQuantumGateRotation(
@@ -82,12 +94,12 @@ bool QIGA::advanceGeneration(StateP state, DemeP deme) {
         }
 
         // Measure the new individual to generate a classical bit string, helps with local optima problem and global space search.
-        ((QuantumRegister *) deme->at(i)->getGenotype(indexOfQReg).get())->measure(state);
+        quantumRegister->measure(state);
 
         // Update the register's real values, needed for evaluation.
-        ((QuantumRegister *) deme->at(i)->getGenotype(indexOfQReg).get())->update();
+        quantumRegister->update();
 
-        // If QuantumRegister is the only genotype.
+        // If QuantumRegister is not the only genotype.
         if (indexOfQReg > 0)
 
             // Update the other genotype to inherit the results.
@@ -102,7 +114,7 @@ bool QIGA::advanceGeneration(StateP state, DemeP deme) {
 
 bool QIGA::isDisasterTriggered(double bestFitness) {
 
-    if (bestFitness > disasterBestFitness_) { // Fitness changed, no local optimal detected.
+    if (bestFitness != disasterBestFitness_) { // Fitness changed, no local optimal detected.
 
         disasterCouter_ = 0;
         disasterBestFitness_ = bestFitness;

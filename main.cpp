@@ -8,13 +8,13 @@
 int main(int argc, char **argv) {
     StateP state(new State);
 
-//    FunctionMinEvalOpP eval(new FunctionMinEvalOp);
-    KnapsackEvalOpP eval(new KnapsackEvalOp);
+    FunctionMinEvalOpP eval(new FunctionMinEvalOp);
+//    KnapsackEvalOpP eval(new KnapsackEvalOp);
 //    NNErrorEvalOpP eval(new NNErrorEvalOp);
     state->setEvalOp(eval);
 
-    NeuralNetworkP nn(new NeuralNetwork);
-    state->addGenotype(nn);
+//    NeuralNetworkP nn(new NeuralNetwork);
+//    state->addGenotype(nn);
 
     QuantumRegisterP qreg(new QuantumRegister);
     state->addGenotype(qreg);

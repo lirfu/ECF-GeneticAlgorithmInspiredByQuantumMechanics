@@ -68,14 +68,11 @@ bool QuantumRegister::initialize(StateP state) {
 
 void QuantumRegister::measure(StateP state) {
     // Collapse the superpositions of qbits to a classical binary string.
-    bool result;
     uint index = 0;
     for (uint variable = 0; variable < nDimension_; variable++) {
         for (uint bit = 0; bit < nBits_; bit++) {
             // Measure the qbit state based on alpha squared.
-            result = state->getRandomizer()->getRandomDouble() > pow(cos(thetas_[index] / 2), 2);
-
-            variables[variable][bit] = result;
+            variables[variable][bit] = state->getRandomizer()->getRandomDouble() > pow(cos(thetas_[index] / 2), 2);
 
             index++;
         }
@@ -96,7 +93,7 @@ void QuantumRegister::printOut() {
 }
 
 void QuantumRegister::resetQbits(StateP state) {
-    double superpositionThetaValue = (*(double *) getParameterValue(state, "initAngle").get()) * M_PI;
+    double superpositionThetaValue = *(double *) getParameterValue(state, "initAngle").get() * M_PI;
 
     ulong qbitsRequired = variables.size() * nBits_;
     thetas_.clear();

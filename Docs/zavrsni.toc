@@ -1,50 +1,77 @@
 \select@language {croatian}
 \contentsline {chapter}{\numberline {1}Uvod}{1}
-\contentsline {section}{\numberline {1.1}Povijest kvantnih algoritama i procesora}{1}
-\contentsline {subsection}{\numberline {1.1.1}Algoritmi}{1}
-\contentsline {subsection}{\numberline {1.1.2}Ra\IeC {\v c}unala}{1}
-\contentsline {section}{\numberline {1.2}Trenutno stanje u svijetu}{1}
-\contentsline {chapter}{\numberline {2}Kvantni bit (qbit)}{2}
-\contentsline {section}{\numberline {2.1}Princip rada}{2}
+\contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {section}{\numberline {1.1}Kvantni algoritmi i ra\IeC {\v c}unala}{1}
+\contentsline {paragraph}{}{1}
 \contentsline {paragraph}{}{2}
-\contentsline {paragraph}{}{2}
-\contentsline {paragraph}{}{2}
-\contentsline {paragraph}{}{3}
-\contentsline {subsection}{\numberline {2.1.1}Blochova shema}{3}
-\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {1.2}Trenutno stanje u svijetu}{2}
+\contentsline {paragraph}{D-Wave}{2}
+\contentsline {chapter}{\numberline {2}Kvantni bit (qbit)}{3}
+\contentsline {section}{\numberline {2.1}Princip rada}{3}
 \contentsline {paragraph}{}{3}
 \contentsline {paragraph}{}{3}
 \contentsline {paragraph}{}{3}
 \contentsline {paragraph}{}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {subsection}{\numberline {2.1.2}Aproksimacija kvantnog stanja}{4}
-\contentsline {paragraph}{}{4}
+\contentsline {subsection}{\numberline {2.1.1}Blochova shema}{4}
 \contentsline {paragraph}{}{4}
 \contentsline {paragraph}{}{4}
-\contentsline {section}{\numberline {2.2}Kvantni registar}{5}
-\contentsline {chapter}{\numberline {3}Genetski algoritam inspiriran kvantnom mehanikom}{6}
-\contentsline {section}{\numberline {3.1}Klasi\IeC {\v c}ni genetski algoritam (CGA)}{6}
-\contentsline {subsection}{\numberline {3.1.1}Djelovi}{6}
-\contentsline {subsection}{\numberline {3.1.2}Pseudokod}{6}
-\contentsline {section}{\numberline {3.2}Genetski algoritam inspiriran kvantnom mehanikom}{7}
-\contentsline {subsection}{\numberline {3.2.1}Djelovi}{7}
-\contentsline {subsection}{\numberline {3.2.2}Pseudokod}{7}
-\contentsline {subsection}{\numberline {3.2.3}Rad algoritma}{7}
-\contentsline {subsection}{\numberline {3.2.4}Implementacijski detalji}{7}
-\contentsline {chapter}{\numberline {4}Primjena}{8}
-\contentsline {section}{\numberline {4.1}Tra\IeC {\v z}enje globalnog minimuma funkcije (FunctionMin)}{8}
-\contentsline {subsection}{\numberline {4.1.1}Opis problema}{8}
-\contentsline {subsection}{\numberline {4.1.2}Rezultat}{8}
-\contentsline {section}{\numberline {4.2}Knapsack problem}{8}
-\contentsline {subsection}{\numberline {4.2.1}Opis problema}{8}
-\contentsline {subsection}{\numberline {4.2.2}Rezultat}{9}
-\contentsline {section}{\numberline {4.3}Regresija neuronske mre\IeC {\v z}e}{9}
-\contentsline {subsection}{\numberline {4.3.1}Opis problema}{9}
-\contentsline {subsection}{\numberline {4.3.2}Rezultat}{9}
-\contentsline {section}{\numberline {4.4}COCO}{9}
-\contentsline {subsection}{\numberline {4.4.1}Opis problema}{9}
-\contentsline {subsection}{\numberline {4.4.2}Rezultat}{9}
-\contentsline {chapter}{\numberline {5}Mogu\IeC {\'c}a nadogradnja}{10}
-\contentsline {section}{\numberline {5.1}Paralelizacija}{10}
-\contentsline {section}{\numberline {5.2}Podr\IeC {\v z}avanje vi\IeC {\v s}e-genotipskih jedinki}{10}
-\contentsline {chapter}{\numberline {6}Zaklju\IeC {\v c}ak}{11}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {2.1.2}Aproksimacija kvantnog stanja}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {2.2}Kvantni registar}{6}
+\contentsline {chapter}{\numberline {3}Genetski algoritam inspiriran kvantnom mehanikom}{7}
+\contentsline {section}{\numberline {3.1}Klasi\IeC {\v c}ni genetski algoritam (CGA)}{7}
+\contentsline {subsection}{\numberline {3.1.1}Dijelovi}{7}
+\contentsline {subsubsection}{Genotip}{7}
+\contentsline {subsubsection}{Operator kri\IeC {\v z}anja}{7}
+\contentsline {subsubsection}{Operator mutacije}{8}
+\contentsline {subsubsection}{Evaluator}{8}
+\contentsline {subsection}{\numberline {3.1.2}Pseudokod}{8}
+\contentsline {section}{\numberline {3.2}Kvantni genetski algoritam (QGA)}{8}
+\contentsline {subsection}{\numberline {3.2.1}Dijelovi}{8}
+\contentsline {subsubsection}{Kvantni genotip (kvantni registar)}{9}
+\contentsline {subsubsection}{Kvantna rotacijska vrata}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{10}
+\contentsline {subsubsection}{Inicijalizator populacije}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {subsubsection}{Operator mjerenja qbita}{10}
+\contentsline {subsubsection}{Evaluator}{10}
+\contentsline {subsubsection}{Operator kvantnih rotacijskih vrata}{10}
+\contentsline {subsection}{\numberline {3.2.2}Pseudokod}{10}
+\contentsline {section}{\numberline {3.3}Genetski algoritam inspiriran kvantnom mehanikom (GAIQM)}{10}
+\contentsline {subsection}{\numberline {3.3.1}Dijelovi}{11}
+\contentsline {subsubsection}{Kvantni genotip (kvantni registar)}{11}
+\contentsline {subsubsection}{Kvantni operator mutacije}{11}
+\contentsline {subsubsection}{Evaluator}{12}
+\contentsline {subsubsection}{Operator kvantnih rotacijskih vrata}{12}
+\contentsline {subsection}{\numberline {3.3.2}Pseudokod}{12}
+\contentsline {subsection}{\numberline {3.3.3}Implementacija algoritma}{12}
+\contentsline {paragraph}{}{12}
+\contentsline {subsection}{\numberline {3.3.4}Rad algoritma}{12}
+\contentsline {chapter}{\numberline {4}Primjena}{13}
+\contentsline {section}{\numberline {4.1}Tra\IeC {\v z}enje globalnog minimuma funkcije (FunctionMin)}{13}
+\contentsline {subsection}{\numberline {4.1.1}Opis problema}{13}
+\contentsline {paragraph}{Zadane funkcije:}{13}
+\contentsline {subsection}{\numberline {4.1.2}Rezultat}{13}
+\contentsline {section}{\numberline {4.2}Knapsack problem}{13}
+\contentsline {subsection}{\numberline {4.2.1}Opis problema}{13}
+\contentsline {subsection}{\numberline {4.2.2}Rezultat}{14}
+\contentsline {section}{\numberline {4.3}Regresija neuronske mre\IeC {\v z}e}{14}
+\contentsline {subsection}{\numberline {4.3.1}Opis problema}{14}
+\contentsline {subsection}{\numberline {4.3.2}Rezultat}{14}
+\contentsline {section}{\numberline {4.4}COCO}{14}
+\contentsline {subsection}{\numberline {4.4.1}Opis problema}{14}
+\contentsline {subsection}{\numberline {4.4.2}Rezultat}{14}
+\contentsline {chapter}{\numberline {5}Mogu\IeC {\'c}a nadogradnja}{15}
+\contentsline {section}{\numberline {5.1}Paralelizacija}{15}
+\contentsline {section}{\numberline {5.2}Podr\IeC {\v z}avanje vi\IeC {\v s}e-genotipskih jedinki}{15}
+\contentsline {chapter}{\numberline {6}Zaklju\IeC {\v c}ak}{16}
+\contentsline {chapter}{\numberline {A}Parametri}{17}

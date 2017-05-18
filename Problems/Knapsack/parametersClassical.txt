@@ -13,7 +13,7 @@
 
 	<Registry>
 	    <Entry key="eval.knapsackSize">100</Entry>
-		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/QIGA/Problems/Knapsack/KnapsackTest1000</Entry>
+		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/GAIQM/Problems/Knapsack/KnapsackTest1000</Entry>
         <Entry key="population.size">200</Entry>
         <Entry key="mutation.indprob">0.1</Entry>
 

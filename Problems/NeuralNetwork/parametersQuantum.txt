@@ -1,10 +1,10 @@
 <ECF>
 	<Algorithm>
-		<QIGA>
+		<GAIQM>
             <Entry key="qrot.ubound">0.3</Entry>
             <Entry key="qrot.lbound">0.008</Entry>
             <Entry key="disaster">800</Entry>
-        </QIGA>
+        </GAIQM>
 
 	</Algorithm>
 	<Genotype>
@@ -13,7 +13,7 @@
 			<Entry key="activations">sig lin</Entry>
 			<Entry key="lbound">-1</Entry>
 			<Entry key="ubound">1</Entry>
-			<Entry key="dataFile">/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Testing/data(x2)</Entry>
+			<Entry key="dataFile">/home/lirfu/zavrsni/GAIQM/Problems/NeuralNetwork/Testing/data(x2)</Entry>
 			<Entry key="errorFunc">MSE</Entry>
 		</NeuralNetwork>
 

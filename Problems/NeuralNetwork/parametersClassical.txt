@@ -11,7 +11,7 @@
 			<Entry key="activations">sig lin</Entry>
 			<Entry key="lbound">-1</Entry>
 			<Entry key="ubound">1</Entry>
-			<Entry key="dataFile">/home/lirfu/zavrsni/QIGA/Problems/NeuralNetwork/Testing/data(x2)</Entry>
+			<Entry key="dataFile">/home/lirfu/zavrsni/GAIQM/Problems/NeuralNetwork/Testing/data(x2)</Entry>
 			<Entry key="errorFunc">MSE</Entry>
 		</NeuralNetwork>
 	</Genotype>

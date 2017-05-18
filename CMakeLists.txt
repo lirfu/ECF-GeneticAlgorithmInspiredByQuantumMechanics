@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
         main.cpp
         QuantumRegister.cpp QuantumRegister.h
-        Algorithms/QIGA.cpp Algorithms/QIGA.h
+        Algorithms/GAIQM.cpp Algorithms/GAIQM.h
 
         Operators/QuantumRotationGate.cpp Operators/QuantumRotationGate.h
         Operators/MutQuantumInversion.cpp Operators/MutQuantumInversion.h

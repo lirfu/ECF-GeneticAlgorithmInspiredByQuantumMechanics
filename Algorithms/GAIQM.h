@@ -8,9 +8,9 @@
 #include "ecf/ECF.h"
 #include "../Operators/QuantumRotationGate.h"
 
-class QIGA : public Algorithm {
+class GAIQM : public Algorithm {
 public:
-    QIGA();
+    GAIQM();
 
     void registerParameters(StateP state);
 
@@ -33,7 +33,7 @@ private:
     void adapter(IndividualP, uint);
 };
 
-typedef boost::shared_ptr<QIGA> QIGAP;
+typedef boost::shared_ptr<GAIQM> GAIQMP;
 
 
 #endif //QUANTUMINSPIREDGENETICALGORITHM_QIGA_H

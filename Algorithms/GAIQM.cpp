@@ -2,13 +2,13 @@
 // Created by lirfu on 27.02.17..
 //
 
-#include "QIGA.h"
+#include "GAIQM.h"
 
-QIGA::QIGA() {
-    name_ = "QIGA";
+GAIQM::GAIQM() {
+    name_ = "GAIQM";
 }
 
-void QIGA::registerParameters(StateP state) {
+void GAIQM::registerParameters(StateP state) {
     Algorithm::registerParameters(state);
 
     registerParameter(state, "qrot.ubound", (voidP) (new double(0.1)), ECF::DOUBLE,
@@ -19,7 +19,7 @@ void QIGA::registerParameters(StateP state) {
                       "number of repeated best individuals before triggering the disaster operator.");
 }
 
-bool QIGA::initialize(StateP state) {
+bool GAIQM::initialize(StateP state) {
     Algorithm::initialize(state);
 
     double ubound = *((double *) getParameterValue(state, "qrot.ubound").get());
@@ -32,7 +32,7 @@ bool QIGA::initialize(StateP state) {
     return true;
 }
 
-bool QIGA::initializePopulation(StateP state) {
+bool GAIQM::initializePopulation(StateP state) {
     Algorithm::initializePopulation(state);
 
     DemeP deme = state->getPopulation()->getLocalDeme();
@@ -43,7 +43,7 @@ bool QIGA::initializePopulation(StateP state) {
 
 }
 
-bool QIGA::advanceGeneration(StateP state, DemeP deme) {
+bool GAIQM::advanceGeneration(StateP state, DemeP deme) {
 
     // Store the best solution.
     IndividualP best = (deme->hof_->getBest().at(0)); // Guess the best.
@@ -112,7 +112,7 @@ bool QIGA::advanceGeneration(StateP state, DemeP deme) {
     return true;
 }
 
-bool QIGA::isDisasterTriggered(double bestFitness) {
+bool GAIQM::isDisasterTriggered(double bestFitness) {
 
     if (bestFitness != disasterBestFitness_) { // Fitness changed, no local optimal detected.
 
@@ -136,7 +136,7 @@ bool QIGA::isDisasterTriggered(double bestFitness) {
     }
 }
 
-void QIGA::adapter(IndividualP gen, uint indexOfQReg) {
+void GAIQM::adapter(IndividualP gen, uint indexOfQReg) {
     QuantumRegister *reg = (QuantumRegister *) gen->getGenotype(indexOfQReg).get();
 
     if (boost::dynamic_pointer_cast<BitString::BitString>(gen->getGenotype(0)) != nullptr) {

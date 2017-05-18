@@ -4,7 +4,7 @@
 problemName="Knapsack"
 #problemName="NeuralNetwork"
 
-workspace="/home/lirfu/zavrsni/QIGA"
+workspace="/home/lirfu/zavrsni/GAIQM"
 
 compute=false
 display=true
@@ -112,7 +112,7 @@ echo "Quantum:   $quantFit    (gen $quantGen)"
 if $NOTIFY
 then
     # Send a Slack notification.
-    curl -X POST --data-urlencode 'payload={"channel": "***YOUR_CHANNEL_HERE***", "username": "CGAvsQIGA", "text": "Finished processing the CGA-QIGA comparison.", "icon_emoji": ":ant:", "color": "#00bb44"}' ***YOUR_HOOK_ID***
+    curl -X POST --data-urlencode 'payload={"channel": "***YOUR_CHANNEL_HERE***", "username": "CGAvsQIGA", "text": "Finished processing the CGA-GAIQM comparison.", "icon_emoji": ":ant:", "color": "#00bb44"}' ***YOUR_HOOK_ID***
 fi
 
 

@@ -11,7 +11,7 @@
 #include <ecf/ECF.h>
 
 #include "../QuantumRegister.h"
-#include "../Algorithms/QIGA.h"
+#include "../Algorithms/GAIQM.h"
 #include "../Operators/QuantumRotationGate.h"
 #include "../Operators/MutQuantumInversion.h"
 #include "../Operators/MutQuantumSwap.h"

@@ -1,10 +1,10 @@
 <ECF>
 	<Algorithm>
-		<QIGA>
+		<GAIQM>
 			<Entry key="qrot.ubound">0.2</Entry>
             <Entry key="qrot.lbound">0.005</Entry>
             <Entry key="disaster">300</Entry>
-		</QIGA>
+		</GAIQM>
 
 	</Algorithm>
 	<Genotype>

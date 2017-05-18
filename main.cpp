@@ -1,5 +1,5 @@
 #include <ecf/ECF.h>
-#include "Algorithms/QIGA.h"
+#include "Algorithms/GAIQM.h"
 #include "Problems/FunctionMin/FunctionMinEvalOp.h"
 #include "Problems/Knapsack/KnapsackEvalOp.h"
 #include "Problems/NeuralNetwork/NeuralNetwork.h"
@@ -8,8 +8,8 @@
 int main(int argc, char **argv) {
     StateP state(new State);
 
-    FunctionMinEvalOpP eval(new FunctionMinEvalOp);
-//    KnapsackEvalOpP eval(new KnapsackEvalOp);
+//    FunctionMinEvalOpP eval(new FunctionMinEvalOp);
+    KnapsackEvalOpP eval(new KnapsackEvalOp);
 //    NNErrorEvalOpP eval(new NNErrorEvalOp);
     state->setEvalOp(eval);
 
@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
     QuantumRegisterP qreg(new QuantumRegister);
     state->addGenotype(qreg);
 
-    QIGAP qga(new QIGA);
+    GAIQMP qga(new GAIQM);
     state->addAlgorithm(qga);
 
     state->initialize(argc, argv);

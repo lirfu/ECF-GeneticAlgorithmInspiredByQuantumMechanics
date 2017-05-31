@@ -1,9 +1,9 @@
 <ECF>
 	<Algorithm>
 		<GAIQM>
-            <Entry key="qrot.ubound">0.3</Entry>
-            <Entry key="qrot.lbound">0.008</Entry>
-            <Entry key="disaster">800</Entry>
+            <Entry key="qrot.ubound">0.015</Entry>
+            <Entry key="qrot.lbound">0.004</Entry>
+            <Entry key="disaster">400</Entry>
         </GAIQM>
 
 	</Algorithm>
@@ -23,15 +23,15 @@
             <Entry key="lbound">-1</Entry>
             <Entry key="precision">16</Entry>
 
-            <Entry key="initAngle">0.5</Entry>
+            <Entry key="initAngle">0.4</Entry>
 
-            <Entry key="mut.quantum_inversion">0.8</Entry>
-            <Entry key="mut.quantum_swap">0.2</Entry>
+            <Entry key="mut.quantum_inversion">1</Entry>
+            <Entry key="mut.quantum_swap">1</Entry>
         </QuantumRegister>
 	</Genotype>
 
 	<Registry>
-		<Entry key="population.size">5</Entry>
+		<Entry key="population.size">50</Entry>
 
 		<Entry key="crossover.genotypes">all</Entry>
         <Entry key="crossover.protected">0</Entry>
@@ -40,7 +40,8 @@
         <Entry key="mutation.indprob">0.01</Entry>
 
 		<Entry key="term.fitnessval">1e-6</Entry>
-		<Entry key="term.maxtime">300</Entry>
+        <Entry key="term.eval">200000</Entry>
+
 		<Entry key="log.frequency">100</Entry>
 		<Entry key="log.level">3</Entry>
 	</Registry>

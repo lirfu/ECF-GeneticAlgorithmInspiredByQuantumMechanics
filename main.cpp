@@ -13,8 +13,8 @@ int main(int argc, char **argv) {
 //    NNErrorEvalOpP eval(new NNErrorEvalOp);
     state->setEvalOp(eval);
 
-//    NeuralNetworkP nn(new NeuralNetwork);
-//    state->addGenotype(nn);
+    NeuralNetworkP nn(new NeuralNetwork);
+    state->addGenotype(nn);
 
     QuantumRegisterP qreg(new QuantumRegister);
     state->addGenotype(qreg);
@@ -24,4 +24,6 @@ int main(int argc, char **argv) {
 
     state->initialize(argc, argv);
     state->run();
+
+    cout << "Total evaluations: " << state->getStats()->getEvaluations() << endl;
 }

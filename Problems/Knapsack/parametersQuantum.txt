@@ -3,7 +3,7 @@
 		<GAIQM>
 			<Entry key="qrot.ubound">0.2</Entry>
             <Entry key="qrot.lbound">0.005</Entry>
-            <Entry key="disaster">300</Entry>
+            <Entry key="disaster">500</Entry>
 		</GAIQM>
 
 	</Algorithm>
@@ -18,17 +18,17 @@
             <Entry key="lbound">0</Entry>
             <Entry key="precision">0</Entry>
 
-            <Entry key="initAngle">0.012</Entry>
+            <Entry key="initAngle">0.01</Entry>
 
-            <Entry key="mut.quantum_inversion">0.4</Entry>
-            <Entry key="mut.quantum_swap">0.6</Entry>
+            <Entry key="mut.quantum_inversion">1</Entry>
+            <Entry key="mut.quantum_swap">1</Entry>
         </QuantumRegister>
 	</Genotype>
 
 	<Registry>
 	    <Entry key="eval.knapsackSize">100</Entry>
 		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/GAIQM/Problems/Knapsack/KnapsackTest1000</Entry>
-        <Entry key="population.size">8</Entry>
+        <Entry key="population.size">10</Entry>
 
         <Entry key="crossover.genotypes">all</Entry>
         <Entry key="crossover.protected">0</Entry>
@@ -36,9 +36,13 @@
         <Entry key="mutation.protected">0</Entry>
 		<Entry key="mutation.indprob">0.04</Entry>
 
-		<Entry key="term.maxtime">30</Entry>
+        <Entry key="term.fitnessval">3616</Entry>
+		<Entry key="term.eval">200000</Entry>
 
-		<Entry key="log.frequency">100</Entry>
+		<Entry key="log.frequency">1</Entry>
 		<Entry key="log.level">3</Entry>
+
+		<Entry key="coco.enableoutput">1</Entry>
+        <Entry key="coco.folder">/home/lirfu/zavrsni/GAIQM/Results/Knapsack1000</Entry>
 	</Registry>
 </ECF>

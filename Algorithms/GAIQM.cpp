@@ -37,10 +37,22 @@ bool GAIQM::initializePopulation(StateP state) {
 
     DemeP deme = state->getPopulation()->getLocalDeme();
 
+    uint indexOfQReg;
+    QuantumRegister *quantumRegister;
     for (uint i = 0; i < deme->size(); i++) {
-        adapter(deme->at(i), (uint) deme->at(i)->size() - 1);
+        indexOfQReg = (uint) deme->at(i)->size() - 1;
+        quantumRegister = (QuantumRegister *) deme->at(i)->getGenotype(indexOfQReg).get();
+
+        quantumRegister->measure(state);
+        quantumRegister->update();
+
+        if (indexOfQReg > 0)
+            adapter(deme->at(i), indexOfQReg);
+
+        evaluate(deme->at(i));
     }
 
+    return true;
 }
 
 bool GAIQM::advanceGeneration(StateP state, DemeP deme) {
@@ -114,26 +126,20 @@ bool GAIQM::advanceGeneration(StateP state, DemeP deme) {
 
 bool GAIQM::isDisasterTriggered(double bestFitness) {
 
-    if (bestFitness != disasterBestFitness_) { // Fitness changed, no local optimal detected.
+    if (disasterCouter_ == disasterTrigger_) {
+        disasterCouter_ = 0;
+        return true;
 
+    } else if (bestFitness == disasterBestFitness_) {
+        disasterCouter_++;
+        return false;
+
+    } else {
         disasterCouter_ = 0;
         disasterBestFitness_ = bestFitness;
         return false;
-
-    } else { // Local optima detected (same best fitness repeated).
-
-        if (disasterCouter_ == disasterTrigger_) { // Local optima repeated too many times, disaster triggered.
-
-            disasterCouter_ = 0;
-            return true;
-
-        } else { // Repeated fitness, one step closer to disaster.
-
-            disasterCouter_++;
-            return false;
-
-        }
     }
+
 }
 
 void GAIQM::adapter(IndividualP gen, uint indexOfQReg) {

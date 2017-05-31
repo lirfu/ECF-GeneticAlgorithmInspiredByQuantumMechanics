@@ -44,8 +44,8 @@ bool QuantumRegister::initialize(StateP state) {
     return true;
 }
 
-// NOT NEEDED IF EXTENDING FLOATING POINT AND NOT STORING ANY PERSONAL PARAMS.
-//void QuantumRegister::write(XMLNode &xQuantumRegister) {
+void QuantumRegister::write(XMLNode &xQuantumRegister) {
+    Binary::write(xQuantumRegister);
 //    xQuantumRegister = XMLNode::createXMLTopNode("QuantumRegister");
 //    std::stringstream sValue;
 //    sValue << nDimension_;
@@ -55,8 +55,10 @@ bool QuantumRegister::initialize(StateP state) {
 //    for(uint iVar = 0; iVar < nDimension_; iVar++)
 //        sValue << "\t" << realValue[iVar];
 //    xFloatingPoint.addText(sValue.str().c_str());
-//}
-//void QuantumRegister::read(XMLNode &xQuantumRegister) {
+}
+
+void QuantumRegister::read(XMLNode &xQuantumRegister) {
+    Binary::read(xQuantumRegister);
 //    XMLCSTR values = xQuantumRegister.getText();
 //    std::stringstream sValues;
 //    sValues << values;
@@ -64,7 +66,7 @@ bool QuantumRegister::initialize(StateP state) {
 //    for(uint iVar = 0; iVar < nDimension_; iVar++) {
 //        sValues >> realValue[iVar];
 //    }
-//}
+}
 
 void QuantumRegister::measure(StateP state) {
     // Collapse the superpositions of qbits to a classical binary string.

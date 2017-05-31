@@ -19,21 +19,18 @@ bool MutQuantumSwap::initialize(StateP state) {
 bool MutQuantumSwap::mutate(GenotypeP gene) {
     QuantumRegister *reg = (QuantumRegister *) (gene.get());
 
-    // If a mutation occurs.
-    if (state_->getRandomizer()->getRandomDouble() < probability_) {
-        // Select the 1st qbit to swap.
-        uint index1 = (uint) ((std::rand()) % reg->thetas_.size());
-        // Select the 2nd qbit to swap, different from the first one.
-        uint index2;
-        do {
-            index2 = (uint) ((std::rand()) % reg->thetas_.size());
-        } while (index2 == index1);
+    // Select the 1st qbit to swap.
+    uint index1 = (uint) ((std::rand()) % reg->thetas_.size());
+    // Select the 2nd qbit to swap, different from the first one.
+    uint index2;
+    do {
+        index2 = (uint) ((std::rand()) % reg->thetas_.size());
+    } while (index2 == index1);
 
-        // swap the two qbits.
-        double tmp = reg->thetas_[index1];
-        reg->thetas_[index1] = reg->thetas_[index2];
-        reg->thetas_[index2] = tmp;
-    }
+    // swap the two qbits.
+    double tmp = reg->thetas_[index1];
+    reg->thetas_[index1] = reg->thetas_[index2];
+    reg->thetas_[index2] = tmp;
 
 
     return true;

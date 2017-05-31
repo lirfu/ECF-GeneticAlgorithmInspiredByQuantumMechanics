@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #problemName="FunctionMin"
-problemName="Knapsack"
-#problemName="NeuralNetwork"
+#problemName="Knapsack"
+problemName="NeuralNetwork"
 
 workspace="/home/lirfu/zavrsni/GAIQM"
 
@@ -53,7 +53,7 @@ if $compute
 then
     # Remove old logs.
 #    rm classical_full.log quantum_full.log classicalMin.log classicalMax.log quantumMin.log quantumMax.log joinedMin.tmp joinedMax.tmp 2> /dev/null
-    rm *
+#    rm *
 
     echo "Starting the programs!"
 
@@ -86,12 +86,17 @@ then
      egrep "^[[:space:]]+stdev: +[0-9]+" classical_full.log | sed -E "s/stdev: ([0-9]+\.*[0-9]*).*/\1/" > classicalStdev.log
      egrep "^[[:space:]]+stdev: +[0-9]+" quantum_full.log | sed -E "s/stdev: ([0-9]+\.*[0-9]*).*/\1/" > quantumStdev.log
 
+     # Process log files (extract total evaluations).
+     egrep "^Total evaluations" classical_full.log | sed -E "s/Total evaluations: ([0-9]+)/\1/" > classicalEval.log
+     egrep "^Total evaluations" quantum_full.log | sed -E "s/Total evaluations: ([0-9]+)/\1/" > quantumEval.log
+
 
     # Join the logs.
     paste -d : classicalMin.log quantumMin.log > joinedMin.tmp
     paste -d : classicalMax.log quantumMax.log > joinedMax.tmp
     paste -d : classicalAvg.log quantumAvg.log > joinedAvg.tmp
     paste -d : classicalStdev.log quantumStdev.log > joinedStdev.tmp
+    paste -d : classicalEval.log quantumEval.log > joinedEval.tmp
 
     echo "Finished!"
 
@@ -99,15 +104,17 @@ else
     echo "Displaying pre-generated results."
 fi
 
-# Store final fitness values and generations to achieve.
-classFit=$(grep "FitnessM" classical_full.log | sed -E "s/<FitnessM.. value=\"([0-9]+\.*[0-9]*).*/\1/")
-quantFit=$(grep "FitnessM" quantum_full.log | sed -E "s/<FitnessM.. value=\"([0-9]+\.*[0-9]*).*/\1/")
-classGen=$(grep "<Individual" classical_full.log | sed -E "s/<Individual.+gen=\" *([0-9]+\.*[0-9]*).*/\1/")
-quantGen=$(grep "<Individual" quantum_full.log | sed -E "s/<Individual.+gen=\" *([0-9]+\.*[0-9]*).*/\1/")
+# Store final fitness values and generations to achieve, compatible with min and max search.
+classFit=$(grep "FitnessM" classical_full.log | sed -E "s/<FitnessM.. value=\"(.+)\".*/\1/" | sed -E "s/e/*10^/")
+quantFit=$(grep "FitnessM" quantum_full.log | sed -E "s/<FitnessM.. value=\"(.+)\".*/\1/" | sed -E "s/e/*10^/")
+classGen=$(grep "<Individual" classical_full.log | sed -E "s/<Individual.+gen=\" *(.*)\".*/\1/" | sed -E "s/e/*10^/")
+quantGen=$(grep "<Individual" quantum_full.log | sed -E "s/<Individual.+gen=\" *(.*)\".*/\1/" | sed -E "s/e/*10^/")
 
 # Print final fitness values and generations.
 echo "Classical: $classFit    (gen $classGen)"
+    #(evals $(cat classicalEval.log))"
 echo "Quantum:   $quantFit    (gen $quantGen)"
+    #(evals $(cat quantumEval.log))"
 
 if $NOTIFY
 then

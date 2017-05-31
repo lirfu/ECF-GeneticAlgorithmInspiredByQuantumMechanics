@@ -1,75 +1,95 @@
-\documentclass[times, utf8, zavrsni]{fer}
+\documentclass[times, utf8, zavrsni, numeric]{fer}
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{ctable}
+\usepackage{multirow}
 \usepackage{algorithm}
 \usepackage{algorithmic}
-
 \graphicspath{ {./images/} }
 
 \begin{document}
 
-% TODO: Navedite broj rada.
-\thesisnumber{000}
-\title{Genetski algoritmi inspirirani kvantnom mehanikom}
+\thesisnumber{4830}
+\title{Genetski algoritam inspiriran kvantnom mehanikom}
 \author{Juraj Fulir}
+
 \maketitle
 
 % Ispis stranice s napomenom o umetanju izvornika rada. Uklonite naredbu \izvornik ako želite izbaciti tu stranicu.
 \izvornik
 
-% Dodavanje zahvale ili prazne stranice. Ako ne želite dodati zahvalu, naredbu ostavite radi prazne stranice.
 \zahvala{
   
-Zahvaljujem svome mentoru prof. dr. sc. Domagoju Jakoboviću na danoj mogućnosti vlastitog odabira teme završnog rada te iznimnom interesu za istu. \\
-Zahvaljujem svojoj obitelji na svoj podršci i strpljenju pogotovo tijekom kasnih noćnih sati. \\
-Za kraj zahvaljujem Karlu Kneževiću, mag. ing., na kolegijalnoj pomoći.
+Zahvaljujem svome mentoru prof. dr. sc. Domagoju Jakoboviću na pomoći i savjetima u razvoju rada te danoj mogućnosti vlastitog odabira teme. 
+\\
+
+Zahvaljujem svojoj obitelji na podršci i strpljenju pogotovo tijekom kasnih noćnih sati. 
+
 }
 
 \tableofcontents
 
 \chapter{Uvod}
-Sve do početka 19. stoljeća fizičari su imali deterministički pogled na svijet. Razvijanjem tehnologije koja je omogućavala promatranje sve manjih čestica primjećuju se čudni fenomeni koje dotadašnja fizika nije mogla opisati. Iz potrebe za objašnjavanjem tih neobićnih pojava razvijene su podjednako neobićne teorije koje, iako su matematički dokazane, nisu olako prihvaćene na znanstvenoj sceni. Jedna takva teorija je pretpostavka diskretne prirode stvarnosti. Iz nje je nastalo jedno čitavo područje fizike zvano '\it kvantna mehanika\rm '. Iako su puno ranije postojala slična razmišljanja o diskretnim i točkastim česticama (Galilei, Bošković), do 19. stoljeća nije postojala ni tehnologija kojom bi se tvrdnje dokazale ni matematika kojom bi se tvrdnje opisale.
+Genetski algoritmi postoje još od 1960-tih kada je John Holland sa svojim studentima i kolegama napravio algoritam koji je simulirao fenomen adaptivnog ponašanja u prirodi. Kasnije su otkrivene mogućnosti i primjene genetskih algoritama na širokom rasponu stvarnih problema iz područja inženjerstva, ekonomije, kemije, robotike i mnogih drugih. Danas su genetski algoritmi podgrupa široke klase evolucijskih algoritama koji simuliranom evolucijom pronalaze rješenja. \citep{c_history}
 
 \paragraph{}
-Početkom 19. stoljeća, Max Planck objavljuje \it Plankov zakon zračenja\rm\ kojim rješava dugogodišnji problem zračenja crnog tijela, popularno nazvan "\it ultraljubičasta katastrofa\rm". Definira povezanost izračene energije s valnom duljinom izračene svjetlosti, ali još bitnije definira diskretizirano zračenje u paketićima energije koje naziva 'količina', latinski 'kvantum'. Njegovim otkrićem kreće revolucija u fizici od kojih ću spomenuti samo nekoliko: otkriće fotoelektričnog efekta (Einstein), ispravljanje (redefiniranje) modela atoma (Rutherford, Bohr), otkriće dvojne prirode čestica (De Broglie), opisivanje valne prirode elektronske ljuske atoma (Heisenberg, Schr\"odinger, Born).
+U ovom radu predstavljam noviju vrstu genetskog algoritma koji koristi paradigmu kvantne mehanike za predstavljanje i manipuliranje podacima. Praktični dio implementiram u sklopu evolucijskog razvojnog okruženja ECF (\it Evolutionary Computation Framework\rm) razvijenog na FERu. Služim se znanstvenim člancima i knjigama te sažimam i objedinjujem većinu ideja i rješenja iznesenih u njima. U implementaciji koristim aproksimaciju qubita na koju još nisam naišao u radovima i člancima, a za koju vjerujem da je isplativija u pogledu memorijskog zauzeća i kompleksnosti implementacije. Algoritam prilagođavam korištenju 3 različite reprezentacije genotipa: niz bitova, niz decimalnih brojeva i bitovni niz s pretvorbom u niz decimalnih brojeva. Vršim usporedbu algoritma s "klasičnim" na tri različita problema, svaki za jednu reprezentaciju genotipa. Radu prilažem sve rezultate te korištene parametre. 
 
 \paragraph{}
-Danas je kvantni pogled na svijet vrlo uvriježen u krugu fizičara, ali i šire no još nije u potpunosti shvaćen. Unatoč tome korištenjem fenomena proizišlih iz kvantne fizike stvorili smo razne uređaje i alate koji su danas u širokoj primjeni. Neki takvi uređaji su: tunel dioda, laser, magnetska rezonancija i drugi.
+Rad je raspoređen na sljedeći način: u poglavlju \ref{ch:kvameh} ukratko navodim povijest i opisujem značaj kvantne mehanike, objašnjavam neke temeljne pojmove potrebne za shvaćanje paradigme računanja kvantnim računalima te trenutnu tržišnu scenu istih. U poglavlju \ref{ch:gaiqm} opisujem strukturu klasičnog genetskog algoritma i kvantnog genetskog algoritma te detaljnije genetski algoritam inspiriran kvantnom mehanikom. U poglavlju \ref{ch:primjena} opisujem i prikazujem rezultate CGA i GAIQM raznih eksperimenata uz obrazloženja. Uz to obavljam i usporedbu s postojećim algoritmima na problemu traženja minimuma funkcija. U poglavlju \ref{ch:nadogradnja} predlažem moguće izmjene i nadogradnje algoritma. U dodatku \ref{ch:parametri} prilažem popis svih dostupnih parametara za komponente GAIQM.
+
+\chapter{Kvantna mehanika i kvantna računala}
+\label{ch:kvameh}
+Do početka 19. stoljeća fizičari su imali deterministički pogled na svijet. Razvijanjem tehnologije koja je omogućavala promatranje sve manjih čestica primjećuju se čudni fenomeni koje dotadašnja fizika nije mogla opisati. Iz potrebe za objašnjavanjem tih neobićnih pojava razvijene su podjednako neobićne teorije koje, iako su matematički dokazane, nisu olako prihvaćene na znanstvenoj sceni. Jedna takva teorija je pretpostavka diskretne prirode stvarnosti. Iz nje je nastalo jedno čitavo područje fizike zvano '\it kvantna mehanika\rm '. Iako su puno ranije postojala slična razmišljanja o diskretnim i točkastim česticama (Galilei, Bošković), do 19. stoljeća nije postojala ni tehnologija kojom bi se tvrdnje dokazale ni matematika kojom bi se tvrdnje opisale.
 
 \paragraph{}
-Ukratko, kvantna mehanika je relativno mlada grana fizike, ali je uvelike utjecala na naš razvoj tehnologije, znanosti i shvaćanja svijeta u kojem živimo.
-
-\section{Kvantni algoritmi i kvantna računala}
+Početkom 19. stoljeća, Max Planck objavljuje "\it Plankov zakon zračenja\rm" kojim rješava dugogodišnji problem opisivanja zračenja crnog tijela, popularno nazvan "\it ultraljubičasta katastrofa\rm". Definira povezanost izračene energije s valnom duljinom izračene svjetlosti, ali još bitnije definira diskretizirano zračenje u paketićima energije koje naziva 'količina', latinski 'kvantum'. Njegovim otkrićem kreće revolucija u fizici od kojih ću spomenuti samo nekoliko: otkriće fotoelektričnog efekta (Einstein), ispravljanje (redefiniranje) modela atoma (Rutherford, Bohr), otkriće dvojne prirode čestica (De Broglie), opisivanje valne prirode elektronske ljuske atoma (Heisenberg, Schr\"odinger, Born). \citep{bozja_cestica}
 
 \paragraph{}
-\it No Clone Theorem\rm\ potvrđuje da nije moguće stvoriti kopiju postojećeg qbita odnosno nije moguće prenijeti kvantno stanje jednog qbita na drugi.
+Danas je kvantni pogled na svijet vrlo uvriježen u krugu fizičara i šire, no još nije u potpunosti shvaćen. Unatoč tome korištenjem fenomena proizišlih iz kvantne fizike stvorili smo razne uređaje i alate koji su danas u širokoj primjeni. Neki takvi uređaji su: tunel dioda, laser, magnetska rezonancija i drugi.
 
 \paragraph{}
-Primjenom qBita, teoretski je moguće ostvariti značajna ubrzanja nekih NP problema kvantnim algoritama (Shor-ov algoritam faktorizacije cijelih brojeva, Grover-ov algoritam pretrage nesortiranih polja, ...).
-Jedan primjer primjene qbita je kvantni registar kao spremnik podataka, kojim se opisuje značaj superpozicije:
-\begin{quote}
-Pomoću 1 klasičnog registra velićine n bitova moguće je pohraniti 1 od mogućih $2^n$ vrijednosti.
+Ukratko, kvantna mehanika je relativno mlada grana fizike, ali je uvelike utjecala na razvoj tehnologije, znanosti i shvaćanja svijeta u kojem živimo.
 
-Pomoću 1 kvantnog registra velićine n qBita moguće je pohraniti $2^n$ od mogućih $2^n$ vrijednosti, odnosno sve vrijednosti od jednom.
-\end{quote}
+\section{Temeljni pojmovi kvantne mehanike}
+U ovom odlomku objašnjavam neke temeljne pojmove kvantne mehanike koji se spominju u daljnjem tekstu. 
 
-\section{Trenutno stanje u svijetu}
-Postoje dvije tvrtke koje danas izrađuju i razvijaju kvantna računala.
+\subsection{Kvantna superpozicija}
+Jedan je od osnovnih i nama najvažnijih pojmova kvantne mehanike.
+Kvantna superpozicija je princip koji definira zbroj (superpoziciju) dvaju ili više kvantnih stanja kao ispravno kvantno stanje. 
+To znači da je kvantno stanje kombinacija više stanja s pridjeljenom vrijednosti (važnosti) svakog stanja.
 
-\subsection{D-Wave}
-Tvrtka D-Wave razvija i proizvodi kompaktne zatvorene sustave kvantnih računala. Trenutno najnoviji model kvantnog računala tvrtke D-Wave je 2000Q, podržava 2000 qbita i temelji se na adijabatskom kvantnom računanju. Taj princip vrlo je sličan principu kvantnog kaljenja. Radi se o topološkom pretraživanju prostora stanja za koji se mogu modelirati neki problemi.
-Ta su računala nedostupna široj javnosti isključivo radi cijene (15 milijuna američkih dolara 05.2017.) no neke su ih tvrke ipak nabavile (Google, NASA, USRA, Volkswagen Group i ostali).
+\paragraph{}
+Kvantnom superpozicijom deterministički je model atoma s definiranim dozvoljenim putanjama elektrona zamjenjen puno preciznijim kvantnim modelom atoma koji ne definira točne putanje elektrona već prostornu distribuciju vjerojatnosti pronalaženja elektrona u određenoj točki prostora. Slikovito možemo reći da je model atoma s kružnim putanjama elektrona oko jezgre zamijenjen modelom jezgre okružene elektronskim oblacima. \citep{bozja_cestica}
 
-\subsection{IBM}
-Razvivši svoje kvantno računalo, IBM nudi udaljeni pristup svojim kvantnim računalima. Javni paket uključuje pristup web aplikaciji za dizajniranje kvantnih krugova do 5 qbita te mogućnost izvršavanja eksperimenta na simulatoru ili stvarnom kvantnom procesoru. Pristup stvarnom kvantnom procesoru naplaćuje se 'virtualnim kreditom' koji se dobije registracijom na sustav i vremenski obnavlja. Svako izvršavanje se naplaćuje ovisno o zadanom broju ponovljanja eksperimenta. Početkom 2017. godine omogućen je pristup računalu s čak 20 qbita preko web aplikacije.
+\paragraph{}
+Jedan od najpoznatijih alegorija superpozicije je Schr\"odingerov misaoni eksperiment zvan 'Schr\"odingerova mačka'. Zamislimo zatvorenu čelićnu kutiju u koju smo stavili mačku i Geigerov brojač unutar kojeg se nalazi uređaj s otrovom. Uređaj u sebi ima komadić radioaktivnog elementa, toliko malen da se u vremenskom rasponu od 1 sat može (ali i ne mora) dogoditi raspad atoma. U slučaju raspada Geigerov bojač aktivira relej koji ispusti čekić na malenu staklenu ampulu cijanovodične kiseline.
+Ostavimo li sustav zatvorenim na sat vremena možemo reći da je mačka još uvijek živa ako u međuvremenu nije došlo do raspada atoma jer prvi bi raspad otrovao mačku. Psi (valna) funkcija čitavog sustava bi to opisala stanjima žive i mrtve mačke jednakog značaja, odnosno drugačije rečeno jednakih vjerojatnosti pojavljivanja.
+Stvarno stanje ne možemo znati s potpunom sigurnošću dok je otvorimo kutiju i pogledamo u nju.
 
-\chapter{Kvantni bit (qbit)}
-Kvantni bit je najmanja jedinica podatka u kvantnim računalima. Fizički je to zapravo sićušna čestica sa svojstvom superpozicije, jedne od temeljnih fizikalnih pojava u "kvantnom svijetu" čiju ćemo primjenu objasniti u nastavku.
+\paragraph{}
+Iz primjera vidimo da se sustav (ili čestica) može nalaziti u superpoziciji dok god ne promotrimo (izmjerimo) sustav. Superpozicija je opisana valnom funkcijom, a mjerenjem sustava gubi se superpozicija odnosno događa se kolaps valne funkcije u jedno determinističko stanje. Dakle, mjerenjem sustava dobivamo klasično stanje čestice u kojem se ona tog trena našla i upravo to je naša poveznica između "kvantnog" i "klasičnog" svijeta koja je nužna za ostvarivanje kvantnog računala.
 
-\section{Princip rada}
+\subsection{Kvantna dekoherencija}
+Kvantna dekoherencija je kolaps valne funkcije odnosno nepovratni gubitak pohranjene informacije zbog utjecaja okoline koja ga okružuje.
+U stvarnim kvantnim sustavima relativno je lako ostvariti superpoziciju, ali je veliki problem održati ju. Ovisno o tehnologiji sustava razni uvijeti moraju biti ostvareni kako bi se sustav izolirao od okoline i zaštitio integritet pohranjene informacije. Iz tog su razloga kvantni sustavi danas glomazni i zahtjevni za održavanje.
+
+\subsection{Spregnuta stanja \engl{entangled states}}
+Spregnuta kvantna stanja povezana su (spregnuta) ako rezultat mjerenja jednog kvantnog stanja utječe na rezultat mjerenja drugog kvantnog stanja. Zanimljivost te veze je da se "informacija" o rezultatu mjerenja jednog stanja u istom trenu prenese drugom stanju. Poznati paradoks koji opisuje tu pojavu je "Einstein–Podolsky–Rosen paradoks".
+
+\subsection{"No-cloning theorem"}
+Ovaj je teorem jedna velika zapreka u kvantnoj fizici. 
+Njime se potvrđuje da nije moguće stvoriti identične kopije postojećeg kvantnog stanja. Želimo li stvoriti još jednu česticu nalik ovoj koju već imamo, moramo ponoviti čitav proces stvaranja te čestice. \cite{q_history}
+
+\paragraph{}
+Iako teorem djeluje vrlo ograničavajuće može se upotrijebiti u kvantnoj kriptografiji. Problem sigurnosti razmjene javnog ključa na kojoj se zasniva moderna sigurnost Interneta može se rješiti kvantnom enkripcijom kojom se garantira nemogućnost kopiranja odaslanog ključa. Čitanjem ključa uništava se njegovo kvantno stanje te ga nije moguće kopirati što pospješuje zaštitu od "\it Man-in-the-middle\rm" napada. \citep{han_phd}
+
+\section{Kvantni bit (qubit)}
+Kvantni bit je najmanja jedinica podatka u kvantnim računalima. U literaturi se može pronaći i pod nazivima "\it qbit\rm" i "\it Qbit\rm". Fizički gledano to je zapravo sićušna čestica sa svojstvom superpozicije.
+
+\subsection{Princip rada}
 \paragraph{}
 Klasični bit pronalazimo u jednom od dva klasična stanja. Jednom postavljeno stanje se pamti i uvijek ga u njemu možemo pronaći. Njima gradimo binarni brojevni sustav pomoću kojeg zapisujemo podatke na računalu.
 
@@ -77,19 +97,19 @@ Klasični bit pronalazimo u jednom od dva klasična stanja. Jednom postavljeno s
 Kvantni bit ne pamti jedno klasično stanje već se on istovremeno nalazi u više različitih klasičnih stanja. To se svojstvo naziva superpozicija. Fizički gledano kvantni bit je čestica kojoj je pridružen kvantizirani spin. Spin je kvantizirana inačica kutne količine gibanja rotirajućeg tijela.
 
 \paragraph{}
-Kvantno stanje jednog qubita opisano je vektorom njegovog spina. Kvantno stanje opisuje vjerojatnost pronalaženja qbita u svakom od klasičnih stanja. Konkretno stanje dobivamo mjerenjem qbita kojim se uništava njegovo svojstvo superpozicije te dobivamo česticu u jednom stanju koju možemo koristiti poput klasičnog bita.
+Kvantno stanje jednog qubita opisano je vektorom njegovog spina. Kvantno stanje opisuje vjerojatnost pronalaženja qubita u svakom od klasičnih stanja. Konkretno stanje dobivamo mjerenjem qubita kojim se uništava njegovo svojstvo superpozicije te dobivamo česticu u jednom stanju koju možemo koristiti poput klasičnog bita.
 
 \begin{center}
 \includegraphics[width=55mm, height=40mm]{spin}
-\captionof{figure}{Vjerojatnost pronalaženja qbita u određenom stanju opisana je njegovim kvantnim stanjem (spinom).}
+\captionof{figure}{Vjerojatnost pronalaženja qubita u određenom stanju opisana je njegovim kvantnim stanjem (spinom).}
 \end{center}
 
 \paragraph{}
-Sustavi s kvantnim bitovima mogu biti definirani za proizvoljan brojevni sustav, no kako su današnja računala bazirana na binarnom brojevnom sustavu zanima nas definicija qbita s 2 stanja.
+Sustavi s kvantnim bitovima mogu biti definirani za proizvoljan brojevni sustav, no s obzirom da su današnja računala bazirana na binarnom brojevnom sustavu zanima nas definicija qubita s 2 stanja.
 
 \subsection{Blochova shema}
 \paragraph{}
-Stanje qbita prikazujemo Blochovom shemom. Jedno kvantno stanje prikazujemo kao vektor iz središta sfere na njezinu površinu. Stanja u kojima možemo pronaći qbit prikazujemo polovima sfere koje definiramo sjecištima sfere i z-osi.
+Stanje qubita prikazujemo Blochovom shemom. Jedno kvantno stanje prikazujemo kao vektor iz središta sfere na njezinu površinu. Stanja u kojima možemo pronaći qubit prikazujemo polovima sfere koje definiramo sjecištima sfere i z-osi. \citep{computer_scientist} \citep{qubit_geometry}
 
 \begin{center}
 \includegraphics[width=60mm, height=65mm]{bloch}
@@ -98,30 +118,27 @@ Stanje qbita prikazujemo Blochovom shemom. Jedno kvantno stanje prikazujemo kao 
 
 \paragraph{}
 Na slici vidimo jedno kvantno stanje opisano vektorom. Matematički ga možemo opisati kao linearnu kombinaciju dvaju klasičnih stanja:
-
 \begin{align}
 \ket{\psi} &= \alpha\ket{0} + \beta\ket{1} \label{eq:psi_orig}
 \end{align}
+gdje su $\alpha$ i $\beta$ kompleksni brojevi.
 
 \paragraph{}
-Iz Blochove sfere popunjavamo konstante iz \eqref{eq:psi_orig}:
-
-\begin{align}
-\ket{\psi} &= \cos(\frac{\theta}{2})\ket{0} + e^{i\phi}\sin(\frac{\theta}{2})\ket{1} \nonumber \\
-&= \cos(\frac{\theta}{2})\ket{0} + (cos(\phi)+i\sin(\phi))\sin(\frac{\theta}{2})\ket{1} \label{eq:psi_orig_full}
+Iz vektora na Blochovoj sferi definiramo konstante iz \eqref{eq:psi_orig}:
+\begin{align} \label{eq:psi_orig_full}
+\ket{\psi} &= \cos(\frac{\theta}{2})\ket{0} + e^{i\phi}\cdot\sin(\frac{\theta}{2})\ket{1} \nonumber \\
+&= \cos(\frac{\theta}{2})\ket{0} + (cos(\phi)+i\sin(\phi))\cdot\sin(\frac{\theta}{2})\ket{1} 
 \end{align}
 
 \paragraph{}
 Vrijednosti $\alpha$ i $\beta$ su normirane:
-
 \begin{equation} \label{eq:prob_norm}
 |\alpha|^2 + |\beta|^2 = 1
 \end{equation}
 
 \paragraph{}
-Vrijednosti $\alpha$ i $\beta$ predstavljaju vjerojatnosne amplitude pronalaženja qbita u stanju $\ket{0}$ i $\ket{1}$ respektivno.
-Iz vjerojatnosnih amplituda računamo vjerojatnosti pronalaženja qbita u svakom od stanja:
-
+Vrijednosti $\alpha$ i $\beta$ predstavljaju vjerojatnosne amplitude pronalaženja qubita u stanju $\ket{0}$ i $\ket{1}$ respektivno.
+Iz vjerojatnosnih amplituda računamo vjerojatnosti pronalaženja qubita u svakom od stanja:
 \begin{equation} \label{eq:prob}
 \begin{split}
 \Pr{\ket{0}} = |\alpha|^2 = \cos^2{\frac{\theta}{2}} \\ 
@@ -130,68 +147,135 @@ Iz vjerojatnosnih amplituda računamo vjerojatnosti pronalaženja qbita u svakom
 \end{equation}
 
 \paragraph{}
-Kvantno stanje kraće možemo napisati u obliku vektora:
-
-\begin{equation} \nonumber
+Kvantno stanje možemo zapisati vektorom što je pogodno za izvršavanje matričnih operacija nad njime. \citep{computer_scientist}
+\begin{align}
 \ket{\psi} =
-\begin{pmatrix}
+\begin{bmatrix}
 \alpha \\ \beta
-\end{pmatrix}
-\end{equation}
+\end{bmatrix}
+\end{align}
 
 \subsection{Aproksimacija kvantnog stanja}
 \paragraph{}
-Kvantno stanje prikazano na Blochovoj sferi opisano je u 3 dimenzije. Kako su operacije nad 3 dimenzije računski zahtjevne želimo pojednostaviti model kvantnog stanja. 
-U simulaciji qbita jedino su nam važne vjerojatnosti pronalaženja qbita u određenom stanju. 
-Ako pogledamo kvantno stanje opisano formulom \eqref{eq:psi_orig_full} vidimo da $\alpha$ ovisi samo o kutu $\theta$. Kombinacijom formula \eqref{eq:psi_orig_full} i \eqref{eq:prob_norm} zaključujemo kako $\beta$ ovisi isključivo o $\alpha$:
-
+Kvantno stanje prikazano na Blochovoj sferi opisano je s 3 dimenzije. Trodimenzionalne operacije računski su vrlo zahtjevne stoga želimo pojednostaviti model kvantnog stanja. 
+U simulaciji rada s qubitom jedino su nam važne vjerojatnosti pronalaženja qubita u određenom stanju. 
+Iz formula \eqref{eq:prob_norm} i \eqref{eq:prob} zaključujemo da vjerojatnost $|\beta|^2$ ovisi isključivo o vjerojatnosti $|\alpha|^2$:
 \begin{align*}
 |\alpha|^2 + |\beta|^2 &= 1 \\
 |\beta|^2 &= 1 - |\alpha|^2 \\
-&= 1 - \cos^2(\frac{\theta}{2}) \\
-&= \sin^2(\frac{\theta}{2})
+&= 1 - \cos^2\frac{\theta}{2} \\
+&= \sin^2\frac{\theta}{2}
 \end{align*}
 
-\paragraph{}
-Zaključujemo da je kut $\phi$ suvišan. To možemo vidjeti i na samoj Blochovoj sferi.
-Za fiksni kut $\theta$ mijenjanjem kuta $\phi$ rotiramo vektor oko z-osi i ne približavamo se niti jednom polu sfere.
-
-\paragraph{}
-Dobivamo sljedeću reprezentaciju kvantnog stanja qbita:
-
-%%%%%%%%%%%%%%%%%
-SLIKA 2D
-
+Ako bolje pogledamo kvantno stanje opisano formulom \eqref{eq:psi_orig_full} vidjet ćemo da $\alpha$ ovisi samo o kutu $\theta$. Želimo se riješiti kompleksne konstante $\beta$ ili ju barem svesti na realnu.
+Iz jednakosti \eqref{eq:phi_useless} zaključujemo da je kut $\phi$ suvišan za računanje vjerojatnosti. To možemo vidjeti i na samoj Blochovoj sferi.
+Za fiksni kut $\theta$ mijenjanjem kuta $\phi$ rotiramo vektor oko z-osi i ne približavamo se niti jednom polu sfere odnosno vjerojatnosti stanja se ne mjenjaju.
 \begin{equation}
+\label{eq:phi_useless}
+|cos(\phi)+i\sin(\phi)| = 1
+\end{equation}
+
+Dakle, parametre $\alpha$ i $\beta$ sveli smo na realne vrijednosti koje ovise samo o jednom parametru: $\theta$. Naše kvantno stanje možemo opisati formulom:
+\begin{align} 
+\label{eq:aprox_real}
+\ket{\psi} = \cos(\frac{\theta}{2})\ket{0} + \sin(\frac{\theta}{2})\ket{1} 
+\end{align}
+
+\paragraph{}
+Aproksimacijom qubita uz zadržane vjerojatnosti stanja dobivamo sljedeću reprezentaciju kvantnog stanja qubita:
+
+\begin{center}
+\includegraphics[width=80mm, height=72mm]{approx}
+\captionof{figure}{Aproksimacija qubita}
+\end{center}
+
+\begin{align}
+\label{eq:qubit_aprox}
+\begin{split}
+\alpha = \cos\frac{\theta}{2} \qquad
+\beta = \sin\frac{\theta}{2}
+\end{split}
+\end{align}
+\begin{equation}
+\label{eq:qubit_state_aprox}
 \ket{\psi} = \cos(\frac{\theta}{2})\ket{0} + \sin(\frac{\theta}{2})\ket{1}
 \end{equation}
 
-\section{Kvantni registar}
-Kvantni registar, poput klasičnog registra, pohranjuje niz qbita te omogućuje ne-destruktivno čitanje i zapisivanje istih.
+\subsection{Kvantni registar}
+Kvantni registar, poput klasičnog registra, pohranjuje niz qubita te omogućuje ne-destruktivno čitanje i zapisivanje istih. Ovdje čitanje predstavlja korištenje (izmjena) kvantnog stanja zapisanog u njemu, a ne mjerenje koje bi uništilo superpoziciju qubita.
+\begin{figure}[htb]
+\centering
 \begin{align*}
 \begin{bmatrix}
 q_1 & q_2 & q_3 & \cdots & q_i & \cdots & q_n
 \end{bmatrix}
 \end{align*}
+\caption{Registar qubita}
+\end{figure}
 
-Simulacija kvantnog registra je klasični registar koji pohranjuje vjerojatnosti qbita:
+Simulacija kvantnog registra koju implementiraju članci na koje sam naišao je klasični registar koji pohranjuje vjerojatnosne amplitude qubita pomoću kojih se određuju vjerojatnosti stanja. \citep{han_qga_combinat} \citep{han_analysis} \citep{han_phd}
+\begin{figure}[htb]
+\centering
 \begin{align*}
 \begin{bmatrix}
 \alpha_1 & \alpha_2 & \alpha_3 & \cdots & \alpha_i & \cdots & \alpha_n \\
 \beta_1 & \beta_2 & \beta_3 & \cdots & \beta_i & \cdots & \beta_n
 \end{bmatrix}
 \end{align*}
+\caption{Registar aproksimiranih qubita zapisom gustoća vjerojatnosti}
+\end{figure}
 
-Nadalje možemo dodatno pojednostaviti, u klasični registar pohranjujemo samo kuteve qbita:
+Koristeći aproksimaciju qubita zadanu jednadžbom \ref{eq:qubit_state_aprox} zapis stanja možemo dodatno pojednostaviti tako da u klasični registar pohranjujemo samo kuteve qubita pomoću kojih možemo izračunati vjerojatnosti stanja.
+\begin{figure}[htb]
+\centering
 \begin{align*}
 \begin{bmatrix}
 \theta_1 & \theta_2 & \theta_3 & \cdots & \theta_i & \cdots & \theta_n \\
 \end{bmatrix}
 \end{align*}
+\caption{Registar aproksimiranih qubita zapisom kuteva kvantnog stanja}
+\end{figure}
 
+\paragraph{}
+Zadnji sam model kvantnog registra odabrao za implementaciju upravo zbog svoje jednostavnosti i memorijske isplativosti. Kasniji će se operatori također pojednostaviti zahvaljujući ovoj aproksimaciji.
 
+\section{Kvantni algoritmi i kvantna računala}
+Kvantno računalo je uređaj koji je sposoban izvršavati matematičke i logičke zadatke korištenjem fenomena kvantne mehanike. Temeljna podatkovna jedinica klasičnog računala je bit, a kvantnog računala qubit. Prednost qubita je što posjeduje svojstvo superpozicije, odnosno može pohraniti više stanja odjednom. Jedan primjer primjene qubita je kvantni registar kao spremnik podataka kojim se opisuje značaj superpozicije:
+\begin{quote}
+Pomoću 1 klasičnog registra velićine n bitova moguće je pohraniti 1 od mogućih $2^n$ vrijednosti.
 
-\chapter{Genetski algoritam inspiriran kvantnom mehanikom}
+Pomoću 1 kvantnog registra velićine n qBita moguće je pohraniti $2^n$ od mogućih $2^n$ vrijednosti, odnosno sve vrijednosti od jednom.
+\end{quote}
+
+\paragraph{}
+Zanimanje za kvantnim računalima počinje rasti 1980-tih godina govorom Richarda Feynmana u kojem Feynman iznosi i obrazlaže zabrinutost da se kvantni sustavi ne mogu učinkovito simulirati klasičnim računalom, umjesto kojeg predlaže osnovni model kvantnog računala. \citep{q_history}
+
+\paragraph{}
+Kvantni algoritam je algoritam koji je prilagođen izvršavanju na kvantnom računalu. Kvantnim algoritmima moguće je ostvariti značajna ubrzanja nekih NP problema. \cite{qga_apply} \citep{han_phd} Primjeri takvih algoritama su:
+\begin{itemize}
+\item Shor-ov algoritam faktorizacije cijelih brojeva - moguća primjena u otkrivanju javnog ključa RSA
+\item Grover-ov algoritam invertiranja funkcije - moguća primjena je pretraživanje baze podataka
+\item Algoritmi simulacije kvantnih sustava
+\end{itemize}
+
+\section{Trenutno stanje u svijetu}
+Porastom snage i pouzdanosti kvantnih računala krenulo se stvarati tržište za njih. Danas neke od najvećih tvrtki ulažu u razvoj kvantnih računala. To su većinom banke, vojska i IT industrija.
+Danas su najpoznatije dvije tvrtke koje proizvode i razvijaju kvantna računala.
+
+\subsubsection{D-Wave}
+Tvrtka D-Wave razvija i proizvodi kompaktne zatvorene sustave kvantnih računala. Trenutno najnoviji model kvantnog računala tvrtke D-Wave je 2000Q, podržava 2000 qubita i temelji se na adijabatskom kvantnom računanju. Rješava probleme pretraživanja prostora principom sličnim simuliranom kaljenju. Ta su računala nedostupna široj javnosti isključivo radi cijene (15 milijuna američkih dolara, 05.2017.) no neke su ih tvrke ipak nabavile (Google, NASA, USRA, Volkswagen Group i ostali).
+
+\subsubsection{IBM}
+IBM nudi udaljeni pristup svojim kvantnim računalima koja su razvili. Javni paket uključuje pristup web aplikaciji za dizajniranje kvantnih krugova do 5 qubita te mogućnost izvršavanja eksperimenta na simulatoru ili stvarnom kvantnom procesoru. Pristup stvarnom kvantnom procesoru naplaćuje se 'virtualnim kreditom' koji se dobiva registracijom na sustav i vremenski obnavlja. Svako izvršavanje se naplaćuje ovisno o zadanom broju ponovljanja eksperimenta. Početkom 2017. godine omogućen je pristup računalu s čak 20 qubita preko web aplikacije. Postoji API za razvoj kvantnih krugova pomoću "kvantnog asemblera" (QASM), a u tijeku je izrada APIa za pristup sustavu kojim bi se omogućio razvoj algoritama i aplikacija u više programskih jezika.
+
+\chapter{Genetski algoritam inspiriran kvantnom mehanikom} 
+\label{ch:gaiqm}
+U ovom ću odlomku opisati slićnosti između klasićnog i kvantnog genetskog algoritma te primjenjenu aproksimaciju qubita u genetskom algoritmu inspiriranom kvantnom mehanikom. Posebno ću opisati GAIQM i kako sam ga implementirao.
+
+\paragraph{}
+Svi navedeni algoritmi koriste i evaluator.
+To je procedura koja jedinci pridružuje vrijednost dobrote (fitness) prema kojoj se poželjnije jedinke ističu iz populacije. Gradi se ovisno o zadanom problemu i ne ovisi o implementaciji algoritma odnosno jednom napisani evaluator je kompatibilan sa svim algoritmima. Ovisi jedino o načinu na koji se zapisuju podaci koji se evoluiraju tj. ovisi o vrsti genotipa.
+
 \section{Klasični genetski algoritam (CGA)}
 \subsection{Dijelovi}
 Klasični genetski algoritam zahtjeva nekoliko osnovnih dijelova:
@@ -199,18 +283,23 @@ Klasični genetski algoritam zahtjeva nekoliko osnovnih dijelova:
 \item Genotip 
 \item Operator križanja 
 \item Operator mutacije
-\item Evaluator 
 \end{itemize}
 
 \subsubsection{Genotip}
-Podatkovna struktura koja opisuje jednu jedinku. Mora biti kompatibilna s evaluatorom i zahtjeva sebi kompatibilne operatore. Sadrži niz bitova:
+Podatkovna struktura koja opisuje jednu jedinku. Mora biti kompatibilna s evaluatorom i zahtjeva sebi kompatibilne operatore. Sadrži kromosom u obliku niza bitova.
+\begin{figure}[htb]
+\centering
 \begin{align*}
 \begin{bmatrix}
 b_1 & b_2 & b_3 & \cdots & b_i & \cdots & b_n
 \end{bmatrix}
 \end{align*}
+\caption{Registar klasičnih bitova}
+\end{figure}
 \subsubsection{Operator križanja}
-Operator koji izvodi križanje (razmjenu) genetskog materijala danih jedinki. Odabire se točka koja će podijeliti kromosom roditelja na 2 dijela. Stvore se djeca kojima je jedna polovica roditelja zamijenjena polovicom drugog roditelja.
+Operator koji izvodi križanje (razmjenu) genetskog materijala danih jedinki. Odabire se točka koja će podijeliti kromosom roditelja na 2 dijela. Stvaraju se djeca kojima je jedna polovica roditelja zamijenjena polovicom drugog roditelja.
+\begin{figure}[htb]
+\centering
 \begin{align*}
 Roditelj 1:
 \begin{bmatrix}
@@ -229,9 +318,13 @@ Dijete 2:
 \mathbf{b_{11}} & \mathbf{b_{12}} & b_{23} & \cdots & b_{2i} & \cdots & b_{2n}
 \end{bmatrix}
 \end{align*}
+\caption{Križanje kromosoma zamjenom polovica roditeljskih kromosoma}
+\end{figure}
 
 \subsubsection{Operator mutacije}
-Operator koji vrši izmjenu genetskog materijala dane jedinke. Odabire se bit te se invertira.
+Operator koji vrši izmjenu genetskog materijala dane jedinke. Odabire se bit koji se invertira.
+\begin{figure}[htb]
+\centering
 \begin{align*}
 \begin{bmatrix}
 b_1 & b_2 & \mathbf{b_3} & \cdots & b_i & \cdots & b_n
@@ -240,10 +333,8 @@ b_1 & b_2 & \mathbf{b_3} & \cdots & b_i & \cdots & b_n
 b_1 & b_2 & \overline{\mathbf{b_3}} & \cdots & b_i & \cdots & b_n
 \end{bmatrix}
 \end{align*}
-
-\subsubsection{Evaluator}
-Procedura koja jedinci pridružuje vrijednost dobrote (fitness). Gradi se na temelju zadanog problema i ne ovisi o implementaciji algoritma.
-
+\caption{Mutacija invertiranjem jednog bita kromosoma}
+\end{figure}
 
 \subsection{Pseudokod}
 U ovom primjeru gledamo pseudokod turnirskog algoritma s konstantnom veličinom populacije (SteadyStateTournament).
@@ -266,6 +357,8 @@ U ovom primjeru gledamo pseudokod turnirskog algoritma s konstantnom veličinom 
 \end{algorithmic}
 \end{algorithm}
 
+\newpage
+
 \section{Kvantni genetski algoritam (QGA)}
 \subsection{Dijelovi}
 Kvantni genetski algoritam uz svoje specifične operatore sadrži i dijelove slične onima iz CGA:
@@ -273,23 +366,26 @@ Kvantni genetski algoritam uz svoje specifične operatore sadrži i dijelove sli
 \item Kvantni genotip (kvantni registar)
 \item Kvantna rotacijska vrata
 \item Inicijalizator populacije
-\item Operator mjerenja qbita
-\item Evaluator
+\item Operator mjerenja qubita
 \end{itemize}
 
 \subsubsection{Kvantni genotip (kvantni registar)}
-Podatkovna struktura koja opisuje jednu jedinku. Od klasičnog registra se razlikuje u principu pohrane podataka (superpozicijom qbita). Zahtjeva operatore sposobne za baratanje qbitima. Dodatno zahtjeva i klasični genotip koji može pohraniti izmjerene vrijednosti qbita i koji je pogodan evaluatoru.
+Podatkovna struktura koja opisuje jednu jedinku. Od klasičnog registra se razlikuje u principu pohrane podataka (superpozicija). Zahtjeva operatore sposobne za baratanje qbitima. Dodatno zahtjeva i klasični genotip koji može pohraniti izmjerene vrijednosti qubita i koji je pogodan evaluatoru. Sadrži kromosom u obliku niza qubita.
+\begin{figure}[htb]
+\centering
 \begin{align*}
 \begin{bmatrix}
 q_1 & q_2 & q_3 & \cdots & q_i & \cdots & q_n
 \end{bmatrix}
 \end{align*}
+\caption{Registar qubita}
+\end{figure}
 
-\subsubsection{Kvantna rotacijska vrata}
-Operator koji vrši unaprjeđenje populacije transformiranjem kromosoma. Matematički ih možemo prikazati kao matrice. Matrice moraju biti unitarne odnosno mora vrijediti: $UU' = I$.
+\subsubsection{Operator kvantnih rotacijskih vrata}
+Ovim operatorom mijenja se kvantno stanje qubita. Koristi se za unaprjeđenje populacije transformiranjem kromosoma. Matematički ih možemo prikazati kao matrice. Matrice moraju biti unitarne odnosno mora vrijediti: $UU' = I$.
 
 \paragraph{}
-Prisjetimo se da smo kvantno stanje qbita opisali vektorom na Blochovoj sferi. Želimo li promjeniti stanje qbita moramo rotirati svojstveni vektor. Upravo nam tome služe kvantna rotacijska vrata. Najvažnija vrata su vrata identiteta i Paulijeva X, Y i Z vrata:
+Prisjetimo se da smo kvantno stanje qubita opisali vektorom na Blochovoj sferi. Želimo li promjeniti stanje qubita moramo rotirati svojstveni vektor. Upravo nam tome služe kvantna rotacijska vrata. Najvažnija vrata su vrata identiteta i Paulijeva X, Y i Z vrata:
 \begin{equation}
 I = 
 \begin{bmatrix}
@@ -310,7 +406,7 @@ Z =
 \end{equation}
 
 \paragraph{}
-Matematički promjenu kvantnim rotacijskim vratima ostvarujemo umnoškom kvantnog stanja zapisanog u vektor i samih vrata, npr. ostvarenje zrcaljenja oko x-osi:
+Matematički primjenu kvantnih rotacijskih vrata ostvarujemo umnoškom kvantnog stanja zapisanog u vektor i samih vrata, npr. ostvarenje zrcaljenja oko x-osi:
 \begin{equation}
 X\cdot \ket{\psi} = 
 \begin{bmatrix}
@@ -324,8 +420,11 @@ X\cdot \ket{\psi} =
 \end{bmatrix}
 \end{equation}
 
+\paragraph{}
+Kvantna rotacijska vrata u QGA mogu poprimiti više namjena. U prethodnom primjeru zrcaljenjem oko x-osi zamijenjujemo vjerojatnosti pronalaska bita u oba stanja, odnosno ostvarujemo operaciju slićnu inverziji bita koja se koristi za mutaciju kromosoma. Blagom rotacijom kvantnog stanja oko x-osi ili y-osi približavamo se stanju $\ket{0}$ ili $\ket{1}$ te tako ostvarujemo pretraživanje prostora stanja.
+
 \subsubsection{Inicijalizator populacije}
-Svrha inicijalizatora populacije je postaviti qbite u superpoziciju. Ostvaruje se Hadamardovim H vratima:
+Svrha inicijalizatora populacije je postaviti qubite u superpoziciju. Ostvaruje se Hadamardovim H vratima:
 \begin{equation}
 H = \frac{1}{\sqrt{2}}
 \begin{bmatrix}
@@ -334,7 +433,7 @@ H = \frac{1}{\sqrt{2}}
 \end{equation}
 
 \paragraph{}
-Matematički prikaz postavljanja qbita u superpoziciju:
+Matematički prikaz postavljanja qubita u superpoziciju:
 \begin{equation}
 H\cdot \ket{\psi} = \frac{1}{\sqrt{2}}
 \begin{bmatrix}
@@ -348,14 +447,33 @@ H\cdot \ket{\psi} = \frac{1}{\sqrt{2}}
 \alpha + \beta \\ \alpha - \beta
 \end{bmatrix}
 \end{equation}
+Na samom početku qubit nije u superpoziciji te se može nalaziti u stanju $\ket{0}$ ili $\ket{1}$. Primjenom Hadamardovih vrata na takve qubite dobivamo dvije istovjetne superpozicije stanja.
+\begin{align}
+\begin{split}
+H \cdot \ket{0} &= \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 + 0 \\ 1 - 0
+\end{bmatrix}
+= \begin{bmatrix}
+\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{bmatrix}
+\\
+H \cdot \ket{1} &= \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+0 + 1 \\ 0 - 1
+\end{bmatrix}
+= \begin{bmatrix}
+\frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+\end{split}
+\end{align}
+Da su superpozicije istovjetne zaključujemo iz formule \ref{eq:prob} kojom dobivamo jednake vjerojatnosti za oba stanja.
+\begin{equation}
+|\alpha|^2 = |\beta|^2 = \frac{1}{2}
+\end{equation}
 
-\subsubsection{Operator mjerenja qbita}
-Operator mjerenja qbita uništava kvantno svojstvo qbita i vraća klasičnu vrijednost. 
-
-\subsubsection{Evaluator}
-Evaluator CGA je kompatibilan s QGA.
-\subsubsection{Operator kvantnih rotacijskih vrata}
-Operator koji vrši napredak populacije. Prima jedinku i najbolju jedinku trenutne populacije i njima pripadne vrijednosti dobrote te "usmjerava" jedinku prema najboljoj.
+\subsubsection{Operator mjerenja qubita}
+Operator mjerenja qubita uništava kvantnu superpoziciju qubita i pretvara ju u klasično determinističko stanje, odnosno pretvara qubit u bit. Kvantnim stanjem qubita opisana je vjerojatnost pronalaženja qubita u jednom klasičnom stanju.
 
 \subsection{Pseudokod}
 \begin{algorithm}
@@ -364,46 +482,244 @@ Operator koji vrši napredak populacije. Prima jedinku i najbolju jedinku trenut
 \begin{algorithmic}
 \STATE{\textbf{Input:\ $parametri$}}
 \STATE{$InicijalizirajPopulaciju\ $Q(0)}
-\STATE{$IzmjeriPopulaciju\ $Q(0) $\rightarrow$ P(0)}
+\STATE{$OperatorMjerenja\ $Q(0) $\to$ P(0)}
 \STATE{$EvaluirajPopulaciju\ $P(0)}
 \STATE{B = $DohvatiNajboljegIz\ $P(0)}
 \WHILE{$NijeDovoljnoDobar\ $B}
 \STATE{t $\gets$ t + 1}
-\STATE{$IzmijeniKvantnimVratima\ $Q(t)}
-\STATE{$IzmjeriPopulaciju\ $Q(t) $\rightarrow$ P(t)}
-\STATE{$EvaluirajPopulaciju\ $P(t)}\\
+\STATE{$OperatorKvantnihRotacijskihVrata\ $Q(t)}
+\STATE{$OperatorMjerenja\ $Q(t) $\to$ P(t)}
+\STATE{$EvaluirajPopulaciju\ $P(t)}
 \STATE{B = $DohvatiNajboljegIz\ $P(t)}
 \ENDWHILE
 \RETURN $B$
 \end{algorithmic}
 \end{algorithm}
 
+\newpage
+
 \section{Genetski algoritam inspiriran kvantnom mehanikom (GAIQM)}
-Genetski algoritam inspiriran kvantnom mehanikom je simulacija QGA. U literaturi ga možemo pronaći i pod nazivom \it Quantum inspired genetic algorithm (GAIQM)\rm.
+Genetski algoritam inspiriran kvantnom mehanikom je simulacija QGA. U literaturi ga možemo pronaći i pod nazivom \it Quantum inspired genetic algorithm (QIGA)\rm. \citep{han_phd}
 
 \subsection{Dijelovi}
-Dijelovi GAIQM i QGA su identični, ali imaju različite implementacije:
+GAIQM sadrži dijelove CGA i QGA prilagođene korištenoj aproksimaciji qubita:
 \begin{itemize}
 \item Kvantni genotip (kvantni registar)
-\item Kvantni operator mutacije
 \item Operator kvantnih rotacijskih vrata
-\item Evaluator
+\item Kvantni operator mutacije
+\item Operator katastrofe
+\item Inicijalizator populacije
+\item Operator mjerenja qubita
 \end{itemize}
 
 \subsubsection{Kvantni genotip (kvantni registar)}
-Podatkovna struktura koja opisuje jednu jedinku. Od klasičnog registra se razlikuje u principu pohrane podataka (superpozicijom qbita). Zahtjeva operatore sposobne za baratanje qbitima. Dodatno zahtjeva i klasični genotip koji može pohraniti izmjerene vrijednosti qbita i koji je pogodan evaluatoru.
+Podatkovna struktura koja opisuje jednu jedinku. Od stvarnog kvantnog registra se razlikuje u principu pohrane podataka. Superpozicija qubita zapisana je aproksimacijom qubita \ref{eq:qubit_state_aprox} odnosno kutem kvantnog stanja.
+\begin{figure}[htb]
+\centering
 \begin{align*}
 \begin{bmatrix}
 \theta_1 & \theta_2 & \theta_3 & \cdots & \theta_i & \cdots & \theta_n
 \end{bmatrix}
 \end{align*}
+\caption{Registar kuteva aproksimiranog kvantnog stanja qubita}
+\end{figure}
+
+\subsubsection{Operator kvantnih rotacijskih vrata}
+Rotaciju qubita proizvoljnim kutem $\delta\theta$ u dvodimenzionalnom prostoru ostvarujemo rotacijskim vratima:
+\begin{align}
+\begin{bmatrix}
+\alpha' \\ \beta'
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos(\delta\theta) & -\sin(\delta\theta) \\ \sin(\delta\theta) & \cos(\delta\theta)
+\end{bmatrix}
+\begin{bmatrix}
+\alpha \\ \beta
+\end{bmatrix}
+\end{align} 
+
+\paragraph{}
+Korišteći aproksimaciju qubita \ref{eq:qubit_state_aprox} operator rotacije možemo pojednostaviti:
+\begin{align*}
+\begin{bmatrix}
+\alpha' \\ \beta'
+\end{bmatrix}
+&=
+\begin{bmatrix}
+\cos(\delta\theta) & -\sin(\delta\theta) \\ \sin(\delta\theta) & \cos(\delta\theta)
+\end{bmatrix}
+\begin{bmatrix}
+\alpha \\ \beta
+\end{bmatrix}
+\\&=
+\begin{bmatrix}
+\cos(\delta\theta) & -\sin(\delta\theta) \\ \sin(\delta\theta) & \cos(\delta\theta)
+\end{bmatrix}
+\begin{bmatrix}
+\cos(\frac{\theta}{2}) \\ \sin(\frac{\theta}{2})
+\end{bmatrix}
+\\&=
+\begin{bmatrix}
+\cos(\frac{\theta}{2})\cos(\delta\theta) - \sin(\frac{\theta}{2})\sin(\delta\theta) \\ \cos(\frac{\theta}{2})\sin(\delta\theta) + \sin(\frac{\theta}{2})\cos(\delta\theta)
+\end{bmatrix}
+\\&=
+\begin{bmatrix}
+\cos(\frac{\theta}{2}+\delta\theta) \\ \sin(\frac{\theta}{2}+\delta\theta)
+\end{bmatrix} 
+\\
+\begin{bmatrix}
+\cos(\frac{\theta'}{2}) \\ \sin(\frac{\theta'}{2})
+\end{bmatrix}
+&=
+\begin{bmatrix}
+\cos(\frac{\theta+2\delta\theta}{2}) \\ \sin(\frac{\theta+2\delta\theta}{2})
+\end{bmatrix}
+\end{align*}
+
+\paragraph{}
+Zaključujemo da je matrično množenje moguće zamijeniti formulom znatno manje složenosti:
+\begin{align} \label{eq:qrot_simple}
+\theta' = \theta + 2\cdot \delta\theta
+\end{align}
+
+\paragraph{}
+Kut zakreta $\delta\theta$ je moguće zadati pomoću tablice kuteva tzv. \it look-up table\rm\ u kojoj za svaki mogući slučaj određujemo smjer i velićinu zakreta. Tablicu možemo proizvoljno zadati, a standardni oblik tablice dan je u nastavku:
+\begin{table}[htb]
+\caption{Standardna \it look-up\rm\ tablica}
+\label{tbl:lookup}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|} 
+\hline
+$q_i$ & $b_i$ & f(q)>f(b) & $\Delta\theta$ & \multicolumn{4}{|c|}{sg($\alpha_i, \beta_i$)} \\
+\hline
+&&&& $\alpha_i\cdot\beta_i$ > 0 & $\alpha_i\cdot\beta_i$ < 0 & $\alpha_i$ = 0 & $\beta_i$ = 0 \\
+\hline
+0 & 0 & $\bot$ & 0 & - & - & - & - \\
+0 & 0 & $\top$ & 0 & - & - & - & - \\
+0 & 1 & $\bot$ & $\phi$ & +1 & -1 & 0 & $\pm$1 \\
+0 & 1 & $\top$ & $\phi$ & -1 & +1 & $\pm$1 & 0 \\
+1 & 0 & $\bot$ & $\phi$ & -1 & +1 & $\pm$1 & 0 \\
+1 & 0 & $\top$ & $\phi$ & +1 & -1 & 0 & $\pm$1 \\
+1 & 1 & $\bot$ & 0 & - & - & - & - \\
+1 & 1 & $\top$ & 0 & - & - & - & - \\
+\hline
+\end{tabular}
+\end{table}
+\paragraph{}
+Za zadani i-ti qubit neke jedinke $q$ i i-ti qubit najbolje jedinke $b$, ovisno o odnosu vrijednosti \it fitness\rm\ funkcija obiju jedinki odabiremo redak u tablici.
+Kut zakreta čitamo iz retka na sljedeći način:
+\begin{align*}
+\delta\theta = \Delta\theta \cdot sg(a,b)
+\end{align*}
+gdje $\Delta\theta$ određuje iznos zakreta, a $sg(\alpha_i, \beta_i)$ smjer zakreta. Vrijednost kut $\phi$ se najčešće odabire iz intervala $[0.005\pi, 0.01\pi]$.
+
+\paragraph{}
+U praksi se pokazalo da male promjene vrijednosti zadanih tablicom uvelike utjeću na brzinu i pouzdanost čitavog algoritma. Ovim pristupom određivanja kuta moguće je ostvariti prilagodbu algoritma pojedinom problemu i ostvariti dobre rezultate, no ugađanje konstanti nije učinkovito zbog njihove brojnosti, ima ih čak 40. Stvara se i problem fiksne vrijednosti zakreta zbog koje dolazi do prebrze konvergencije populacije čime ona gubi raznolikost i često završava u lokalnom optimumu. Prevelik kut zakreta sprječava finu pretragu oko pronađenog optimuma što ograničava preciznost pretrage.
+
+\paragraph{}
+Iz tih se razloga koristi adaptivno ugađanje vrijednosti zakreta koje automatski prilagođava iznos kuta zakreta. \citep{adaptive_qga} Umjesto fiksne vrijednosti kuta $\phi$ zadajemo najveću i najmanju vrijednost kuta između kojih će se interpolirati vrijednost kuta $\phi$. Što je jedinka bliža najboljoj jedinci po \it fitness\rm\ vrijednosti, to je kut zakreta manji, odnosno kut zakreta proporcionalan je razlici \it fitness\rm\ vrijednosti jedinki. Formula za određivanje kuta je sljedeća:
+
+\begin{equation}
+\label{eq:adapt}
+\delta\theta = l + (h - l) \cdot \frac{|f(q) - f(b)|}{max(f(q), f(b))}
+\end{equation}
+gdje $l$ i $h$ predstavljaju respektivno iznos donje i gornje granice kuta, $f(q)$ vrijednost \it fitness\rm funkcije jedinke koju usmjeravamo i $f(b)$ vrijednost \it fitness\rm funkcije trenutne najbolje jedinke u populaciji.
 
 \subsubsection{Kvantni operator mutacije}
-Operator funkcionalno jednak klasičnom operatoru mutacije, ali prilagođen upravljanju s nizom qubita.
-\subsubsection{Evaluator}
-Evaluator CGA je kompatibilan s QGA.
-\subsubsection{Operator kvantnih rotacijskih vrata}
-Operator koji vrši napredak populacije. Prima jedinku i najbolju jedinku trenutne populacije i njima pripadne vrijednosti dobrote te "usmjerava" jedinku prema najboljoj.
+Koriste se dvije vrste mutacija koje se izvršavaju ili ne ovisno o zadanoj vjerojatnosti izvršavanja: inverzija i zamjena.
+
+\paragraph{}
+Operator inverzije nasumično određuje jedan qubit jedinke te ga invertira. Mutacija je izvedena po uzoru na onu iz QGA. Obavlja se zrcaljenje bita s obzirom na x-os. Aproksimacijom stanja qubita samo jednim kutem (\ref{eq:qubit_aprox}) ograničili smo kut $\theta$ na interval $[-\pi, \pi]$ te omogućili pojednostavljeno zrcaljenje kuta:
+\begin{algorithm}
+\caption{Kvantni operator mutacije za GAIQM}
+\label{algo:gaiqm_mut}
+\begin{algorithmic}
+\STATE{\textbf{Input:\ $\theta$}}
+\IF{$\theta$ > 0}
+\RETURN $\pi - \theta$
+\ELSE
+\RETURN $-\pi - \theta$
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{}
+Operator zamjene nasumično odabire dva qubita te im zamijenjuje mjesta.
+\begin{figure}[htb]
+\centering
+\begin{align*}
+\begin{split}
+\begin{bmatrix}
+\boldsymbol{\theta_{1}} & \theta_{2} & \boldsymbol{\theta_{3}} & \cdots & \theta_{i} & \cdots & \theta_{n}
+\end{bmatrix} 
+\\
+\begin{bmatrix}
+\boldsymbol{\theta_{3}} & \theta_{2} & \boldsymbol{\theta_{1}} & \cdots & \theta_{i} & \cdots & \theta_{n}
+\end{bmatrix}
+\end{split}
+\end{align*}
+\caption{Zamjena dva nasumično odabrana qubita}
+\label{fig:mut_swap}
+\end{figure}
+
+\subsubsection{Operator katastrofe}
+Uporabom operatora kvantnih rotacijskih vrata algoritam može konvergirati u lokalni optimum, koji nije globalni optimum, te u njemu zaglaviti. Same mutacije nisu dovoljne da bi se algoritam izvukao, već je potreban snažniji operator.
+
+\paragraph{}
+Operator katastrofe unosi velik poremećaj u populaciju čime ostvaruje veću raznolikost populacije, a time i pretraživanje šireg prostora stanja. Operator sve jedinke populacije izuzev najbolje, vraća u početno stanje čiste superpozicije. Te jedinke tada ponovno kovnergiraju (iz nule), ali ovaj puta prema trenutnoj najboljoj jedinci. Uz ugrađenu nasumičnost smjera konvergencije velika je vjerojatnost pretraživanja dosad neistraženog prostora.
+
+\paragraph{}
+Prečestim pozivanjem operatora može se blokirati svojstvo usmjerenog razvoja populacije čime se pretraživanje pretvara u nasumično. To reguliramo parametrom ponovljenih optimuma. Ideja je pratiti u koliko se uzastopnih generacija ponavlja ista vrijednost najbolje jedinke, a kada taj broj prekorači vrijednost parametra izvršavamo katastrofu.
+\begin{algorithm}
+\caption{Okidač $katastrofe$}
+\label{algo:katastrofa_okidac}
+\begin{algorithmic}
+\STATE{\textbf{Input:\ }B}
+\IF{$prekoracen(parametarOkidanja)$} 
+\STATE{$resetirajBrojac()$}
+\RETURN{true}
+\ELSIF{$najboljiSePonovio(B)$}
+\STATE{$uvecajBrojac()$}
+\ELSE
+\STATE{$resetirajBrojac()$}
+\STATE{$zapamtiNajboljeg(B)$}
+\ENDIF
+\RETURN{false}
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Inicijalizator populacije}
+Inicijalizator postavlja sve qubite u stanje superpozicije $\ket{\psi_0}$.
+%\begin{align*}
+%\alpha = \cos{\frac{\theta}{2}} \qquad \beta = \sin{\frac{\theta}{2}} \\
+%\ket{\psi_0} = H \cdot \ket{\psi} &= \frac{1}{\sqrt{2}}
+%\begin{bmatrix}
+%\alpha + \beta \\ \alpha - \beta
+%\end{bmatrix}
+%\\ &=
+%\begin{cases}
+%\frac{1}{\sqrt{2}} \alpha \ket{0} + \frac{1}{\sqrt{2}} \beta \ket{1} \\
+%\frac{1}{\sqrt{2}} \alpha \ket{0} - \frac{1}{\sqrt{2}} \beta \ket{1}
+%\end{cases}
+%\\ &=
+%\begin{cases}
+%\frac{1}{\sqrt{2}} \cos{\frac{\theta}{2}} \ket{0} + \frac{1}{\sqrt{2}} \sin{\frac{\theta}{2}} \ket{1} \\
+%\frac{1}{\sqrt{2}} \cos{\frac{\theta}{2}} \ket{0} - \frac{1}{\sqrt{2}} \sin{\frac{\theta}{2}} \ket{1}
+%\end{cases}
+%\end{align*}
+ Zbog aproksimacije qubita definirane u (\ref{eq:qubit_state_aprox}) potrebno je sve kuteve inicijalizirati na $\pm\frac{\pi}{2}$.
+%\begin{align*}
+%\ket{\psi_0} = \begin{cases}
+%\frac{1}{2} \ket{0} + \frac{1}{\sqrt{2}} \sin{\frac{\theta}{2}} \ket{1} \\
+%\frac{1}{\sqrt{2}} \cos{\frac{\theta}{2}} \ket{0} - \frac{1}{\sqrt{2}} \sin{\frac{\theta}{2}} \ket{6}
+%\end{cases}
+%\end{align*}
+ 
+\subsubsection{Operator mjerenja}
+Operatorom mjerenja superpoziciju pretvaramo u klasično stanje odnosno qubit pretvaramo u bit. Na temelju vjerojatnosi 
+
+\newpage
 
 \subsection{Pseudokod}
 \begin{algorithm}
@@ -411,45 +727,100 @@ Operator koji vrši napredak populacije. Prima jedinku i najbolju jedinku trenut
 \label{algo:gaiqm}
 \begin{algorithmic}
 \STATE{\textbf{Input:\ $parametri$}}
-\STATE{$InicijalizirajPopulaciju\ $P(0)}
-\STATE{$IzmjeriPopulaciju\ $P(0)}
+\STATE{$InicijalizirajPopulaciju\ $Q(0)}
+\STATE{$OperatorMjerenja\ $Q(0) $\to$ P(0)}
 \STATE{$EvaluirajPopulaciju\ $P(0)}
-\STATE{B = $DohvatiNajboljegIz\ $P(0)}
+\STATE{B = $DohvatiNajboljegIz\ $Q(0), P(0)}
 \WHILE{$NijeDovoljnoDobar\ $B}
 \STATE{t $\gets$ t + 1}
-\STATE{$OperatorKvantnihRotacijskihVrata\ $B, P(t)}
-\STATE{$OperatorMutacije\ $P(t)}
+\IF{$OkidacKatastrofe\ $B}
+\STATE{$OperatorKatastrofe\ $B, Q(t)}
+\ENDIF
+\STATE{$OperatorKvantnihRotacijskihVrata\ $B, Q(t)}
+\STATE{$OperatorMutacije\ $Q(t)}
+\STATE{$OperatorMjerenja\ $Q(t) $\to$ P(t)}
 \STATE{$EvaluirajPopulaciju\ $P(t)}
+\STATE{B = $DohvatiNajboljegIz\ $Q(t), P(t)}
 \ENDWHILE
 \RETURN $B$
 \end{algorithmic}
 \end{algorithm}
 
+\newpage
+
 \subsection{Implementacija algoritma}
-Algoritam je implementiran na aproksimaciji qbita i kvantnog registra. Genotip sadrži kvantni registar koji pamti samo kuteve kvantnih stanja:
+Algoritam je implementiran na aproksimaciji qubita i kvantnog registra.
+\subsubsection{Kvantni genotip (QuantumRegister)}
+Genotip nasljeđuje klasu Binary koja svoj kromosom zapisuje u obliku niza bitova, a nudi i pretvorbu niza bitova u niz realnih brojeva. Definiranim parametrima \ref{tbl:param_kvareg} određuje se brojnost i preciznost pretvorenih realnih brojeva. Dodatno sadrži i registar koji pamti samo vrijednosti kuteva aproksimiranih kvantnih stanja.
+\begin{figure}[htb]
+\centering
 \begin{align*}
+Registar\ bitova &
+\begin{bmatrix}
+b_1 & b_2 & b_3 & \cdots & b_i & \cdots & b_n \\
+\end{bmatrix} \\
+Registar\ realnih\ brojeva &
+\begin{bmatrix}
+r_1 & r_2 & r_3 & \cdots & r_j & \cdots & r_m \\
+\end{bmatrix} \\
+Registar\ kuteva &
 \begin{bmatrix}
 \theta_1 & \theta_2 & \theta_3 & \cdots & \theta_i & \cdots & \theta_n \\
 \end{bmatrix}
 \end{align*}
+\caption{$QuantumRegister$ sadrži 3 registra za reprezentaciju informacije}
+\end{figure}
 
 \paragraph{}
+Sadrži metodu $measure()$ kojom se izvršava mjerenje registra. Iteracijom po kutevima računa se vjerojatnost i određuje klasično stanje (bit) koje se zapisuje u registar bitova. Algoritam koji određuje stanje qubita:
+\begin{algorithm}
+\caption{measure()}
+\label{algo:measure}
+\begin{algorithmic}
+\FOR{$\theta _i$ : registarKuteva}
+\STATE{$b _i$ = randomDouble() > $\cos^2{(\frac{\theta _i}{2})}$}
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
 
+\paragraph{}
+Metodom $resetQbits(StateP)$ ostvaruje se inicijalizacija superpozicije qubita. Parametrima \ref{tbl:param_kvareg} moguće je odrediti kut početne superpozicije. Ova metoda nasumično postavlja pozitivan ili negativan početni kut za svaki qubit, te nakon toga poziva $measure()$ kako bi se iz qubita dobile vrijednosti bitova. Konačno poziva se $update()$ koji izračunava vrijednosti realnih brojeva iz vrijednosti registra bitova. Ova se metoda poziva i pri inicijalizaciji samog kvantnog registra.
 
+\paragraph{Napomena:}
+Naslijeđujući $Binary$ genotip sadrži sve potrebne strukture i procedure klase $Binary$ te se može jednako koristiti. To znači da evaluatori koji koriste $Binary$ mogu direktno koristiti i $QuantumRegister$ bez potrebe za dodatnim (pomoćnim) genotipom što za taj slučaj ubrzava rad algoritma.
 
-\subsection{Rad algoritma}
+\subsubsection{GAIQM}
+Implementacija GAIQM prati pseudokod \ref{algo:gaiqm}. Algoritam interno koristi $QuantumRegister$ nad kojim izvršava sve operacije. Kako bi algoritam podržavao različite genotipe dodao sam adapter.
 
+\paragraph{}
+Adapter u obliku metode $adapter(individual, indexOfQreg)$ kopira odgovarajući sadržaj kvantnog registra u radni genotip koji se koristi u evaluatoru. Ovisno o tipu kopira samo realne brojeve ($FloatingPoint$) ili samo bitove ($BitString$ i $Binary$). Posebno za $Binary$ nakon kopiranja poziva se i metoda $update()$ kako bi se osvježili i realni brojevi tog genotipa. Metoda se neće pozvati ako je $QuantumRegister$ jedini zadani genotip. Jedinka može imati više genotipa koji su pohranjeni u niz. Varijabla $indexOfQreg$ služi kao indeks na kojem se nalazi genotip kvantnog registra. 
 
+\paragraph{Napomena:}
+Algoritam se služi konvencijom da je $QuantumRegister$ uvijek posljednji genotip u jedinki. Zato treba paziti da se pri definiciji parametara genotipa $QuantumRegister$ uvijek navede posljednji.
 
-\chapter{Primjena}
+\subsubsection{MutQuantumInversion}
+Operator inverzije pri pozivu nasumično odabire jedan qubit u zadanom registru te ga invertira algoritmom \ref{algo:gaiqm_mut}.
+
+\subsubsection{MutQuantumSwap}
+Operator zamjene pri pozivu nasumično odabire dvije različite pozicije qubita u zadanom registru te im zamjeni vrijednosti kao što je prikazano slikom \ref{fig:mut_swap}.
+
+\subsubsection{QuantumRotationGate}
+Koristi se pojednostavljena formula \ref{eq:qrot_simple} i adaptivna metoda izračuna vrijednosti zakreta \ref{eq:adapt}. Tablica predznaka je implementirana neizravno pomoću $if-else$ blokova.
+
+\chapter{Eksperimenti} 
+\label{ch:primjena}
+Eksperiment se sastoji od usporedbe CGA i GAIQM na identičnom problemu uz parametre za koje pojedini algoritam ostvaruje vrlo dobre rezultate.
+Terminator eksperimenata je maksimalan broj evaluacija koji je zadan ovisno o problemu.
+Svaki eksperiment je ponovljen 40 puta, a prikazani rezultati su usrednjene vrijednosti svih ponovljenih eksperimenata.
 
 \section{Traženje globalnog minimuma funkcije (FunctionMin)}
 \subsection{Opis problema}
-Zadane su netricijalne funkcije u 3 dimenzije kojima je potrebno pronaći točku minimuma.
+Zadane su netrivijalne višedimenzionalne funkcije kojima je potrebno pronaći minimum.
 Ovaj problem koristi genotip $Binary$.
 
-\paragraph{Zadane funkcije:}
-\begin{itemize}
+\paragraph{}
+Zadane funkcije:
+\begin{enumerate}
 \item Kvadratna
 %\begin{equation}
 %f(\mathbf {x} )=\sum _{{i=1}}^{n}x_{i}^{2}
@@ -476,57 +847,250 @@ Ovaj problem koristi genotip $Binary$.
 %f({\boldsymbol {x}})=\sum _{i=1}^{n-1}\left[100\left(x_{i+1}-x_{i}^{2}\right)^{2}+\left(x_{i}-1\right)^{2}\right]
 %\end{equation}
 \item Schaffer-ova F7 funkcija
-\end{itemize}
+\end{enumerate}
 
-\subsection{Rezultat}
+\clearpage
+
+\subsection{Rezultati}
+\begin{table}[htb]
+\caption{Korišteni parametri za FunctionMin}
+\centering
+\begin{tabular}{|c|c||c|c|} \hline
+\multicolumn{2}{|c||}{SteadyStateTournament} & \multicolumn{2}{c|}{GAIQM} \\ 
+\hline
+Parametar & Vrijednost & Parametar & Vrijednost \\ 
+\hline
+tsize & 3 & disaster & 300 \\
+&& qrot.ubound & 0.25 \\
+&& qrot.lbound & 0.008 \\
+&& initAngle & 0.3 \\
+dimension & 2 & dimension & 2 \\
+ubound & 10 & ubound & 10 \\
+lbound & -10 & lbound & -10 \\
+precision & 3 & precision & 3 \\
+population.size & 170 & population.size & 48 \\
+mutation.indprob & 0.1 & mutation.indprob & 0.04 \\
+&& mut.quantum\_swap & 0.2 \\
+&& mut.quantum\_inversion & 0.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{}
+Za svaki je eksperiment postavljena gornja granica broja evaluacija na $200000$ koja prekida eksperiment. Algoritmi nikada ne dostižu vrijednost $0$ pa broj evaluacija uvijek prekine program, odnosno broj evaluacija jednak za sve funkcije i oba algoritma (uz manja prekoraćenja zbog veličine populacije). Program će završiti i ako se dosegne optimum pojedine funkcije. Optimumi sviju navedenih funkcija su $0$.
+
+\begin{table}[htb]
+\caption{Prosječne vrijednsti po funkcijama}
+\centering
+\begin{tabular}{|c|cc|cc|} \hline
+\multirow{2}{*}{Funkcija} & \multicolumn{2}{c|}{CGA} & \multicolumn{2}{c|}{GAIQM} \\ \cline{2-5}
+ & Optimum & Broj generacija & Optimum & Broj generacija \\ 
+\hline
+F1 & $6.53\cdot 10^{-6}$ & 149 & $2.33\cdot 10^{-8}$ & 364 \\
+F2 & $1.21\cdot 10^{-3}$ & 288 & $1.86\cdot 10^{-7}$ & 271 \\
+F3 & $6.99\cdot 10^{-8}$ & 105 & $6.99\cdot 10^{-8}$ & 113 \\
+F4 & $1.23\cdot 10^{-3}$ & 16 & $1.23\cdot 10^{-3}$ & 13 \\
+F5 & $3.69\cdot 10^{-5}$ & 23 & $3.69\cdot 10^{-5}$ & 53 \\
+F6 & $9.19\cdot 10^{-3}$ & 440 & $6.16\cdot 10^{-3}$ & 1434 \\
+F7 & $3.19\cdot 10^{-2}$ & 99 & $3.14\cdot 10^{-2}$ & 26 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{}
+Vidimo da je veličina populacije GAIQM znatno manja u odnosu na CGA, a postižu se podjednaki ili bolji rezultati. Iz tog se razloga puno rijeđe poziva evaluator. To možemo zaključiti i na broju generacija.
+
+\clearpage
 
 \section{Knapsack problem}
 \subsection{Opis problema}
-Zadana je nosivost torbe (knapsack) i popis stvari i njima pripadnih težina.
-Potrebno je pronaći najbolju kombinaciju stvari uz uvijet da je zadovoljena nosivost torbe.
+Zadana je nosivost torbe \engl{knapsack} i popis predmeta. Za svaki predmet zadana je njegova težina i vrijednost.
+Cilj je pronaći najvrijedniju kombinaciju stvari uz uvijet da nije prekoračena nosivost torbe.
 Ovaj problem koristi genotip $BitString$.
 
-\subsection{Rezultat}
+
+\subsection{Rezultati}
+Za testiranje koristim nasumično generirane setove predmeta s ograničenom maksimalnom težinom predmeta, maksimalnom vrijednošću predmeta te definiranim brojem predmeta u setu. Koristim set od 500 i od 1000 predmeta.
+
+\begin{table}[htb]
+\caption{Korišteni parametri za Knapsack}
+\centering
+\begin{tabular}{|c|c||c|c|} \hline
+\multicolumn{2}{|c||}{SteadyStateTournament} & \multicolumn{2}{c|}{GAIQM} \\ 
+\hline
+Parametar & Vrijednost & Parametar & Vrijednost \\ 
+\hline
+tsize & 3 & disaster & 500 \\
+&& qrot.ubound & 0.2 \\
+&& qrot.lbound & 0.005 \\
+&& initAngle & 0.01 \\
+population.size & 100 & population.size & 10 \\
+mutation.indprob & 0.1 & mutation.indprob & 0.04 \\
+crx.onepoint & 1 & mut.quantum\_swap & 1 \\
+mut.simple & 1 & mut.quantum\_inversion & 1 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htb]
+\caption{Prosječni rezultati po setovima}
+\centering
+\begin{tabular}{|c|ccc|} \hline
+\multirow{2}{*}{Funkcija} & \multicolumn{3}{c|}{CGA} \\ \cline{2-4}
+ & Pronađeni optimum & Broj generacija & Broj evaluacija \\ 
+\hline
+500 & 2922 & 319 & 63920 \\
+1000 & 3616 & 700 & 140115 \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[htb]
+\centering
+\begin{tabular}{|c|ccc|} \hline
+\multirow{2}{*}{Funkcija} & \multicolumn{3}{c|}{GAIQM} \\ \cline{2-4}
+ & Pronađeni optimum & Broj generacija & Broj evaluacija \\ 
+\hline
+500 & 2922 & 3261 & 32635 \\
+1000 & 3616 & 4616 & 46182 \\
+\hline
+\end{tabular}
+\end{table}
 
 \section{Regresija neuronske mreže}
 \subsection{Opis problema}
-Za zadane ulazi/izlazi brojčane podatke potrebno je pronaći težine veza između neurona neuronske mreže (učenje neuronske mreže). Ovaj problem koristi genotip $FloatingPoint$.
+Za zadane ulaz/izlaz brojčane podatke potrebno je pronaći težine veza između slojeva neuronske mreže (učenje neuronske mreže). Ovaj problem koristi genotip $FloatingPoint$.
 
-\subsection{Rezultat}
+\paragraph{}
+Struktura mreže je fiksirana na $1\to 5\to 1$, a aktivacijske funkcije su definirane po slojevima $sigmodalna \to linearna$.
+Broj evaluacija ograničen je na $100000$.
+Za testiranje koristim dvije funkcije:
+\begin{align*}
+&f(x) = \frac{x^2}{100},\quad x \in [-9, 9], \quad \Delta x = 1 \\
+&g(x) = \sin{x},\quad x \in [0, 6.2], \quad \Delta x = 0.1
+\end{align*}
+
+\subsection{Rezultati}
+\begin{table}[htb]
+\caption{Korišteni parametri za regresiju neuronske mreže}
+\centering
+\begin{tabular}{|c|c||c|c|} \hline
+\multicolumn{2}{|c||}{SteadyStateTournament} & \multicolumn{2}{c|}{GAIQM} \\ 
+\hline
+Parametar & Vrijednost & Parametar & Vrijednost \\ 
+\hline
+tsize & 3 & disaster & 800 \\
+&& qrot.ubound & 0.3 \\
+&& qrot.lbound & 0.008 \\
+&& initAngle & 0.5 \\
+population.size & 70 & population.size & 5 \\
+mutation.indprob & 0.01 & mutation.indprob & 0.01 \\
+&& mut.quantum\_swap & 0.2 \\
+&& mut.quantum\_inversion & 0.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Funkcija f(x)}
+\subsubsection{Funkcija g(x)}
+\begin{table}[htb]
+\caption{Prosječni rezultati po setovima}
+\centering
+\begin{tabular}{|c|cc|cc|} \hline
+\multirow{2}{*}{Funkcija} & \multicolumn{2}{c|}{CGA} & \multicolumn{2}{c|}{GAIQM} \\ \cline{2-5}
+ & Pronađeni optimum & Broj evaluacija & Pronađeni optimum & Broj evaluacija \\ 
+\hline
+f(x) & 0 & 0 & 0 & 0 \\
+g(x) & 0 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+\end{table}
 
 \section{COCO}
 \subsection{Opis problema}
-Usporedba s ostalim optimizacijskim algoritmima
+Algoritam se uspoređuje s ostalim algoritmima implementiranim u ECFu na problemu traženja minimuma funkcije ($FunctionMin$).
 
 \subsection{Rezultat}
+\begin{table}[htb]
+\caption{Korišteni parametri za COCO}
+\centering
+\begin{tabular}{|c|c|} \hline
+\multicolumn{2}{|c|}{GAIQM} \\ 
+\hline
+Parametar & Vrijednost \\ 
+\hline
+disaster & 500 \\
+qrot.ubound & 0.2 \\
+qrot.lbound & 0.005 \\
+initAngle & 0.01 \\
+population.size & 10 \\
+mutation.indprob & 0.04 \\
+mut.quantum\_swap & 1 \\
+mut.quantum\_inversion & 1 \\
+\hline
+\end{tabular}
+\end{table}
 
+GRAFOVI
 
-\chapter{Moguća nadogradnja}
+\chapter{Moguće nadogradnje} \label{ch:nadogradnja}
 \section{Paralelizacija}
-Stvaranjem više nezavisnih populacija jedinki te povremenom razmjenom najboljih jedinki između populacija poboljšava se rad algoritma.
+Stvaranjem više nezavisnih populacija jedinki te povremenom razmjenom najboljih jedinki populacija poboljšava se raznolikost populacije. Također, ustvaruje se šira pretraga prostora stanja jer se jedinke pojedinih populacija počinju "kretati" prema drugim optimumima čime se povećava vjerojatnost pronalaženja dotad neistraženih stanja. \citep{han_phd}
 
 \section{Podržavanje više-genotipskih jedinki}
-Trenutno je ostvarena podrška jedinki s jednim genotipom. Podršku više genotipa moguće je ostvariti izmjenom 'prilagodnika' unutar algoritma te prikladnim zastavicama za odabir genotipa koji će poprimati vrijednosti kvantnog registra.
+Trenutno je ostvarena podrška jedinki s jednim genotipom. Definiranjem više genotipa, vrijednosti iz kvantnog registra će se kopirati u prvi zadani genotip (genotip jedinke na indeksu 0). Podršku više genotipa moguće je ostvariti izmjenom 'prilagodnika' te prikladnim zastavicama za odabir genotipova u koje će se kopirati odgovarajuće vrijednosti iz kvantnog registra.
 
-\chapter{Zaključak}
-Zaključak.
+\section{Optimizacija domenom cijelih brojeva}
+Operacije s podacima dvostruke preciznosti su računski zahtjevnije cjelobrojnih te ih je poželjno zamijeniti. Trenutno se u kvantni registar pohranjuju brojevi dvostruke preciznosti te su sve operacije prilagođene njihovom. Kako je kvantni i klasični dio GAIQM međusobno izoliran, a povezan samo operatorom mjerenja, moguće je drugačije modelirati kvantni dio bez utjecaja na klasični.
 
-\bibliography{literatura}
+\paragraph{}
+Umjesto decimalnih brojeva, u kvantni registar možemo pohranjivati cijele brojeve. Trenutnu definiciju kuta iz domene $[-\pi, \pi]$ možemo preslikati na cjelobrojnu domenu $[INT\_MIN, INT\_MAX]$ (odnosno $[-32767, 32767]$). Tada sve operacije nad kvantnim registrom moramo prilagoditi novoj domeni.
+
+\paragraph{}
+Nedostatak ove optimizacije je smanjivanje prostora kuteva odnosno kvantnih stanja u kojem se kromosom može pronaći.
+
+\chapter{Zaključak} 
+\label{ch:zaključak}
+Genetski algoritam inspiriran kvantnom mehanikom kombinacija je strukture klasičnih genetskih algoritama i paradigme kvantnih računala. Cilj ovog rada je objasniti paradigmu kvantnih računala, istražiti mogućnosti oblikovanja stohastičkih optimizacijskih algoritama uz korištenje simulacije rada kvantnog računala te usporediti novu vrstu genetskog algoritma s klasičnim na nekoliko primjera.
+
+\paragraph{}
+Kako su evaluatori često skupe (spore) procedure, a brzina algoritma ovisi direktno o broju evaluacija poželjno je što manje pozivati evaluator. Rezultati usporedbe klasičnog genetskog algoritma (CGA) i genetskog algoritma inspiriranog kvantnom mehanikom (GAIQM) pokazuju na nadmoć GAIQM po broju evaluacija. Iako CGA na jednostavnijim problemima vremenski brže dolazi do globalnog optimuma, izvršava i do 4 puta više evaluacija. To navodi na činjenicu da je GAIQM iznimno pogodan za rad sa zahtjevnim evaluatorima.
+
+\paragraph{}
+Vremenska cijena GAIQM proizlazi iz činjenice da obavlja računske operacije koje se ponavljaju nad svakim qubitom svake jedinke u populaciji. Svoju vremensku zahtjevnost balansira znantno manjom populacijom od CGA. Velićina populacije osigurava veću raznolikost populacije odnosno pretraživanje većeg prostora stanja po iteraciji te se na nju oslanja CGA. GAIQM s druge strane ne zahtjeva veliku populaciju zbog svoje ugrađene nasumičnosti svake jedinke kojom jednako dobro pretražuje prostor stanja. Tako GAIQM može nadmašiti CGA i s 10 puta manjom populacijom.
+
+\paragraph{}
+U odnosu na CGA zahtjeva postavljanje više parametara, no upravo zbog toga omogućuje veću konfigurabilnost pojedinom problemu te balansiranje brzine i preciznosti pretraživanja.
+
 \bibliographystyle{fer}
+\bibliography{literatura}
 
 \appendix
-\chapter{Parametri}
+\chapter{Parametri} 
+\label{ch:parametri}
 U nastavku je dan opis svih parametara. Obavezni parametri označeni su \textbf{podebljanim tekstom}.
 
 \begin{table}[htb]
 \caption{Parametri za <GAIQM>}
 \label{tbl:param_gaiqm}
 \centering
-\begin{tabular}{|p{2cm}|r|r|p{8cm}|} \hline
-Naziv & Tip & Pretp. vr. & Opis\\ \hline
-$ubound$ & $double$ & 0.1 & Gornja granica zakreta qbita \\
-$lbound$ & $double$ & 0.01 & Donja granica zakreta qbita \\
-$disaster$ & $uint$ & -1 & Broj ponovljenih vrijednosti operatora katastrofe (vrijednost -1 gasi operator katastrofe) \\ \hline
+\begin{tabular}{p{2cm}ccp{8cm}} \hline
+Naziv & Tip & Pretp. vr. & Opis\\ \toprule
+$ubound$ & $double$ & 0.1 & Gornja granica zakreta qubita \\
+$lbound$ & $double$ & 0.01 & Donja granica zakreta qubita \\
+$disaster$ & $uint$ & -1 & Broj ponovljenih vrijednosti operatora katastrofe (vrijednost -1 gasi operator katastrofe) \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htb]
+\caption{Parametri za problem \it Knapsack\rm}
+\label{tbl:param_knapsack}
+\centering
+\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ nasljeđeni su iz genotipa Binary.}
+\begin{tabular}{p{4cm}ccp{6cm}} \hline
+Naziv & Tip & Pretp. vr. & Opis\\ \toprule
+$\textbf{eval.knapsackSize}$ & $double$ & - & Velićina (nosivost) torbe \\
+$\textbf{eval.itemsFile}$ & $string$ & - & Putanja do datoteke s definicijama težina i cijene predmeta \\
+$eval.$ $punishmentFactor$ & $double$ & 5 & Faktor kojim se množi prekoraćenje nosivosti torbe \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -534,44 +1098,32 @@ $disaster$ & $uint$ & -1 & Broj ponovljenih vrijednosti operatora katastrofe (vr
 \caption{Parametri za <QuantumRegister>}
 \label{tbl:param_kvareg}
 \centering
-\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ naslijeđeni su iz genotipa Binary.}
-\begin{tabular}{|p{3cm}|r|r|p{7cm}|} \hline
-Naziv & Tip & Pretp. vr. & Opis\\ \hline
+\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ nasljeđeni su iz genotipa Binary.}
+\begin{tabular}{p{3cm}ccp{7cm}} \hline
+Naziv & Tip & Pretp. vr. & Opis\\ \toprule
 $\textbf{dimension}$ & $uint$ & - & Količina realnih brojeva genotipa \\
 $\textbf{ubound}$ & $double$ & - & Maksimalna vrijednost brojeva u genotipu \\
 $\textbf{lbound}$ & $double$ & - & Minimalna vrijednost brojeva u genotipu \\
-$precision$ & $uint$ & - & Broj znamenki nakon decimalne točke \\
-$initAngle$ & $double$ & 0.5 & Početni kut qbita (početno kvantno stanje), množi se s $\pi$ \\
-$mut.quantum\_$ $inversion$ & $double$ & 0.5 & Udio vjerojatnosti poziva operatora \\
-$mut.quantum\_$ $swap$ & $double$ & 0.5 & Udio vjerojatnosti poziva operatora \\ \hline
+$\textbf{precision}$ & $uint$ & - & Broj znamenki nakon decimalne točke \\
+$initAngle$ & $double$ & 0.5 & Početni kut qubita (početno kvantno stanje), množi se s $\pi$ \\
+$mut.quantum\_$ $inversion$ & $double$ & 0.5 & Vjerojatnost poziva operatora \\
+$mut.quantum\_$ $swap$ & $double$ & 0.5 & Vjerojatnost poziva operatora \\ \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{table}[htb]
-\caption{Parametri za problem \it Knapsack\rm}
-\label{tbl:param_kvareg}
-\centering
-\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ naslijeđeni su iz genotipa Binary.}
-\begin{tabular}{|p{4cm}|r|r|p{6cm}|} \hline
-Naziv & Tip & Pretp. vr. & Opis\\ \hline
-$\textbf{eval.knapsackSize}$ & $double$ & - & Velićina (nosivost) torbe \\
-$\textbf{eval.itemsFile}$ & $string$ & - & Putanja do datoteke s definicijama težina i cijene predmeta \\
-$eval.$ $punishmentFactor$ & $double$ & - & Faktor kojim se množi prekoraćenje nosivosti torbe \\ \hline
-\end{tabular}
-\end{table}
+\clearpage
 
 \begin{sazetak}
-Cilj rada je objasniti koncept pohrane i manipulacije podacima na kvantnim računalima, mogućnost primjene na genetske algoritme na klasičnim računalima te proširenje ECF-a dotičnim algoritmom. Algoritam je primjenjen na 3 različita problema (traženje minimuma, knapsack, regresija neuronske mreže). Rezultati ukazuju na ...
+Cilj rada je objasniti koncept pohrane i manipulacije podacima na kvantnim računalima, primjenu tih koncepata na genetski algoritam koji se izvršava na klasičnom računalu te proširenje ECF-a dotičnim algoritmom. Algoritam je primjenjen na 3 različita problema (traženje minimuma, knapsack, regresija neuronske mreže). Rezultati ukazuju na primjenjivost algoritma s vrlo zahtjevnim evaluatorima.
 
-\kljucnerijeci{genetski algoritam, kvantna mehanika, qbit, knapsack, neuronska mreža.}
+\kljucnerijeci{genetski algoritam, kvantna mehanika, qubit, knapsack, neuronska mreža.}
 \end{sazetak}
 
-% TODO: Navedite naslov na engleskom jeziku.
 \engtitle{Genetic algorithm inspired by quantum mechanics}
 \begin{abstract}
-ENGLISH.
+The goal of this paper is to explain the concept of data storage and manipulation on quantum computers, applying those concepts on a genetic algorithm that executes in a classical computer and extending the ECF with it. The algorithm was applied on 3 different problems (function minimum search, knapsack problem, regression of a neural network). The results indicate usefulness of the algorithm on very demanding evaluators.
 
-\keywords{genetic algorithm, quantum mechanics, qbit, knapsack, neural network.}
+\keywords{genetic algorithm, quantum mechanics, qubit, knapsack, neural network.}
 \end{abstract}
 
 \end{document}

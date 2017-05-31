@@ -31,6 +31,9 @@ bool KnapsackEvalOp::initialize(StateP state) {
     if (file.is_open()) {
         string line;
 
+        itemWeights_.clear();
+        itemProfits_.clear();
+
         // For each item read and store weights and profits.
         std::vector<double> values;
         while (getline(file, line)) {

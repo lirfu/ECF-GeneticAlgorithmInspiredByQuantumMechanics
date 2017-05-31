@@ -26,9 +26,9 @@ public:
         return newObject;
     }
 
-//    void write(XMLNode &xQuantumRegister);
+    void write(XMLNode &);
 
-//    void read(XMLNode &xQuantumRegister);
+    void read(XMLNode &);
 
     void resetQbits(StateP);
 
@@ -38,10 +38,6 @@ public:
 
     void printOut();
 
-private:
-
-//    std::default_random_engine generator;
-//    std::uniform_real_distribution<double> distribution(0.0, 1.0);
 };
 
 typedef boost::shared_ptr<QuantumRegister> QuantumRegisterP;

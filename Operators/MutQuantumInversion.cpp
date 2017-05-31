@@ -19,18 +19,14 @@ bool MutQuantumInversion::initialize(StateP state) {
 bool MutQuantumInversion::mutate(GenotypeP gene) {
     QuantumRegister *reg = (QuantumRegister *) (gene.get());
 
-    // If a mutation occurs.
-    if (state_->getRandomizer()->getRandomDouble() < probability_) {
-        // Select a qbit to invert.
-        uint index = (uint) ((std::rand()) % reg->thetas_.size());
+    // Select a qbit to invert.
+    uint index = (uint) ((std::rand()) % reg->thetas_.size());
 
-        // Invert the qbit, keeping it in the [-PI, PI] interval.
-        if (reg->thetas_[index] > 0)
-            reg->thetas_[index] = M_PI - reg->thetas_[index];
-        else
-            reg->thetas_[index] = -M_PI - reg->thetas_[index];
-    }
-
+    // Invert the qbit, keeping it in the [-PI, PI] interval.
+    if (reg->thetas_[index] > 0)
+        reg->thetas_[index] = M_PI - reg->thetas_[index];
+    else
+        reg->thetas_[index] = -M_PI - reg->thetas_[index];
 
     return true;
 }

@@ -6,18 +6,17 @@
 
 	</Algorithm>
 	<Genotype>
-		<Binary>
-            <Entry key="dimension">2</Entry>
+		<FloatingPoint>
+            <Entry key="dimension">20</Entry>
             <Entry key="ubound">10</Entry>
             <Entry key="lbound">-10</Entry>
-            <Entry key="precision">3</Entry>
-		</Binary>
+		</FloatingPoint>
 	</Genotype>
 
 	<Registry>
-	    <Entry key="function">6</Entry>
-		<Entry key="population.size">170</Entry>
-		<Entry key="mutation.indprob">0.1</Entry>
+	    <Entry key="function">1</Entry>
+		<Entry key="population.size">100</Entry>
+		<Entry key="mutation.indprob">0.3</Entry>
 
 		<Entry key="term.fitnessval">1e-9</Entry>
 		<Entry key="term.eval">200000</Entry>

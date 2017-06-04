@@ -9,11 +9,11 @@
 	</Algorithm>
 	<Genotype>
 	    <BitString>
-            <Entry key="size">1000</Entry>
+            <Entry key="size">500</Entry>
         </BitString>
 
 		<QuantumRegister>
-            <Entry key="dimension">1000</Entry>
+            <Entry key="dimension">500</Entry>
             <Entry key="ubound">1</Entry>
             <Entry key="lbound">0</Entry>
             <Entry key="precision">0</Entry>
@@ -27,7 +27,7 @@
 
 	<Registry>
 	    <Entry key="eval.knapsackSize">100</Entry>
-		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/GAIQM/Problems/Knapsack/KnapsackTest1000</Entry>
+		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/GAIQM/Problems/Knapsack/KnapsackTest500</Entry>
         <Entry key="population.size">10</Entry>
 
         <Entry key="crossover.genotypes">all</Entry>
@@ -36,13 +36,13 @@
         <Entry key="mutation.protected">0</Entry>
 		<Entry key="mutation.indprob">0.04</Entry>
 
-        <Entry key="term.fitnessval">3616</Entry>
+        <Entry key="term.fitnessval">2922</Entry>
 		<Entry key="term.eval">200000</Entry>
+
+        <Entry key="batch.repeats">10</Entry>
+		<Entry key="batch.statsfile">/home/lirfu/zavrsni/GAIQM/Results/fminQ_u.log</Entry>
 
 		<Entry key="log.frequency">1</Entry>
 		<Entry key="log.level">3</Entry>
-
-		<Entry key="coco.enableoutput">1</Entry>
-        <Entry key="coco.folder">/home/lirfu/zavrsni/GAIQM/Results/Knapsack1000</Entry>
 	</Registry>
 </ECF>

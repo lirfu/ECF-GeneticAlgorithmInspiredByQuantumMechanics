@@ -9,6 +9,10 @@
 \usepackage{algorithmic}
 \graphicspath{ {./images/} }
 
+\floatname{algorithm}{Algoritam}
+\renewcommand{\algorithmiccomment}[1]{\bgroup\hfill//~#1\egroup}
+
+
 \begin{document}
 
 \thesisnumber{4830}
@@ -35,14 +39,16 @@ Zahvaljujem svojoj obitelji na podršci i strpljenju pogotovo tijekom kasnih no�
 Genetski algoritmi postoje još od 1960-tih kada je John Holland sa svojim studentima i kolegama napravio algoritam koji je simulirao fenomen adaptivnog ponašanja u prirodi. Kasnije su otkrivene mogućnosti i primjene genetskih algoritama na širokom rasponu stvarnih problema iz područja inženjerstva, ekonomije, kemije, robotike i mnogih drugih. Danas su genetski algoritmi podgrupa široke klase evolucijskih algoritama koji simuliranom evolucijom pronalaze rješenja. \citep{c_history}
 
 \paragraph{}
-U ovom radu predstavljam noviju vrstu genetskog algoritma koji koristi paradigmu kvantne mehanike za predstavljanje i manipuliranje podacima. Praktični dio implementiram u sklopu evolucijskog razvojnog okruženja ECF (\it Evolutionary Computation Framework\rm) razvijenog na FERu. Služim se znanstvenim člancima i knjigama te sažimam i objedinjujem većinu ideja i rješenja iznesenih u njima. U implementaciji koristim aproksimaciju qubita na koju još nisam naišao u radovima i člancima, a za koju vjerujem da je isplativija u pogledu memorijskog zauzeća i kompleksnosti implementacije. Algoritam prilagođavam korištenju 3 različite reprezentacije genotipa: niz bitova, niz decimalnih brojeva i bitovni niz s pretvorbom u niz decimalnih brojeva. Vršim usporedbu algoritma s "klasičnim" na tri različita problema, svaki za jednu reprezentaciju genotipa. Radu prilažem sve rezultate te korištene parametre. 
+U ovom se radu ostvaruje implementacija novije vrste genetskog algoritma koja koristi paradigmu kvantne mehanike za predstavljanje i manipuliranje podacima. Praktični dio implementiran je u sklopu evolucijskog razvojnog okruženja ECF (\it Evolutionary Computation Framework\rm) razvijenog na FER-u. U implementaciji koristim aproksimaciju qubita na koju još nisam naišao u ostalim radovima i člancima, a za koju vjerujem da je isplativija u pogledu memorijskog zauzeća i kompleksnosti implementacije. Algoritam je prilagođen korištenju 3 različite reprezentacije genotipa: niz bitova, niz decimalnih brojeva i bitovni niz s pretvorbom u niz decimalnih brojeva. Vrši se usporedba algoritma s klasičnim genetskim algoritmom na tri različita problema, svaki za jednu reprezentaciju genotipa. Radu se prilažu svi rezultati te korišteni parametri. 
 
 \paragraph{}
-Rad je raspoređen na sljedeći način: u poglavlju \ref{ch:kvameh} ukratko navodim povijest i opisujem značaj kvantne mehanike, objašnjavam neke temeljne pojmove potrebne za shvaćanje paradigme računanja kvantnim računalima te trenutnu tržišnu scenu istih. U poglavlju \ref{ch:gaiqm} opisujem strukturu klasičnog genetskog algoritma i kvantnog genetskog algoritma te detaljnije genetski algoritam inspiriran kvantnom mehanikom. U poglavlju \ref{ch:primjena} opisujem i prikazujem rezultate CGA i GAIQM raznih eksperimenata uz obrazloženja. Uz to obavljam i usporedbu s postojećim algoritmima na problemu traženja minimuma funkcija. U poglavlju \ref{ch:nadogradnja} predlažem moguće izmjene i nadogradnje algoritma. U dodatku \ref{ch:parametri} prilažem popis svih dostupnih parametara za komponente GAIQM.
+Rad je raspoređen na sljedeći način: u poglavlju \ref{ch:kvameh} ukratko se navodi povijest i opisuje značaj kvantne mehanike, objašnjavaju neki temeljni pojmovi potrebni za shvaćanje paradigme računanja kvantnim računalima te trenutna tržišna scena istih. U poglavlju \ref{ch:gaiqm} opisuje se struktura klasičnog genetskog algoritma i kvantnog genetskog algoritma te detaljnije genetski algoritam inspiriran kvantnom mehanikom. U poglavlju \ref{ch:primjena} opisuju se i prikazuju rezultati eksperimenata postignuti algoritmima CGA i GAIQM. 
+%Uz to obavlja se i usporedba s ostalim postojećim algoritmima na problemu traženja minimuma funkcija. 
+U poglavlju \ref{ch:nadogradnja} predlažu se moguće izmjene i nadogradnje algoritma. U dodatku \ref{ch:parametri} prilaže se popis svih podržanih parametara za komponente GAIQM.
 
 \chapter{Kvantna mehanika i kvantna računala}
 \label{ch:kvameh}
-Do početka 19. stoljeća fizičari su imali deterministički pogled na svijet. Razvijanjem tehnologije koja je omogućavala promatranje sve manjih čestica primjećuju se čudni fenomeni koje dotadašnja fizika nije mogla opisati. Iz potrebe za objašnjavanjem tih neobićnih pojava razvijene su podjednako neobićne teorije koje, iako su matematički dokazane, nisu olako prihvaćene na znanstvenoj sceni. Jedna takva teorija je pretpostavka diskretne prirode stvarnosti. Iz nje je nastalo jedno čitavo područje fizike zvano '\it kvantna mehanika\rm '. Iako su puno ranije postojala slična razmišljanja o diskretnim i točkastim česticama (Galilei, Bošković), do 19. stoljeća nije postojala ni tehnologija kojom bi se tvrdnje dokazale ni matematika kojom bi se tvrdnje opisale.
+Do početka 19. stoljeća fizičari su imali deterministički pogled na svijet. Razvijanjem tehnologije koja je omogućavala promatranje sve manjih čestica primjećuju se čudni fenomeni koje dotadašnja fizika nije mogla opisati. Iz potrebe za objašnjavanjem tih neobičnih pojava razvijene su podjednako neobične teorije koje, iako su matematički dokazane, nisu olako prihvaćene na znanstvenoj sceni. Jedna takva teorija je pretpostavka diskretne prirode stvarnosti. Iz nje je nastalo jedno čitavo područje fizike zvano '\it kvantna mehanika\rm '. Iako su puno ranije postojala slična razmišljanja o diskretnim i točkastim česticama (Galilei, Bošković), do 19. stoljeća nije postojala ni tehnologija kojom bi se tvrdnje dokazale ni matematika kojom bi se tvrdnje opisale.
 
 \paragraph{}
 Početkom 19. stoljeća, Max Planck objavljuje "\it Plankov zakon zračenja\rm" kojim rješava dugogodišnji problem opisivanja zračenja crnog tijela, popularno nazvan "\it ultraljubičasta katastrofa\rm". Definira povezanost izračene energije s valnom duljinom izračene svjetlosti, ali još bitnije definira diskretizirano zračenje u paketićima energije koje naziva 'količina', latinski 'kvantum'. Njegovim otkrićem kreće revolucija u fizici od kojih ću spomenuti samo nekoliko: otkriće fotoelektričnog efekta (Einstein), ispravljanje (redefiniranje) modela atoma (Rutherford, Bohr), otkriće dvojne prirode čestica (De Broglie), opisivanje valne prirode elektronske ljuske atoma (Heisenberg, Schr\"odinger, Born). \citep{bozja_cestica}
@@ -54,27 +60,26 @@ Danas je kvantni pogled na svijet vrlo uvriježen u krugu fizičara i šire, no 
 Ukratko, kvantna mehanika je relativno mlada grana fizike, ali je uvelike utjecala na razvoj tehnologije, znanosti i shvaćanja svijeta u kojem živimo.
 
 \section{Temeljni pojmovi kvantne mehanike}
-U ovom odlomku objašnjavam neke temeljne pojmove kvantne mehanike koji se spominju u daljnjem tekstu. 
 
 \subsection{Kvantna superpozicija}
 Jedan je od osnovnih i nama najvažnijih pojmova kvantne mehanike.
 Kvantna superpozicija je princip koji definira zbroj (superpoziciju) dvaju ili više kvantnih stanja kao ispravno kvantno stanje. 
-To znači da je kvantno stanje kombinacija više stanja s pridjeljenom vrijednosti (važnosti) svakog stanja.
+To znači da je kvantno stanje kombinacija više stanja s pridijeljenom vrijednosti (važnosti) svakog stanja.
 
 \paragraph{}
-Kvantnom superpozicijom deterministički je model atoma s definiranim dozvoljenim putanjama elektrona zamjenjen puno preciznijim kvantnim modelom atoma koji ne definira točne putanje elektrona već prostornu distribuciju vjerojatnosti pronalaženja elektrona u određenoj točki prostora. Slikovito možemo reći da je model atoma s kružnim putanjama elektrona oko jezgre zamijenjen modelom jezgre okružene elektronskim oblacima. \citep{bozja_cestica}
+Kvantnom superpozicijom deterministički je model atoma s definiranim dozvoljenim putanjama elektrona zamijenjen puno preciznijim kvantnim modelom atoma koji ne definira točne putanje elektrona već prostornu distribuciju vjerojatnosti pronalaženja elektrona u određenoj točki prostora. Slikovito možemo reći da je model atoma s kružnim putanjama elektrona oko jezgre zamijenjen modelom jezgre okružene elektronskim oblacima. \citep{bozja_cestica}
 
 \paragraph{}
-Jedan od najpoznatijih alegorija superpozicije je Schr\"odingerov misaoni eksperiment zvan 'Schr\"odingerova mačka'. Zamislimo zatvorenu čelićnu kutiju u koju smo stavili mačku i Geigerov brojač unutar kojeg se nalazi uređaj s otrovom. Uređaj u sebi ima komadić radioaktivnog elementa, toliko malen da se u vremenskom rasponu od 1 sat može (ali i ne mora) dogoditi raspad atoma. U slučaju raspada Geigerov bojač aktivira relej koji ispusti čekić na malenu staklenu ampulu cijanovodične kiseline.
+Jedan od najpoznatijih alegorija superpozicije je Schr\"odingerov misaoni eksperiment zvan 'Schr\"odingerova mačka'. Zamislimo zatvorenu čeličnu kutiju u koju smo stavili mačku i Geigerov brojač unutar kojeg se nalazi uređaj s otrovom. Uređaj u sebi ima komadić radioaktivnog elementa, toliko malen da se u vremenskom rasponu od 1 sat može (ali i ne mora) dogoditi raspad atoma. U slučaju raspada Geigerov bojač aktivira relej koji ispusti čekić na malenu staklenu ampulu cijanovodične kiseline.
 Ostavimo li sustav zatvorenim na sat vremena možemo reći da je mačka još uvijek živa ako u međuvremenu nije došlo do raspada atoma jer prvi bi raspad otrovao mačku. Psi (valna) funkcija čitavog sustava bi to opisala stanjima žive i mrtve mačke jednakog značaja, odnosno drugačije rečeno jednakih vjerojatnosti pojavljivanja.
 Stvarno stanje ne možemo znati s potpunom sigurnošću dok je otvorimo kutiju i pogledamo u nju.
 
 \paragraph{}
-Iz primjera vidimo da se sustav (ili čestica) može nalaziti u superpoziciji dok god ne promotrimo (izmjerimo) sustav. Superpozicija je opisana valnom funkcijom, a mjerenjem sustava gubi se superpozicija odnosno događa se kolaps valne funkcije u jedno determinističko stanje. Dakle, mjerenjem sustava dobivamo klasično stanje čestice u kojem se ona tog trena našla i upravo to je naša poveznica između "kvantnog" i "klasičnog" svijeta koja je nužna za ostvarivanje kvantnog računala.
+Iz primjera vidimo da se sustav (ili čestica) može nalaziti u superpoziciji dok god ne promotrimo (izmjerimo) sustav. Superpozicija je opisana valnom funkcijom, a mjerenjem sustava gubi se superpozicija odnosno događa se kolaps valne funkcije u jedno determinističko stanje. Dakle, mjerenjem sustava dobivamo klasično stanje čestice u kojem se ona tog trena našla i upravo to je naša poveznica između "kvantnog" i "klasičnog" svijeta koja je nužna za ostvarivanje upotrebljivog kvantnog računala.
 
 \subsection{Kvantna dekoherencija}
 Kvantna dekoherencija je kolaps valne funkcije odnosno nepovratni gubitak pohranjene informacije zbog utjecaja okoline koja ga okružuje.
-U stvarnim kvantnim sustavima relativno je lako ostvariti superpoziciju, ali je veliki problem održati ju. Ovisno o tehnologiji sustava razni uvijeti moraju biti ostvareni kako bi se sustav izolirao od okoline i zaštitio integritet pohranjene informacije. Iz tog su razloga kvantni sustavi danas glomazni i zahtjevni za održavanje.
+U stvarnim kvantnim sustavima relativno je lako ostvariti superpoziciju, ali je veliki problem održati ju. Ovisno o tehnologiji sustava razni uvjeti moraju biti ostvareni kako bi se sustav izolirao od okoline i zaštitio integritet pohranjene informacije. Iz tog su razloga kvantni sustavi danas glomazni i zahtjevni za održavanje.
 
 \subsection{Spregnuta stanja \engl{entangled states}}
 Spregnuta kvantna stanja povezana su (spregnuta) ako rezultat mjerenja jednog kvantnog stanja utječe na rezultat mjerenja drugog kvantnog stanja. Zanimljivost te veze je da se "informacija" o rezultatu mjerenja jednog stanja u istom trenu prenese drugom stanju. Poznati paradoks koji opisuje tu pojavu je "Einstein–Podolsky–Rosen paradoks".
@@ -84,7 +89,7 @@ Ovaj je teorem jedna velika zapreka u kvantnoj fizici.
 Njime se potvrđuje da nije moguće stvoriti identične kopije postojećeg kvantnog stanja. Želimo li stvoriti još jednu česticu nalik ovoj koju već imamo, moramo ponoviti čitav proces stvaranja te čestice. \cite{q_history}
 
 \paragraph{}
-Iako teorem djeluje vrlo ograničavajuće može se upotrijebiti u kvantnoj kriptografiji. Problem sigurnosti razmjene javnog ključa na kojoj se zasniva moderna sigurnost Interneta može se rješiti kvantnom enkripcijom kojom se garantira nemogućnost kopiranja odaslanog ključa. Čitanjem ključa uništava se njegovo kvantno stanje te ga nije moguće kopirati što pospješuje zaštitu od "\it Man-in-the-middle\rm" napada. \citep{han_phd}
+Iako teorem djeluje vrlo ograničavajuće može se upotrijebiti u kvantnoj kriptografiji. Problem sigurnosti razmjene javnog ključa na kojoj se zasniva moderna sigurnost Interneta može se riješiti kvantnom enkripcijom kojom se garantira nemogućnost kopiranja odaslanog ključa. Čitanjem ključa uništava se njegovo kvantno stanje te ga nije moguće kopirati što pospješuje zaštitu od "\it Man-in-the-middle\rm" napada. \citep{han_phd}
 
 \section{Kvantni bit (qubit)}
 Kvantni bit je najmanja jedinica podatka u kvantnim računalima. U literaturi se može pronaći i pod nazivima "\it qbit\rm" i "\it Qbit\rm". Fizički gledano to je zapravo sićušna čestica sa svojstvom superpozicije.
@@ -105,7 +110,7 @@ Kvantno stanje jednog qubita opisano je vektorom njegovog spina. Kvantno stanje 
 \end{center}
 
 \paragraph{}
-Sustavi s kvantnim bitovima mogu biti definirani za proizvoljan brojevni sustav, no s obzirom da su današnja računala bazirana na binarnom brojevnom sustavu zanima nas definicija qubita s 2 stanja.
+Sustavi s kvantnim bitovima mogu biti definirani za proizvoljan brojevni sustav, no s obzirom na to da su današnja računala bazirana na binarnom brojevnom sustavu zanima nas definicija qubita s 2 stanja.
 
 \subsection{Blochova shema}
 \paragraph{}
@@ -169,7 +174,7 @@ Iz formula \eqref{eq:prob_norm} i \eqref{eq:prob} zaključujemo da vjerojatnost 
 
 Ako bolje pogledamo kvantno stanje opisano formulom \eqref{eq:psi_orig_full} vidjet ćemo da $\alpha$ ovisi samo o kutu $\theta$. Želimo se riješiti kompleksne konstante $\beta$ ili ju barem svesti na realnu.
 Iz jednakosti \eqref{eq:phi_useless} zaključujemo da je kut $\phi$ suvišan za računanje vjerojatnosti. To možemo vidjeti i na samoj Blochovoj sferi.
-Za fiksni kut $\theta$ mijenjanjem kuta $\phi$ rotiramo vektor oko z-osi i ne približavamo se niti jednom polu sfere odnosno vjerojatnosti stanja se ne mjenjaju.
+Za fiksni kut $\theta$ mijenjanjem kuta $\phi$ rotiramo vektor oko z-osi i ne približavamo se niti jednom polu sfere odnosno vjerojatnosti stanja se ne mijenjaju.
 \begin{equation}
 \label{eq:phi_useless}
 |cos(\phi)+i\sin(\phi)| = 1
@@ -225,7 +230,7 @@ Simulacija kvantnog registra koju implementiraju članci na koje sam naišao je 
 \caption{Registar aproksimiranih qubita zapisom gustoća vjerojatnosti}
 \end{figure}
 
-Koristeći aproksimaciju qubita zadanu jednadžbom \ref{eq:qubit_state_aprox} zapis stanja možemo dodatno pojednostaviti tako da u klasični registar pohranjujemo samo kuteve qubita pomoću kojih možemo izračunati vjerojatnosti stanja.
+Koristeći aproksimaciju qubita zadanu formulom \ref{eq:qubit_state_aprox} zapis stanja možemo dodatno pojednostaviti tako da u klasični registar pohranjujemo samo kuteve qubita pomoću kojih možemo izračunati vjerojatnosti stanja.
 \begin{figure}[htb]
 \centering
 \begin{align*}
@@ -242,9 +247,9 @@ Zadnji sam model kvantnog registra odabrao za implementaciju upravo zbog svoje j
 \section{Kvantni algoritmi i kvantna računala}
 Kvantno računalo je uređaj koji je sposoban izvršavati matematičke i logičke zadatke korištenjem fenomena kvantne mehanike. Temeljna podatkovna jedinica klasičnog računala je bit, a kvantnog računala qubit. Prednost qubita je što posjeduje svojstvo superpozicije, odnosno može pohraniti više stanja odjednom. Jedan primjer primjene qubita je kvantni registar kao spremnik podataka kojim se opisuje značaj superpozicije:
 \begin{quote}
-Pomoću 1 klasičnog registra velićine n bitova moguće je pohraniti 1 od mogućih $2^n$ vrijednosti.
+Pomoću 1 klasičnog registra veličine n bitova moguće je pohraniti 1 od mogućih $2^n$ vrijednosti.
 
-Pomoću 1 kvantnog registra velićine n qBita moguće je pohraniti $2^n$ od mogućih $2^n$ vrijednosti, odnosno sve vrijednosti od jednom.
+Pomoću 1 kvantnog registra veličine n qubita moguće je pohraniti $2^n$ od mogućih $2^n$ vrijednosti, odnosno sve vrijednosti odjednom.
 \end{quote}
 
 \paragraph{}
@@ -253,8 +258,8 @@ Zanimanje za kvantnim računalima počinje rasti 1980-tih godina govorom Richard
 \paragraph{}
 Kvantni algoritam je algoritam koji je prilagođen izvršavanju na kvantnom računalu. Kvantnim algoritmima moguće je ostvariti značajna ubrzanja nekih NP problema. \cite{qga_apply} \citep{han_phd} Primjeri takvih algoritama su:
 \begin{itemize}
-\item Shor-ov algoritam faktorizacije cijelih brojeva - moguća primjena u otkrivanju javnog ključa RSA
-\item Grover-ov algoritam invertiranja funkcije - moguća primjena je pretraživanje baze podataka
+\item Shorov algoritam faktorizacije cijelih brojeva - moguća primjena u otkrivanju javnog ključa RSA
+\item Groverov algoritam invertiranja funkcije - moguća primjena je pretraživanje baze podataka
 \item Algoritmi simulacije kvantnih sustava
 \end{itemize}
 
@@ -263,18 +268,18 @@ Porastom snage i pouzdanosti kvantnih računala krenulo se stvarati tržište za
 Danas su najpoznatije dvije tvrtke koje proizvode i razvijaju kvantna računala.
 
 \subsubsection{D-Wave}
-Tvrtka D-Wave razvija i proizvodi kompaktne zatvorene sustave kvantnih računala. Trenutno najnoviji model kvantnog računala tvrtke D-Wave je 2000Q, podržava 2000 qubita i temelji se na adijabatskom kvantnom računanju. Rješava probleme pretraživanja prostora principom sličnim simuliranom kaljenju. Ta su računala nedostupna široj javnosti isključivo radi cijene (15 milijuna američkih dolara, 05.2017.) no neke su ih tvrke ipak nabavile (Google, NASA, USRA, Volkswagen Group i ostali).
+Tvrtka D-Wave razvija i proizvodi kompaktne zatvorene sustave kvantnih računala. Trenutno najnoviji model kvantnog računala tvrtke D-Wave je 2000Q, podržava 2000 qubita i temelji se na adijabatskom kvantnom računanju. Rješava probleme pretraživanja prostora principom sličnim simuliranom kaljenju. Ta su računala nedostupna široj javnosti isključivo radi cijene (15 milijuna američkih dolara, 05.2017.) no neke su ih tvrtke ipak nabavile (Google, NASA, USRA, Volkswagen Group i ostali).
 
 \subsubsection{IBM}
-IBM nudi udaljeni pristup svojim kvantnim računalima koja su razvili. Javni paket uključuje pristup web aplikaciji za dizajniranje kvantnih krugova do 5 qubita te mogućnost izvršavanja eksperimenta na simulatoru ili stvarnom kvantnom procesoru. Pristup stvarnom kvantnom procesoru naplaćuje se 'virtualnim kreditom' koji se dobiva registracijom na sustav i vremenski obnavlja. Svako izvršavanje se naplaćuje ovisno o zadanom broju ponovljanja eksperimenta. Početkom 2017. godine omogućen je pristup računalu s čak 20 qubita preko web aplikacije. Postoji API za razvoj kvantnih krugova pomoću "kvantnog asemblera" (QASM), a u tijeku je izrada APIa za pristup sustavu kojim bi se omogućio razvoj algoritama i aplikacija u više programskih jezika.
+IBM nudi udaljeni pristup svojim kvantnim računalima koja su razvili. Javni paket uključuje pristup web aplikaciji za dizajniranje kvantnih krugova do 5 qubita te mogućnost izvršavanja eksperimenta na simulatoru ili stvarnom kvantnom procesoru. Pristup stvarnom kvantnom procesoru naplaćuje se 'virtualnim kreditom' koji se dobiva registracijom na sustav i vremenski obnavlja. Svako izvršavanje se naplaćuje ovisno o zadanom broju ponoavljanja eksperimenta. Početkom 2017. godine omogućen je pristup računalu s čak 20 qubita preko web aplikacije. Postoji API za razvoj kvantnih krugova pomoću "kvantnog asemblera" (QASM), a u tijeku je izrada API-a za pristup sustavu kojim bi se omogućio razvoj algoritama i aplikacija u više programskih jezika.
 
 \chapter{Genetski algoritam inspiriran kvantnom mehanikom} 
 \label{ch:gaiqm}
-U ovom ću odlomku opisati slićnosti između klasićnog i kvantnog genetskog algoritma te primjenjenu aproksimaciju qubita u genetskom algoritmu inspiriranom kvantnom mehanikom. Posebno ću opisati GAIQM i kako sam ga implementirao.
+U ovom ću odlomku opisati sličnosti između klasičnog i kvantnog genetskog algoritma te primijenjenu aproksimaciju qubita u genetskom algoritmu inspiriranom kvantnom mehanikom. Posebno ću opisati GAIQM i kako sam ga implementirao.
 
 \paragraph{}
 Svi navedeni algoritmi koriste i evaluator.
-To je procedura koja jedinci pridružuje vrijednost dobrote (fitness) prema kojoj se poželjnije jedinke ističu iz populacije. Gradi se ovisno o zadanom problemu i ne ovisi o implementaciji algoritma odnosno jednom napisani evaluator je kompatibilan sa svim algoritmima. Ovisi jedino o načinu na koji se zapisuju podaci koji se evoluiraju tj. ovisi o vrsti genotipa.
+To je procedura koja jedinci pridružuje vrijednost dobrote \engl{fitness} prema kojoj se poželjnije jedinke ističu iz populacije. Gradi se ovisno o zadanom problemu i ne ovisi o implementaciji algoritma odnosno jednom napisani evaluator je kompatibilan sa svim algoritmima. Ovisi jedino o načinu na koji se zapisuju podaci koji se evoluiraju tj. ovisi o vrsti genotipa.
 
 \section{Klasični genetski algoritam (CGA)}
 \subsection{Dijelovi}
@@ -296,6 +301,7 @@ b_1 & b_2 & b_3 & \cdots & b_i & \cdots & b_n
 \end{align*}
 \caption{Registar klasičnih bitova}
 \end{figure}
+
 \subsubsection{Operator križanja}
 Operator koji izvodi križanje (razmjenu) genetskog materijala danih jedinki. Odabire se točka koja će podijeliti kromosom roditelja na 2 dijela. Stvaraju se djeca kojima je jedna polovica roditelja zamijenjena polovicom drugog roditelja.
 \begin{figure}[htb]
@@ -337,7 +343,7 @@ b_1 & b_2 & \overline{\mathbf{b_3}} & \cdots & b_i & \cdots & b_n
 \end{figure}
 
 \subsection{Pseudokod}
-U ovom primjeru gledamo pseudokod turnirskog algoritma s konstantnom veličinom populacije (SteadyStateTournament).
+U nastavku je dan pseudokod općenitog genetskog algoritma koji se izvršava na klasičnom računalu.
 \begin{algorithm}
 \caption{Klasični genetski algoritam (CGA)}
 \label{algo:cga}
@@ -370,7 +376,7 @@ Kvantni genetski algoritam uz svoje specifične operatore sadrži i dijelove sli
 \end{itemize}
 
 \subsubsection{Kvantni genotip (kvantni registar)}
-Podatkovna struktura koja opisuje jednu jedinku. Od klasičnog registra se razlikuje u principu pohrane podataka (superpozicija). Zahtjeva operatore sposobne za baratanje qbitima. Dodatno zahtjeva i klasični genotip koji može pohraniti izmjerene vrijednosti qubita i koji je pogodan evaluatoru. Sadrži kromosom u obliku niza qubita.
+Podatkovna struktura koja opisuje jednu jedinku. Od klasičnog registra se razlikuje u principu pohrane podataka (superpozicija). Zahtjeva operatore sposobne za baratanje qubitima. Dodatno zahtjeva i klasični genotip koji može pohraniti izmjerene vrijednosti qubita i koji je pogodan evaluatoru. Sadrži kromosom u obliku niza qubita.
 \begin{figure}[htb]
 \centering
 \begin{align*}
@@ -382,10 +388,10 @@ q_1 & q_2 & q_3 & \cdots & q_i & \cdots & q_n
 \end{figure}
 
 \subsubsection{Operator kvantnih rotacijskih vrata}
-Ovim operatorom mijenja se kvantno stanje qubita. Koristi se za unaprjeđenje populacije transformiranjem kromosoma. Matematički ih možemo prikazati kao matrice. Matrice moraju biti unitarne odnosno mora vrijediti: $UU' = I$.
+Ovim se operatorom mijenja kvantno stanje qubita. Operator se koristi za unaprjeđenje populacije transformiranjem kromosoma. Matematički se može prikazati kao matrica koja mora biti unitarna odnosno mora vrijediti: $UU^{\dagger} = I$.
 
 \paragraph{}
-Prisjetimo se da smo kvantno stanje qubita opisali vektorom na Blochovoj sferi. Želimo li promjeniti stanje qubita moramo rotirati svojstveni vektor. Upravo nam tome služe kvantna rotacijska vrata. Najvažnija vrata su vrata identiteta i Paulijeva X, Y i Z vrata:
+Prisjetimo se da smo kvantno stanje qubita opisali vektorom na Blochovoj sferi. Želimo li promijeniti stanje qubita moramo rotirati svojstveni vektor. Upravo nam tome služe kvantna rotacijska vrata. Najvažnija vrata su vrata identiteta i Paulijeva X, Y i Z vrata:
 \begin{equation}
 I = 
 \begin{bmatrix}
@@ -421,7 +427,7 @@ X\cdot \ket{\psi} =
 \end{equation}
 
 \paragraph{}
-Kvantna rotacijska vrata u QGA mogu poprimiti više namjena. U prethodnom primjeru zrcaljenjem oko x-osi zamijenjujemo vjerojatnosti pronalaska bita u oba stanja, odnosno ostvarujemo operaciju slićnu inverziji bita koja se koristi za mutaciju kromosoma. Blagom rotacijom kvantnog stanja oko x-osi ili y-osi približavamo se stanju $\ket{0}$ ili $\ket{1}$ te tako ostvarujemo pretraživanje prostora stanja.
+Kvantna rotacijska vrata u QGA mogu poprimiti više namjena. U prethodnom primjeru zrcaljenjem oko x-osi zamjenjujemo vjerojatnosti pronalaska bita u oba stanja, odnosno ostvarujemo operaciju sličnu inverziji bita koja se koristi za mutaciju kromosoma. Blagom rotacijom kvantnog stanja oko x-osi ili y-osi približavamo se stanju $\ket{0}$ ili $\ket{1}$ te tako ostvarujemo pretraživanje prostora stanja.
 
 \subsubsection{Inicijalizator populacije}
 Svrha inicijalizatora populacije je postaviti qubite u superpoziciju. Ostvaruje se Hadamardovim H vratima:
@@ -476,6 +482,8 @@ Da su superpozicije istovjetne zaključujemo iz formule \ref{eq:prob} kojom dobi
 Operator mjerenja qubita uništava kvantnu superpoziciju qubita i pretvara ju u klasično determinističko stanje, odnosno pretvara qubit u bit. Kvantnim stanjem qubita opisana je vjerojatnost pronalaženja qubita u jednom klasičnom stanju.
 
 \subsection{Pseudokod}
+U nastavku je dan pseudokod kvantnog genetskog algoritma koji se izvršava na kvantnom računalu.
+
 \begin{algorithm}
 \caption{Kvantni genetski algoritam (QGA)}
 \label{algo:qga}
@@ -513,7 +521,7 @@ GAIQM sadrži dijelove CGA i QGA prilagođene korištenoj aproksimaciji qubita:
 \end{itemize}
 
 \subsubsection{Kvantni genotip (kvantni registar)}
-Podatkovna struktura koja opisuje jednu jedinku. Od stvarnog kvantnog registra se razlikuje u principu pohrane podataka. Superpozicija qubita zapisana je aproksimacijom qubita \ref{eq:qubit_state_aprox} odnosno kutem kvantnog stanja.
+Podatkovna struktura koja opisuje jednu jedinku. Od stvarnog kvantnog registra se razlikuje u principu pohrane podataka. Superpozicija qubita zapisana je aproksimacijom kvantnog stanja qubita (formula \ref{eq:qubit_state_aprox}) tj. kutem kvantnog stanja.
 \begin{figure}[htb]
 \centering
 \begin{align*}
@@ -540,7 +548,7 @@ Rotaciju qubita proizvoljnim kutem $\delta\theta$ u dvodimenzionalnom prostoru o
 \end{align} 
 
 \paragraph{}
-Korišteći aproksimaciju qubita \ref{eq:qubit_state_aprox} operator rotacije možemo pojednostaviti:
+Koristeći aproksimaciju qubita zadanu formulom \ref{eq:qubit_state_aprox} operator rotacije možemo pojednostaviti:
 \begin{align*}
 \begin{bmatrix}
 \alpha' \\ \beta'
@@ -584,7 +592,7 @@ Zaključujemo da je matrično množenje moguće zamijeniti formulom znatno manje
 \end{align}
 
 \paragraph{}
-Kut zakreta $\delta\theta$ je moguće zadati pomoću tablice kuteva tzv. \it look-up table\rm\ u kojoj za svaki mogući slučaj određujemo smjer i velićinu zakreta. Tablicu možemo proizvoljno zadati, a standardni oblik tablice dan je u nastavku:
+Kut zakreta $\delta\theta$ je moguće zadati pomoću tablice kuteva tzv. \it look-up table\rm\ u kojoj za svaki mogući slučaj određujemo smjer i veličinu zakreta. Tablicu možemo proizvoljno zadati, a standardni oblik tablice dan je u nastavku:
 \begin{table}[htb]
 \caption{Standardna \it look-up\rm\ tablica}
 \label{tbl:lookup}
@@ -607,7 +615,7 @@ $q_i$ & $b_i$ & f(q)>f(b) & $\Delta\theta$ & \multicolumn{4}{|c|}{sg($\alpha_i, 
 \end{tabular}
 \end{table}
 \paragraph{}
-Za zadani i-ti qubit neke jedinke $q$ i i-ti qubit najbolje jedinke $b$, ovisno o odnosu vrijednosti \it fitness\rm\ funkcija obiju jedinki odabiremo redak u tablici.
+Za zadani i-ti qubit neke jedinke $q$ i i-ti qubit najbolje jedinke $b$, ovisno o odnosu vrijednosti dobrote jedinki odabiremo redak u tablici.
 Kut zakreta čitamo iz retka na sljedeći način:
 \begin{align*}
 \delta\theta = \Delta\theta \cdot sg(a,b)
@@ -615,16 +623,16 @@ Kut zakreta čitamo iz retka na sljedeći način:
 gdje $\Delta\theta$ određuje iznos zakreta, a $sg(\alpha_i, \beta_i)$ smjer zakreta. Vrijednost kut $\phi$ se najčešće odabire iz intervala $[0.005\pi, 0.01\pi]$.
 
 \paragraph{}
-U praksi se pokazalo da male promjene vrijednosti zadanih tablicom uvelike utjeću na brzinu i pouzdanost čitavog algoritma. Ovim pristupom određivanja kuta moguće je ostvariti prilagodbu algoritma pojedinom problemu i ostvariti dobre rezultate, no ugađanje konstanti nije učinkovito zbog njihove brojnosti, ima ih čak 40. Stvara se i problem fiksne vrijednosti zakreta zbog koje dolazi do prebrze konvergencije populacije čime ona gubi raznolikost i često završava u lokalnom optimumu. Prevelik kut zakreta sprječava finu pretragu oko pronađenog optimuma što ograničava preciznost pretrage.
+U praksi se pokazalo da male promjene vrijednosti zadanih tablicom uvelike utječu na brzinu i pouzdanost čitavog algoritma. Ovim pristupom određivanja kuta moguće je ostvariti prilagodbu algoritma pojedinom problemu i ostvariti dobre rezultate, no ugađanje konstanti nije učinkovito zbog njihove brojnosti, ima ih čak 40. Stvara se i problem fiksne vrijednosti zakreta zbog koje dolazi do prebrze konvergencije populacije čime ona gubi raznolikost i često završava u lokalnom optimumu. Prevelik kut zakreta sprječava finu pretragu oko pronađenog optimuma što ograničava preciznost pretrage.
 
 \paragraph{}
-Iz tih se razloga koristi adaptivno ugađanje vrijednosti zakreta koje automatski prilagođava iznos kuta zakreta. \citep{adaptive_qga} Umjesto fiksne vrijednosti kuta $\phi$ zadajemo najveću i najmanju vrijednost kuta između kojih će se interpolirati vrijednost kuta $\phi$. Što je jedinka bliža najboljoj jedinci po \it fitness\rm\ vrijednosti, to je kut zakreta manji, odnosno kut zakreta proporcionalan je razlici \it fitness\rm\ vrijednosti jedinki. Formula za određivanje kuta je sljedeća:
+Iz tih se razloga koristi adaptivno ugađanje vrijednosti zakreta koje automatski prilagođava iznos kuta zakreta.\citep{adaptive_qga} Umjesto fiksne vrijednosti kuta $\phi$ zadajemo najveću i najmanju vrijednost kuta između kojih će se interpolirati vrijednost kuta $\phi$. Što je jedinka bliža najboljoj jedinci po vrijednosti dobrote, to je kut zakreta manji, odnosno kut zakreta proporcionalan je razlici vrijednosti dobrota jedinki. Formula za određivanje kuta je sljedeća:
 
 \begin{equation}
 \label{eq:adapt}
-\delta\theta = l + (h - l) \cdot \frac{|f(q) - f(b)|}{max(f(q), f(b))}
+\delta\theta = l + (h - l) \cdot \frac{f(q) - f(w)}{f(b) - f(w))}
 \end{equation}
-gdje $l$ i $h$ predstavljaju respektivno iznos donje i gornje granice kuta, $f(q)$ vrijednost \it fitness\rm funkcije jedinke koju usmjeravamo i $f(b)$ vrijednost \it fitness\rm funkcije trenutne najbolje jedinke u populaciji.
+gdje $l$ i $h$ predstavljaju respektivno iznos donje i gornje granice kuta zakreta, $f(q)$ vrijednost funkcije dobrote za jedinku koju usmjeravamo, a $f(b)$ i $f(w)$ vrijednost funkcije dobrote za respektivno najbolju i najgoru jedinku u trenutnoj populaciji. Ovom je formulom omogućen valjan odabir kuta zakreta istovremeno za probleme minimizacije i maksimizacije.
 
 \subsubsection{Kvantni operator mutacije}
 Koriste se dvije vrste mutacija koje se izvršavaju ili ne ovisno o zadanoj vjerojatnosti izvršavanja: inverzija i zamjena.
@@ -645,7 +653,7 @@ Operator inverzije nasumično određuje jedan qubit jedinke te ga invertira. Mut
 \end{algorithm}
 
 \paragraph{}
-Operator zamjene nasumično odabire dva qubita te im zamijenjuje mjesta.
+Operator zamjene nasumično odabire dva qubita te im zamjenjuje mjesta.
 \begin{figure}[htb]
 \centering
 \begin{align*}
@@ -667,15 +675,15 @@ Operator zamjene nasumično odabire dva qubita te im zamijenjuje mjesta.
 Uporabom operatora kvantnih rotacijskih vrata algoritam može konvergirati u lokalni optimum, koji nije globalni optimum, te u njemu zaglaviti. Same mutacije nisu dovoljne da bi se algoritam izvukao, već je potreban snažniji operator.
 
 \paragraph{}
-Operator katastrofe unosi velik poremećaj u populaciju čime ostvaruje veću raznolikost populacije, a time i pretraživanje šireg prostora stanja. Operator sve jedinke populacije izuzev najbolje, vraća u početno stanje čiste superpozicije. Te jedinke tada ponovno kovnergiraju (iz nule), ali ovaj puta prema trenutnoj najboljoj jedinci. Uz ugrađenu nasumičnost smjera konvergencije velika je vjerojatnost pretraživanja dosad neistraženog prostora.
+Operator katastrofe unosi velik poremećaj u populaciju čime ostvaruje veću raznolikost populacije, a time i pretraživanje šireg prostora stanja. Operator sve jedinke populacije izuzev najbolje, vraća u početno stanje superpozicije. Te jedinke tada ponovno konvergiraju ("iz nule"), ali ovog puta odmah kreću prema pronađenoj najboljoj jedinci. Iako se najbolja jedinka nalazi u lokalnom optimumu, nasumično stvorene jedinke započinju svoju konvergenciju iz više različitih stanja povećavajući vjerojatnost pretraživanja dosad neistraženog prostora.
 
 \paragraph{}
 Prečestim pozivanjem operatora može se blokirati svojstvo usmjerenog razvoja populacije čime se pretraživanje pretvara u nasumično. To reguliramo parametrom ponovljenih optimuma. Ideja je pratiti u koliko se uzastopnih generacija ponavlja ista vrijednost najbolje jedinke, a kada taj broj prekorači vrijednost parametra izvršavamo katastrofu.
 \begin{algorithm}
-\caption{Okidač $katastrofe$}
+\caption{Okidač katastrofe}
 \label{algo:katastrofa_okidac}
 \begin{algorithmic}
-\STATE{\textbf{Input:\ }B}
+\STATE{\textbf{Input:\ }B} \COMMENT{\it Vrijednost dobrote najbolje jedinke u populaciji.\rm}
 \IF{$prekoracen(parametarOkidanja)$} 
 \STATE{$resetirajBrojac()$}
 \RETURN{true}
@@ -708,7 +716,7 @@ Inicijalizator postavlja sve qubite u stanje superpozicije $\ket{\psi_0}$.
 %\frac{1}{\sqrt{2}} \cos{\frac{\theta}{2}} \ket{0} - \frac{1}{\sqrt{2}} \sin{\frac{\theta}{2}} \ket{1}
 %\end{cases}
 %\end{align*}
- Zbog aproksimacije qubita definirane u (\ref{eq:qubit_state_aprox}) potrebno je sve kuteve inicijalizirati na $\pm\frac{\pi}{2}$.
+ Zbog aproksimacije qubita definirane formulom \ref{eq:qubit_state_aprox} potrebno je sve kuteve inicijalizirati na $\pm\frac{\pi}{2}$.
 %\begin{align*}
 %\ket{\psi_0} = \begin{cases}
 %\frac{1}{2} \ket{0} + \frac{1}{\sqrt{2}} \sin{\frac{\theta}{2}} \ket{1} \\
@@ -717,11 +725,25 @@ Inicijalizator postavlja sve qubite u stanje superpozicije $\ket{\psi_0}$.
 %\end{align*}
  
 \subsubsection{Operator mjerenja}
-Operatorom mjerenja superpoziciju pretvaramo u klasično stanje odnosno qubit pretvaramo u bit. Na temelju vjerojatnosi 
+Operatorom mjerenja superpoziciju pretvaramo u klasično stanje odnosno qubit pretvaramo u bit. Koje će stanje poprimiti pojedini qubit ovisi o njegovom kvantnom stanju prema formuli za izračun vjerojatnosti (\ref{eq:prob}).
+\begin{algorithm}
+\caption{Operator mjerenja}
+\label{algo:op_mjerenja}
+\begin{algorithmic}
+\STATE{\textbf{Input:\ }$\theta_i$} \COMMENT{\it Kut kvantnog stanja i-tog qubita.\rm}
+\IF{$nasumicanBroj(0,1) > \cos^2(\theta_i / 2)$} 
+\RETURN{1}
+\ELSE
+\RETURN{0}
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
 
 \newpage
 
 \subsection{Pseudokod}
+U nastavku je dan pseudokod genetskog algoritma inspiriranog kvantnom mehanikom koji se izvršava na klasičnom računalu.
+
 \begin{algorithm}
 \caption{Genetski algoritam inspiriran kvantnom mehanikom (GAIQM)}
 \label{algo:gaiqm}
@@ -748,7 +770,7 @@ Operatorom mjerenja superpoziciju pretvaramo u klasično stanje odnosno qubit pr
 
 \newpage
 
-\subsection{Implementacija algoritma}
+\section{Implementacija algoritma}
 Algoritam je implementiran na aproksimaciji qubita i kvantnog registra.
 \subsubsection{Kvantni genotip (QuantumRegister)}
 Genotip nasljeđuje klasu Binary koja svoj kromosom zapisuje u obliku niza bitova, a nudi i pretvorbu niza bitova u niz realnih brojeva. Definiranim parametrima \ref{tbl:param_kvareg} određuje se brojnost i preciznost pretvorenih realnih brojeva. Dodatno sadrži i registar koji pamti samo vrijednosti kuteva aproksimiranih kvantnih stanja.
@@ -784,10 +806,10 @@ Sadrži metodu $measure()$ kojom se izvršava mjerenje registra. Iteracijom po k
 \end{algorithm}
 
 \paragraph{}
-Metodom $resetQbits(StateP)$ ostvaruje se inicijalizacija superpozicije qubita. Parametrima \ref{tbl:param_kvareg} moguće je odrediti kut početne superpozicije. Ova metoda nasumično postavlja pozitivan ili negativan početni kut za svaki qubit, te nakon toga poziva $measure()$ kako bi se iz qubita dobile vrijednosti bitova. Konačno poziva se $update()$ koji izračunava vrijednosti realnih brojeva iz vrijednosti registra bitova. Ova se metoda poziva i pri inicijalizaciji samog kvantnog registra.
+Metodom $resetQubits(StateP)$ ostvaruje se inicijalizacija superpozicije qubita. Parametrima \ref{tbl:param_kvareg} moguće je odrediti kut početne superpozicije. Ova metoda nasumično postavlja pozitivan ili negativan početni kut za svaki qubit, te nakon toga poziva $measure()$ kako bi se iz qubita dobile vrijednosti bitova. Konačno poziva se metoda $update()$ naslijeđena iz klase $Binary$ koja pretvara binarni zapis registra bitova u realne vrijednosti ovisno o zadanim granicama i preciznosti realnih vrijednosti. Ova se metoda poziva i pri inicijalizaciji samog kvantnog registra.
 
 \paragraph{Napomena:}
-Naslijeđujući $Binary$ genotip sadrži sve potrebne strukture i procedure klase $Binary$ te se može jednako koristiti. To znači da evaluatori koji koriste $Binary$ mogu direktno koristiti i $QuantumRegister$ bez potrebe za dodatnim (pomoćnim) genotipom što za taj slučaj ubrzava rad algoritma.
+Nasljeđujući $Binary$ genotip sadrži sve potrebne podatkovne strukture i procedure klase $Binary$ te se može jednako koristiti. To znači da evaluatori koji koriste $Binary$ mogu direktno koristiti i $QuantumRegister$ bez potrebe za dodatnim (pomoćnim) genotipom što za taj slučaj ubrzava rad algoritma.
 
 \subsubsection{GAIQM}
 Implementacija GAIQM prati pseudokod \ref{algo:gaiqm}. Algoritam interno koristi $QuantumRegister$ nad kojim izvršava sve operacije. Kako bi algoritam podržavao različite genotipe dodao sam adapter.
@@ -809,111 +831,40 @@ Koristi se pojednostavljena formula \ref{eq:qrot_simple} i adaptivna metoda izra
 
 \chapter{Eksperimenti} 
 \label{ch:primjena}
-Eksperiment se sastoji od usporedbe CGA i GAIQM na identičnom problemu uz parametre za koje pojedini algoritam ostvaruje vrlo dobre rezultate.
-Terminator eksperimenata je maksimalan broj evaluacija koji je zadan ovisno o problemu.
+Eksperiment se sastoji od usporedbe CGA i GAIQM na identičnom eksperimentu uz parametre za koje pojedini algoritam ostvaruje vrlo dobre rezultate.
+Terminator eksperimenata je maksimalan broj evaluacija koji je zadan ovisno o problemu koji rješava.
 Svaki eksperiment je ponovljen 40 puta, a prikazani rezultati su usrednjene vrijednosti svih ponovljenih eksperimenata.
 
-\section{Traženje globalnog minimuma funkcije (FunctionMin)}
+\section{Problem naprtnjače}
 \subsection{Opis problema}
-Zadane su netrivijalne višedimenzionalne funkcije kojima je potrebno pronaći minimum.
-Ovaj problem koristi genotip $Binary$.
-
-\paragraph{}
-Zadane funkcije:
-\begin{enumerate}
-\item Kvadratna
-%\begin{equation}
-%f(\mathbf {x} )=\sum _{{i=1}}^{n}x_{i}^{2}
-%\end{equation}
-\item Schaffer-ova F6 funkcija
-%\begin{equation}
-%f(\mathbf {x} )=\sum _{{i=1}}^{n}x_{i}^{2}
-%\end{equation}
-\item Griewangk
-%\begin{equation}
-%f(\mathbf {x} )=1+{\frac  {1}{4000}}\sum _{{i=1}}^{n}x_{i}^{2}-\prod _{{i=1}}^{n}\cos \left({\frac  {x_{i}}{{\sqrt  {i}}}}\right)
-%\end{equation}
-\item Ackley
-%\begin{equation}
-%{\displaystyle f(x,y)=-20\exp \left[-0.2{\sqrt {0.5\left(x^{2}+y^{2}\right)}}\right]}
-%{\displaystyle -\exp \left[0.5\left(\cos 2\pi x+\cos 2\pi y\right)\right]+e+20} {\displaystyle -\exp \left[0.5\left(\cos 2\pi x+\cos 2\pi y\right)\right]+e+20}
-%\end{equation}
-\item Rastrigin
-%\begin{equation}
-%f(\mathbf {x} )=An+\sum _{i=1}^{n}\left[x_{i}^{2}-A\cos(2\pi x_{i})\right]
-%\end{equation}
-\item Rosenbrock
-%\begin{equation}
-%f({\boldsymbol {x}})=\sum _{i=1}^{n-1}\left[100\left(x_{i+1}-x_{i}^{2}\right)^{2}+\left(x_{i}-1\right)^{2}\right]
-%\end{equation}
-\item Schaffer-ova F7 funkcija
-\end{enumerate}
-
-\clearpage
+Zadana je nosivost naprtnjače \engl{knapsack} i popis predmeta. Za svaki predmet zadana je njegova težina i vrijednost.
+Cilj je pronaći najvrjedniju kombinaciju stvari uz uvjet da nije prekoračena nosivost naprtnjače.
+Dobrota jedinke računa se sumom vrijednosti svih odabranih predmeta.
+Ovaj eksperiment koristi genotip $BitString$.
 
 \subsection{Rezultati}
+Za testiranje koristim nasumično generirani skup predmeta s ograničenom maksimalnom težinom predmeta, maksimalnom vrijednošću predmeta te definiranim brojem predmeta u setu. Koristim skupove od 500 i 1000 predmeta. Statistike skupova i parametri algoritma dani su u nastavku.
+
 \begin{table}[htb]
-\caption{Korišteni parametri za FunctionMin}
+\caption{Statistike skupova predmeta}
 \centering
-\begin{tabular}{|c|c||c|c|} \hline
-\multicolumn{2}{|c||}{SteadyStateTournament} & \multicolumn{2}{c|}{GAIQM} \\ 
+\begin{tabular}{ccc} \hline
+Značajka & Skup 500 & Skup 1000 \\ 
 \hline
-Parametar & Vrijednost & Parametar & Vrijednost \\ 
-\hline
-tsize & 3 & disaster & 300 \\
-&& qrot.ubound & 0.25 \\
-&& qrot.lbound & 0.008 \\
-&& initAngle & 0.3 \\
-dimension & 2 & dimension & 2 \\
-ubound & 10 & ubound & 10 \\
-lbound & -10 & lbound & -10 \\
-precision & 3 & precision & 3 \\
-population.size & 170 & population.size & 48 \\
-mutation.indprob & 0.1 & mutation.indprob & 0.04 \\
-&& mut.quantum\_swap & 0.2 \\
-&& mut.quantum\_inversion & 0.8 \\
+Veličina naprtnjače & 100 & 100 \\
+Broj predmeta & 500 & 1000 \\
+Najveća vrijednost & 100 & 100 \\
+Najmanja težina & 1 & 1 \\
+Najveća težina & 70 & 100 \\
+Prosječna težina & 36.598 & 51.365 \\
+Optimalna vrijednost & 2922 & 3616 \\
 \hline
 \end{tabular}
 \end{table}
 
 \paragraph{}
-Za svaki je eksperiment postavljena gornja granica broja evaluacija na $200000$ koja prekida eksperiment. Algoritmi nikada ne dostižu vrijednost $0$ pa broj evaluacija uvijek prekine program, odnosno broj evaluacija jednak za sve funkcije i oba algoritma (uz manja prekoraćenja zbog veličine populacije). Program će završiti i ako se dosegne optimum pojedine funkcije. Optimumi sviju navedenih funkcija su $0$.
-
 \begin{table}[htb]
-\caption{Prosječne vrijednsti po funkcijama}
-\centering
-\begin{tabular}{|c|cc|cc|} \hline
-\multirow{2}{*}{Funkcija} & \multicolumn{2}{c|}{CGA} & \multicolumn{2}{c|}{GAIQM} \\ \cline{2-5}
- & Optimum & Broj generacija & Optimum & Broj generacija \\ 
-\hline
-F1 & $6.53\cdot 10^{-6}$ & 149 & $2.33\cdot 10^{-8}$ & 364 \\
-F2 & $1.21\cdot 10^{-3}$ & 288 & $1.86\cdot 10^{-7}$ & 271 \\
-F3 & $6.99\cdot 10^{-8}$ & 105 & $6.99\cdot 10^{-8}$ & 113 \\
-F4 & $1.23\cdot 10^{-3}$ & 16 & $1.23\cdot 10^{-3}$ & 13 \\
-F5 & $3.69\cdot 10^{-5}$ & 23 & $3.69\cdot 10^{-5}$ & 53 \\
-F6 & $9.19\cdot 10^{-3}$ & 440 & $6.16\cdot 10^{-3}$ & 1434 \\
-F7 & $3.19\cdot 10^{-2}$ & 99 & $3.14\cdot 10^{-2}$ & 26 \\
-\hline
-\end{tabular}
-\end{table}
-
-\paragraph{}
-Vidimo da je veličina populacije GAIQM znatno manja u odnosu na CGA, a postižu se podjednaki ili bolji rezultati. Iz tog se razloga puno rijeđe poziva evaluator. To možemo zaključiti i na broju generacija.
-
-\clearpage
-
-\section{Knapsack problem}
-\subsection{Opis problema}
-Zadana je nosivost torbe \engl{knapsack} i popis predmeta. Za svaki predmet zadana je njegova težina i vrijednost.
-Cilj je pronaći najvrijedniju kombinaciju stvari uz uvijet da nije prekoračena nosivost torbe.
-Ovaj problem koristi genotip $BitString$.
-
-
-\subsection{Rezultati}
-Za testiranje koristim nasumično generirane setove predmeta s ograničenom maksimalnom težinom predmeta, maksimalnom vrijednošću predmeta te definiranim brojem predmeta u setu. Koristim set od 500 i od 1000 predmeta.
-
-\begin{table}[htb]
-\caption{Korišteni parametri za Knapsack}
+\caption{Korišteni parametri za problem naprtnjače}
 \centering
 \begin{tabular}{|c|c||c|c|} \hline
 \multicolumn{2}{|c||}{SteadyStateTournament} & \multicolumn{2}{c|}{GAIQM} \\ 
@@ -925,19 +876,26 @@ tsize & 3 & disaster & 500 \\
 && qrot.lbound & 0.005 \\
 && initAngle & 0.01 \\
 population.size & 100 & population.size & 10 \\
-mutation.indprob & 0.1 & mutation.indprob & 0.04 \\
+mutation.indprob & 0.3 & mutation.indprob & 0.04 \\
 crx.onepoint & 1 & mut.quantum\_swap & 1 \\
 mut.simple & 1 & mut.quantum\_inversion & 1 \\
 \hline
 \end{tabular}
 \end{table}
 
+\newpage
+
+\paragraph{}
+Pri evaluaciji rješenja može doći do pretrpavanja naprtnjače. Ne prihvaćamo takva rješenja te ih želimo potisnuti. To obavlja operator kazne ugrađen u evaluator koji ovisno o veličini prekoračenja umanjuje ostvareni profit za količinu prekoračene težine pomnoženu sa zadanom konstantom. Koristi se pretpostavljena konstanta $5$.
+
+\newpage
+
 \begin{table}[htb]
-\caption{Prosječni rezultati po setovima}
+\caption{Prosječni rezultati po skupovima}
 \centering
 \begin{tabular}{|c|ccc|} \hline
-\multirow{2}{*}{Funkcija} & \multicolumn{3}{c|}{CGA} \\ \cline{2-4}
- & Pronađeni optimum & Broj generacija & Broj evaluacija \\ 
+\multirow{2}{*}{Skup} & \multicolumn{3}{c|}{CGA} \\ \cline{2-4}
+ & Pronađena opt. vrijednost & Broj generacija & Broj evaluacija \\ 
 \hline
 500 & 2922 & 319 & 63920 \\
 1000 & 3616 & 700 & 140115 \\
@@ -947,8 +905,8 @@ mut.simple & 1 & mut.quantum\_inversion & 1 \\
 \begin{table}[htb]
 \centering
 \begin{tabular}{|c|ccc|} \hline
-\multirow{2}{*}{Funkcija} & \multicolumn{3}{c|}{GAIQM} \\ \cline{2-4}
- & Pronađeni optimum & Broj generacija & Broj evaluacija \\ 
+\multirow{2}{*}{Skup} & \multicolumn{3}{c|}{GAIQM} \\ \cline{2-4}
+ & Pronađena opt. vrijednost & Broj generacija & Broj evaluacija \\ 
 \hline
 500 & 2922 & 3261 & 32635 \\
 1000 & 3616 & 4616 & 46182 \\
@@ -956,20 +914,176 @@ mut.simple & 1 & mut.quantum\_inversion & 1 \\
 \end{tabular}
 \end{table}
 
-\section{Regresija neuronske mreže}
-\subsection{Opis problema}
-Za zadane ulaz/izlaz brojčane podatke potrebno je pronaći težine veza između slojeva neuronske mreže (učenje neuronske mreže). Ovaj problem koristi genotip $FloatingPoint$.
+\paragraph{}
+Oba algoritma za oba seta pronalaze optimalno rješenje. Ovdje je posebno naglašena razlika u broju poziva evaluatora. Vidimo da je za set od 1000 predmeta razlika između broja poziva $93933$ odnosno GAIQM preko 3 puta manje poziva evaluator.
+
+\subsection{Utjecaj parametara}
+GAIQM ima više parametara u odnosu na CGA te zahtjeva više konfiguracije. Iako sama implementacija ima pretpostavljenu većinu parametara, ovisno o problemu potrebno je uštimati pojedine parametre kako bi se ostvarili bolji rezultati. Navedeni primjeri i mjerenja definirani su za prethodno izmjereni skup od 500 predmeta.
+
+\subsubsection{Veličina populacije}
+Većom populacijom ostvaruje se veća raznolikost genetskog materijala što pospješuje pretraživanje neistraženog prostora stanja što znači da će algoritam u manje generacija pronaći optimalno rješenje. Što je veća populacija, to će se po generaciji više puta pozivati evaluator koji je često vrlo zahtjevan i spor. Dakle, želimo pronaći optimalnu veličinu populacije za koju će se minimizirati broj poziva evaluatora.
+
+\begin{table}[htb]
+\caption{Prosječan broj evaluacija i generacija ovisno o veličini populacije}
+\centering
+\begin{tabular}{ccc} \hline
+Veličina populacije & Broj evaluacija & Broj generacija \\ 
+\hline
+3 &	35496.3 &	11830.1 \\
+10	 & 33542 &	3352.2 \\
+30 &	35127 &	1168,9 \\
+50	 & 45200 &	902 \\
+100 &	73990 &	737.9 \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+Za sve navedene veličine populacija algoritam pronalazi optimalno rješenje. Vidimo da broj evaluacija ovisi o veličini populacije te da za ovaj konkretan problem ima minimum za populaciju 10 jedinki. S druge strane, broj generacija opada porastom veličine populacije što potvrđuje tvrdnju o značaju raznolikosti populacije.
+
+\subsubsection{Početni kut}
+Početnim kutom namještamo stanje u kojem će se pronaći svi qubiti pri inicijalizaciji. Standardno se postavlja na $\frac{\pi}{2}$ no može se mijenjati ovisno o problemu. Za problem naprtnjače ovisno o karakteristikama skupa koji koristimo možemo pretpostaviti da će većina ili manjina predmeta stati u naprtnjaču. Tada početni kut postavljamo na veći ili manji kut respektivno.
+
+\begin{table}[htb]
+\caption{Prosječan broj evaluacija i generacija ovisno o početnom kutu}
+\centering
+\begin{tabular}{ccc} \hline
+Veličina populacije & Broj evaluacija & Broj generacija \\ 
+\hline
+0.005 &	51443	& 5142.3 \\
+0.01 & 	33542 & 	3352.2 \\
+0.05 &	 91165 & 	9114.5 \\
+0.1 &	78141 &	7812.1 \\
+0.5 &	200000 &	19998 \\
+0.7 &	200000 &	19998 \\
+\hline
+\end{tabular}
+\end{table}
 
 \paragraph{}
-Struktura mreže je fiksirana na $1\to 5\to 1$, a aktivacijske funkcije su definirane po slojevima $sigmodalna \to linearna$.
-Broj evaluacija ograničen je na $100000$.
+Vidimo da naša pretpostavka o svojstvima skupa može uvelike utjecati na brzinu, ali i uspješnost rada algoritma. Pri odabiru ponovno postoje optimalni parametri za koje algoritam postiže najveću brzinu. Na ovom primjeru algoritam za početne kuteve $0.5 \pi$ i $0.7 \pi$ ne pronalazi rješenje već se prekida brojem evaluacija dok za kut $0.1 \pi$ gotovo uvijek pronalazi rješenje.
+
+\subsubsection{Granice kuteva adaptivne metode zakreta}
+Granice kuteva su vrlo osjetljivi parametri izrazito ovisni o problemu. Adaptivnom metodom odabir kuta zakreta bira se kao interpolacija vrijednosti unutar granica proporcionalno odnosu vrijednosti dobrote jedinke s najboljom jedinkom. Donja granica određuje preciznost kojom se pretražuju stanja oko najbolje jedinke trenutne populacije i obično je reda veličine $10^{-2}$ ili manje.  Gornja granica određuje početnu brzinu konvergencije kada jedinka ima najlošiju vrijednost dobrote u odnosu na najbolju vrijednost trenutne populacije i obično je reda veličine $10^{-1}$ ili manje. 
+
+\paragraph{}
+Kada algoritam pronađe lokalni optimum sve jedinke konvergiraju prema njoj. Dakle, premala donja granica može zaglaviti algoritam u lokalnom optimumu te se odabire vrijednost veća od 0. Prevelika gornja granica može uzrokovati prebrzu početnu konvergenciju populacije prema pronađenom lokalnom optimumu u kojem algoritam može zaglaviti. Raspon granica kuteva određuje brzinu konvergencije populacije te se često odabiru granice različite za 1 red veličine.
+
+\subsubsection{Operator katastrofe}
+Operator katastrofe poziva se samo kada se ista vrijednost dobrote pojavi u $n$ uzastopnih generacija. Bez njega algoritam može zapeti u lokalnom optimumu. Pozivamo li operator prečesto možemo usporiti ili čak zaustaviti konvergenciju populacije te algoritam neće moći pronaći optimum u razumnom vremenu. Operator treba pozivati "dovoljno" rijetko, a taj iznos ovisi o problemu i najbolje ga je odabrati prateći ponašanje rezultata tijekom rada algoritma. Uobičajene vrijednosti su reda 100 generacija.
+
+\clearpage
+
+\section{Traženje globalnog minimuma funkcije (FunctionMin)}
+\subsection{Opis problema}
+Zadane su netrivijalne višedimenzionalne funkcije kojima je potrebno pronaći minimum.
+Ovaj eksperiment koristi genotip $FloatingPoint$ za klasični algoritam te $QuantumRegister$ kao radni genotip.
+
+\paragraph{}
+Zadane funkcije:
+\begin{enumerate}
+\item Kvadratna
+\begin{equation}
+f(\mathbf {x} )=\sum _{{i=1}}^{n}(x_{i}-i)^{2}
+\end{equation}
+\item Schaffer-ova F6 funkcija
+\begin{equation}
+f(x,y)=0.5+\frac{sin^2(\sqrt{x^2 + y^2})-0.5}{[1+0.001 \cdot (x^2 + y^2)]^2}
+\end{equation}
+\item Griewangk
+\begin{equation}
+f(x_1 \cdots x_n) = 1 + \frac{1}{4000} \sum_{i=1}^n x^2_i - \prod_{i=1}^n cos(\frac{x_i}{\sqrt{i}})
+\end{equation}
+\item Ackley
+\begin{equation}
+f(x_0 \cdots x_n) = -20 exp(-0.2 \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}) - exp(\frac{1}{n} \sum_{i=1}^n cos(2\pi x_i)) + 20 + e
+\end{equation}
+\item Rastrigin
+\begin{equation}
+f(x_1 \cdots x_n) = 10n + \sum_{i=1}^n (x_i^2 -10cos(2\pi x_i))
+\end{equation}
+\item Rosenbrock
+\begin{equation}
+f(x_1 \cdots x_n) = \sum_{i=1}^{n-1} (100(x_i^2 - x_{i+1})^2 + (1-x_i)^2)
+\end{equation}
+\item Schaffer-ova F7 funkcija
+\begin{equation}
+f(x_0 \cdots x_n) = [\frac{1}{n-1}\sqrt{s_i} \cdot (sin(50.0s_i^{\frac{1}{5}})+1)]^2 s_i = \sqrt{x_i^2 + x_{i+1}^2}
+\end{equation}
+\end{enumerate}
+
+\subsection{Rezultati}
+Funkcije ograničavamo na 20 dimenzija/vrijednosti te prostor pretraživanja definiramo na intervalu $[-10, 10]$ preciznošću do 16. decimale.
+
+\begin{table}[htb]
+\caption{Korišteni parametri za FunctionMin}
+\centering
+\begin{tabular}{|c|c||c|c|} \hline
+\multicolumn{2}{|c||}{SteadyStateTournament} & \multicolumn{2}{c|}{GAIQM} \\ 
+\hline
+Parametar & Vrijednost & Parametar & Vrijednost \\ 
+\hline
+tsize & 3 & disaster & 300 \\
+&& qrot.ubound & 0.25 \\
+&& qrot.lbound & 0.008 \\
+&& initAngle & 0.5 \\
+dimension & 20 & dimension & 20 \\
+ubound & 10 & ubound & 10 \\
+lbound & -10 & lbound & -10 \\
+&& precision & 16 \\
+population.size & 100 & population.size & 10 \\
+mutation.indprob & 0.3 & mutation.indprob & 0.04 \\
+&& mut.quantum\_swap & 0.2 \\
+&& mut.quantum\_inversion & 0.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{}
+Za svaki eksperiment postavljena je granica dozvoljenog broja evaluacija na $200000$ te vrijednost globalnog optimuma koju moraju postići na $10^{-9}$. Algoritmi nikada ne dostižu vrijednosti globalnog optimuma pa je broj evaluacija jedini prekidač programa.
+
+\clearpage
+
+\paragraph{}
+\begin{table}[htb]
+\caption{Prosječne vrijednosti po funkcijama}
+\centering
+\begin{tabular}{|c|cc|cc|} \hline
+\multirow{2}{*}{Funkcija} & \multicolumn{2}{c|}{CGA} & \multicolumn{2}{c|}{GAIQM} \\ \cline{2-5}
+ & Optimum & Broj generacija & Optimum & Broj generacija \\ 
+\hline
+F1 & $385$ & 1999 & $387.65$ & 19998 \\
+F2 & $3.93\cdot 10^{-2}$ & 1999 & $8.22\cdot 10^{-2}$ & 19998 \\
+F3 & $2.1\cdot 10^{-3}$ & 1999 & $2.17\cdot 10^{-2}$ & 19616.35 \\
+F4 & $7.37\cdot 10^{-4}$ & 1999 & $4.33\cdot 10^{-5}$ & 16832.85 \\
+F5 & $5.42\cdot 10^{-4}$ & 1999 & $25.72$ & 19998 \\
+F6 & $26.36$ & 1999 & $76$ & 19998 \\
+F7 & $1.92$ & 1999 & $2.1$ & 19998 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{}
+Za isti broj evaluacija GAIQM prolazi više generacija od CGA. Unatoč tome GAIQM ne pronalazi uvijek bolja rješenja. Dapače, ponekad pronalazi i po nekoliko redova veličine lošija rješenja.
+
+\section{Regresija neuronske mreže}
+\subsection{Opis problema}
+Za zadane ulaz/izlaz brojčane podatke potrebno je pronaći težine veza između slojeva neuronske mreže (učenje neuronske mreže). Dobrota mreže računa se srednjom kvadratnom greškom (MSE) koju algoritam pokušava minimizirati. Ovaj eksperiment koristi genotip $FloatingPoint$.
+
+\paragraph{}
 Za testiranje koristim dvije funkcije:
 \begin{align*}
 &f(x) = \frac{x^2}{100},\quad x \in [-9, 9], \quad \Delta x = 1 \\
 &g(x) = \sin{x},\quad x \in [0, 6.2], \quad \Delta x = 0.1
 \end{align*}
 
+\newpage
+
 \subsection{Rezultati}
+Struktura mreže je fiksirana na $1\to 5\to 1$, a aktivacijske funkcije su definirane po slojevima $sigmoidalna \to linearna$.
+Broj evaluacija ograničen je na $200000$.
+
 \begin{table}[htb]
 \caption{Korišteni parametri za regresiju neuronske mreže}
 \centering
@@ -978,88 +1092,93 @@ Za testiranje koristim dvije funkcije:
 \hline
 Parametar & Vrijednost & Parametar & Vrijednost \\ 
 \hline
-tsize & 3 & disaster & 800 \\
-&& qrot.ubound & 0.3 \\
-&& qrot.lbound & 0.008 \\
+tsize & 3 & disaster & 600 \\
+&& qrot.ubound & 0.1 \\
+&& qrot.lbound & 0.01 \\
 && initAngle & 0.5 \\
-population.size & 70 & population.size & 5 \\
-mutation.indprob & 0.01 & mutation.indprob & 0.01 \\
-&& mut.quantum\_swap & 0.2 \\
-&& mut.quantum\_inversion & 0.8 \\
+population.size & 70 & population.size & 10 \\
+mutation.indprob & 0.3 & mutation.indprob & 0.01 \\
+&& mut.quantum\_swap & 1 \\
+&& mut.quantum\_inversion & 1 \\
 \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Funkcija f(x)}
-\subsubsection{Funkcija g(x)}
+\paragraph{}
+Težine između slojeva ograničavamo na interval $[-10, 10]$ s preciznošću do 16. decimale.
+
+\paragraph{}
 \begin{table}[htb]
-\caption{Prosječni rezultati po setovima}
+\caption{Prosječni rezultati po funkcijama}
 \centering
 \begin{tabular}{|c|cc|cc|} \hline
 \multirow{2}{*}{Funkcija} & \multicolumn{2}{c|}{CGA} & \multicolumn{2}{c|}{GAIQM} \\ \cline{2-5}
- & Pronađeni optimum & Broj evaluacija & Pronađeni optimum & Broj evaluacija \\ 
+ & Optimalna greška & Broj generacija & Optimalna greška & Broj generacija \\ 
 \hline
-f(x) & 0 & 0 & 0 & 0 \\
-g(x) & 0 & 0 & 0 & 0 \\
-\hline
-\end{tabular}
-\end{table}
-
-\section{COCO}
-\subsection{Opis problema}
-Algoritam se uspoređuje s ostalim algoritmima implementiranim u ECFu na problemu traženja minimuma funkcije ($FunctionMin$).
-
-\subsection{Rezultat}
-\begin{table}[htb]
-\caption{Korišteni parametri za COCO}
-\centering
-\begin{tabular}{|c|c|} \hline
-\multicolumn{2}{|c|}{GAIQM} \\ 
-\hline
-Parametar & Vrijednost \\ 
-\hline
-disaster & 500 \\
-qrot.ubound & 0.2 \\
-qrot.lbound & 0.005 \\
-initAngle & 0.01 \\
-population.size & 10 \\
-mutation.indprob & 0.04 \\
-mut.quantum\_swap & 1 \\
-mut.quantum\_inversion & 1 \\
+$f(x)$ & $8.14\cdot 10^{-2}$ & 2857 & $2.07\cdot 10^{-1}$ & 39998 \\
+$g(x)$ & $26.14$ & 2857 & $26.36$ & 39998 \\
 \hline
 \end{tabular}
 \end{table}
 
-GRAFOVI
+\paragraph{}
+GAIQM postiže znatno lošije rezultate u odnosu na CGA. Iako prolazi kroz deseterostruko više generacija ne uspijeva pronaći bolji optimum. Tijekom rada algoritam ne uspijeva izaći iz optimuma te se operator katastrofe redovito poziva pokušavajući pronaći "bolji kut" iz kojeg će pretraživati prostor prema optimumu.
+
+%\section{COCO}
+%\subsection{Opis problema}
+%Algoritam se uspoređuje s ostalim algoritmima implementiranim u ECFu na problemu traženja minimuma funkcije ($FunctionMin$).
+%
+%\subsection{Rezultat}
+%\begin{table}[htb]
+%\caption{Korišteni parametri za COCO}
+%\centering
+%\begin{tabular}{|c|c|} \hline
+%\multicolumn{2}{|c|}{GAIQM} \\ 
+%\hline
+%Parametar & Vrijednost \\ 
+%\hline
+%disaster & 500 \\
+%qrot.ubound & 0.2 \\
+%qrot.lbound & 0.005 \\
+%initAngle & 0.01 \\
+%population.size & 10 \\
+%mutation.indprob & 0.04 \\
+%mut.quantum\_swap & 1 \\
+%mut.quantum\_inversion & 1 \\
+%\hline
+%\end{tabular}
+%\end{table}
+%
+%GRAFOVI
 
 \chapter{Moguće nadogradnje} \label{ch:nadogradnja}
 \section{Paralelizacija}
-Stvaranjem više nezavisnih populacija jedinki te povremenom razmjenom najboljih jedinki populacija poboljšava se raznolikost populacije. Također, ustvaruje se šira pretraga prostora stanja jer se jedinke pojedinih populacija počinju "kretati" prema drugim optimumima čime se povećava vjerojatnost pronalaženja dotad neistraženih stanja. \citep{han_phd}
+Stvaranjem više nezavisnih populacija jedinki te povremenom razmjenom najboljih jedinki populacija poboljšava se raznolikost populacije. Također, ostvaruje se šira pretraga prostora stanja jer se jedinke pojedinih populacija počinju "kretati" prema drugim optimumima čime se povećava vjerojatnost pronalaženja dotad neistraženih stanja. \citep{han_phd}
 
 \section{Podržavanje više-genotipskih jedinki}
 Trenutno je ostvarena podrška jedinki s jednim genotipom. Definiranjem više genotipa, vrijednosti iz kvantnog registra će se kopirati u prvi zadani genotip (genotip jedinke na indeksu 0). Podršku više genotipa moguće je ostvariti izmjenom 'prilagodnika' te prikladnim zastavicama za odabir genotipova u koje će se kopirati odgovarajuće vrijednosti iz kvantnog registra.
 
-\section{Optimizacija domenom cijelih brojeva}
+\section{Ubrzanje algoritma domenom cijelih brojeva}
 Operacije s podacima dvostruke preciznosti su računski zahtjevnije cjelobrojnih te ih je poželjno zamijeniti. Trenutno se u kvantni registar pohranjuju brojevi dvostruke preciznosti te su sve operacije prilagođene njihovom. Kako je kvantni i klasični dio GAIQM međusobno izoliran, a povezan samo operatorom mjerenja, moguće je drugačije modelirati kvantni dio bez utjecaja na klasični.
 
 \paragraph{}
-Umjesto decimalnih brojeva, u kvantni registar možemo pohranjivati cijele brojeve. Trenutnu definiciju kuta iz domene $[-\pi, \pi]$ možemo preslikati na cjelobrojnu domenu $[INT\_MIN, INT\_MAX]$ (odnosno $[-32767, 32767]$). Tada sve operacije nad kvantnim registrom moramo prilagoditi novoj domeni.
+Umjesto decimalnih brojeva, u kvantni registar možemo pohranjivati cijele brojeve. Trenutnu definiciju kuta iz domene $[-\pi, \pi]$ možemo preslikati na proizvoljnu cjelobrojnu domenu $[MIN, MAX]$. Tada se sve operacije nad kvantnim registrom trebaju prilagoditi novoj domeni.
 
 \paragraph{}
-Nedostatak ove optimizacije je smanjivanje prostora kuteva odnosno kvantnih stanja u kojem se kromosom može pronaći.
+Nedostatak ove optimizacije je smanjivanje domene kuteva odnosno kvantnih stanja što može utjecati na preciznost lokalne pretrage prostora stanja kao i uzrokovati prebrzu konvergenciju stanja prema lokalnom optimumu.
 
 \chapter{Zaključak} 
 \label{ch:zaključak}
 Genetski algoritam inspiriran kvantnom mehanikom kombinacija je strukture klasičnih genetskih algoritama i paradigme kvantnih računala. Cilj ovog rada je objasniti paradigmu kvantnih računala, istražiti mogućnosti oblikovanja stohastičkih optimizacijskih algoritama uz korištenje simulacije rada kvantnog računala te usporediti novu vrstu genetskog algoritma s klasičnim na nekoliko primjera.
 
 \paragraph{}
-Kako su evaluatori često skupe (spore) procedure, a brzina algoritma ovisi direktno o broju evaluacija poželjno je što manje pozivati evaluator. Rezultati usporedbe klasičnog genetskog algoritma (CGA) i genetskog algoritma inspiriranog kvantnom mehanikom (GAIQM) pokazuju na nadmoć GAIQM po broju evaluacija. Iako CGA na jednostavnijim problemima vremenski brže dolazi do globalnog optimuma, izvršava i do 4 puta više evaluacija. To navodi na činjenicu da je GAIQM iznimno pogodan za rad sa zahtjevnim evaluatorima.
+Kako su evaluatori često skupe (spore) procedure, a brzina algoritma ovisi direktno o broju evaluacija poželjno je što manje pozivati evaluator. Rezultati usporedbe klasičnog genetskog algoritma (CGA) i genetskog algoritma inspiriranog kvantnom mehanikom (GAIQM) pokazuju na nadmoć GAIQM po broju poziva evaluatora. To navodi na činjenicu da je GAIQM iznimno pogodan za rad sa zahtjevnim evaluatorima. 
 
 \paragraph{}
-Vremenska cijena GAIQM proizlazi iz činjenice da obavlja računske operacije koje se ponavljaju nad svakim qubitom svake jedinke u populaciji. Svoju vremensku zahtjevnost balansira znantno manjom populacijom od CGA. Velićina populacije osigurava veću raznolikost populacije odnosno pretraživanje većeg prostora stanja po iteraciji te se na nju oslanja CGA. GAIQM s druge strane ne zahtjeva veliku populaciju zbog svoje ugrađene nasumičnosti svake jedinke kojom jednako dobro pretražuje prostor stanja. Tako GAIQM može nadmašiti CGA i s 10 puta manjom populacijom.
+Vremenska cijena GAIQM proizlazi iz činjenice da obavlja računske operacije koje se ponavljaju nad svakim qubitom svake jedinke u populaciji. Svoju vremensku zahtjevnost balansira znatno manjom populacijom od CGA. Veličina populacije osigurava veću raznolikost populacije odnosno pretraživanje većeg prostora stanja po iteraciji te se na nju oslanja CGA. GAIQM s druge strane ne zahtijeva veliku populaciju zbog svoje ugrađene nasumičnosti svake jedinke kojom jednako dobro pretražuje prostor stanja.
 
 \paragraph{}
-U odnosu na CGA zahtjeva postavljanje više parametara, no upravo zbog toga omogućuje veću konfigurabilnost pojedinom problemu te balansiranje brzine i preciznosti pretraživanja.
+Rezultati eksperimenata ukazuju na nadmoć GAIQM u kombinatoričkom tipu problema, konkretno na problemu naprtnjače. Na ostalim izvedenim eksperimentima GAIQM daje loše rezultate i ne uspijeva se mjeriti s CGA.
 
 \bibliographystyle{fer}
 \bibliography{literatura}
@@ -1082,15 +1201,15 @@ $disaster$ & $uint$ & -1 & Broj ponovljenih vrijednosti operatora katastrofe (vr
 \end{table}
 
 \begin{table}[htb]
-\caption{Parametri za problem \it Knapsack\rm}
+\caption{Parametri za <KnapsackEvalOp>}
 \label{tbl:param_knapsack}
 \centering
-\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ nasljeđeni su iz genotipa Binary.}
+\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ naslijeđeni su iz genotipa Binary.}
 \begin{tabular}{p{4cm}ccp{6cm}} \hline
 Naziv & Tip & Pretp. vr. & Opis\\ \toprule
-$\textbf{eval.knapsackSize}$ & $double$ & - & Velićina (nosivost) torbe \\
+$\textbf{eval.knapsackSize}$ & $double$ & - & Veličina (nosivost) torbe \\
 $\textbf{eval.itemsFile}$ & $string$ & - & Putanja do datoteke s definicijama težina i cijene predmeta \\
-$eval.$ $punishmentFactor$ & $double$ & 5 & Faktor kojim se množi prekoraćenje nosivosti torbe \\ \bottomrule
+$eval.$ $punishmentFactor$ & $double$ & 5 & Faktor kojim se množi prekoračenje nosivosti torbe \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -1098,7 +1217,7 @@ $eval.$ $punishmentFactor$ & $double$ & 5 & Faktor kojim se množi prekoraćenje
 \caption{Parametri za <QuantumRegister>}
 \label{tbl:param_kvareg}
 \centering
-\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ nasljeđeni su iz genotipa Binary.}
+\caption*{\footnotesize Parametri $dimension$, $ubound$, $lbound$ i $precision$ naslijeđeni su iz genotipa Binary.}
 \begin{tabular}{p{3cm}ccp{7cm}} \hline
 Naziv & Tip & Pretp. vr. & Opis\\ \toprule
 $\textbf{dimension}$ & $uint$ & - & Količina realnih brojeva genotipa \\
@@ -1114,7 +1233,7 @@ $mut.quantum\_$ $swap$ & $double$ & 0.5 & Vjerojatnost poziva operatora \\ \bott
 \clearpage
 
 \begin{sazetak}
-Cilj rada je objasniti koncept pohrane i manipulacije podacima na kvantnim računalima, primjenu tih koncepata na genetski algoritam koji se izvršava na klasičnom računalu te proširenje ECF-a dotičnim algoritmom. Algoritam je primjenjen na 3 različita problema (traženje minimuma, knapsack, regresija neuronske mreže). Rezultati ukazuju na primjenjivost algoritma s vrlo zahtjevnim evaluatorima.
+Cilj rada je objasniti koncept pohrane i manipulacije podacima na kvantnim računalima, primjenu tih koncepata na genetski algoritam koji se izvršava na klasičnom računalu te proširenje ECF-a dotičnim algoritmom. Algoritam je primijenjen na 3 različita problema (traženje minimuma, knapsack, regresija neuronske mreže). Rezultati ukazuju na primjenjivost algoritma s vrlo zahtjevnim evaluatorima.
 
 \kljucnerijeci{genetski algoritam, kvantna mehanika, qubit, knapsack, neuronska mreža.}
 \end{sazetak}

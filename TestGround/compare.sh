@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#problemName="FunctionMin"
+problemName="FunctionMin"
 #problemName="Knapsack"
-problemName="NeuralNetwork"
+#problemName="NeuralNetwork"
 
 workspace="/home/lirfu/zavrsni/GAIQM"
 

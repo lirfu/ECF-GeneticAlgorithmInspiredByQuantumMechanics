@@ -21,7 +21,8 @@ FitnessP FunctionMinEvalOp::evaluate(IndividualP individual) {
     FitnessP fitness(new FitnessMin);
 
 //    RealValueGenotypeP gen = boost::dynamic_pointer_cast<RealValueGenotype>(individual->getGenotype());
-
+    RealValueGenotypeP gen;
+    
     // we define FloatingPoint as the only genotype (in the configuration file)
 //	FloatingPoint::FloatingPoint* gen = (FloatingPoint::FloatingPoint*) individual->getGenotype().get();
     // (you can also use boost smart pointers:)
@@ -29,8 +30,12 @@ FitnessP FunctionMinEvalOp::evaluate(IndividualP individual) {
 
     // alternative encoding: Binary Genotype
 //	Binary::Binary* gen = (Binary::Binary*) individual->getGenotype().get();
-    BinaryP gen = boost::dynamic_pointer_cast<Binary::Binary>(individual->getGenotype());
 
+    if (boost::dynamic_pointer_cast<Binary::Binary>(individual->getGenotype(0)) != nullptr)
+        gen = boost::dynamic_pointer_cast<Binary::Binary>(individual->getGenotype());
+    else if (boost::dynamic_pointer_cast<FloatingPoint::FloatingPoint>(individual->getGenotype(0)) != nullptr)
+        gen = boost::dynamic_pointer_cast<FloatingPoint::FloatingPoint>(individual->getGenotype());
+    
     // we implement the fitness function 'as is', without any translation
     // the number of variables is read from the genotype itself (size of 'realValue' vector)
     double realTemp = 0, value = 0;

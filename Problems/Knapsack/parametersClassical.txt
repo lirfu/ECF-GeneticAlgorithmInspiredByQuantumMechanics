@@ -7,7 +7,7 @@
 
 	<Genotype>
 		<BitString>
-            <Entry key="size">1000</Entry>
+            <Entry key="size">100</Entry>
 
             <Entry key="crx.onepoint">1</Entry>
             <Entry key="crx.uniform">0</Entry>
@@ -18,17 +18,14 @@
 
 	<Registry>
 	    <Entry key="eval.knapsackSize">100</Entry>
-		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/GAIQM/Problems/Knapsack/KnapsackTest1000</Entry>
-        <Entry key="population.size">200</Entry>
+		<Entry key="eval.itemsFile">/home/lirfu/zavrsni/GAIQM/Problems/Knapsack/KnapsackTest100</Entry>
+        <Entry key="population.size">100</Entry>
         <Entry key="mutation.indprob">0.1</Entry>
 
-		<Entry key="term.fitnessval">3616</Entry>
+		<Entry key="term.fitnessval">873</Entry>
         <Entry key="term.eval">200000</Entry>
 
 		<Entry key="log.frequency">1</Entry>
 		<Entry key="log.level">3</Entry>
-
-		<Entry key="coco.enableoutput">1</Entry>
-        <Entry key="coco.folder">/home/lirfu/zavrsni/GAIQM/Results/Knapsack1000</Entry>
 	</Registry>
 </ECF>

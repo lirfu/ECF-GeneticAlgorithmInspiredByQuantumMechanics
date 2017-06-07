@@ -2,7 +2,7 @@
 	<Algorithm>
 		<GAIQM>
 			<Entry key="qrot.ubound">0.2</Entry>
-            <Entry key="qrot.lbound">0.005</Entry>
+            <Entry key="qrot.lbound">0.01</Entry>
             <Entry key="disaster">500</Entry>
 		</GAIQM>
 
@@ -40,7 +40,7 @@
 		<Entry key="term.eval">200000</Entry>
 
         <Entry key="batch.repeats">10</Entry>
-		<Entry key="batch.statsfile">/home/lirfu/zavrsni/GAIQM/Results/fminQ_u.log</Entry>
+		<Entry key="batch.statsfile">/home/lirfu/zavrsni/GAIQM/Results/fminQ_a01.log</Entry>
 
 		<Entry key="log.frequency">1</Entry>
 		<Entry key="log.level">3</Entry>

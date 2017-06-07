@@ -4,8 +4,6 @@
 \contentsline {paragraph}{}{1}
 \contentsline {chapter}{\numberline {2}Kvantna mehanika i kvantna ra\IeC {\v c}unala}{2}
 \contentsline {paragraph}{}{2}
-\contentsline {paragraph}{}{2}
-\contentsline {paragraph}{}{3}
 \contentsline {section}{\numberline {2.1}Temeljni pojmovi kvantne mehanike}{3}
 \contentsline {subsection}{\numberline {2.1.1}Kvantna superpozicija}{3}
 \contentsline {paragraph}{}{3}
@@ -15,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.1.3}Spregnuta stanja (engl.~\emph {entangled states})}{4}
 \contentsline {subsection}{\numberline {2.1.4}"No-cloning theorem"}{4}
 \contentsline {paragraph}{}{4}
-\contentsline {section}{\numberline {2.2}Kvantni bit (qubit)}{4}
+\contentsline {section}{\numberline {2.2}Kvantni bit (qubit)}{5}
 \contentsline {subsection}{\numberline {2.2.1}Princip rada}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
@@ -33,98 +31,98 @@
 \contentsline {paragraph}{}{7}
 \contentsline {subsection}{\numberline {2.2.4}Kvantni registar}{8}
 \contentsline {paragraph}{}{9}
-\contentsline {section}{\numberline {2.3}Kvantni algoritmi i kvantna ra\IeC {\v c}unala}{9}
-\contentsline {paragraph}{}{9}
-\contentsline {paragraph}{}{9}
-\contentsline {section}{\numberline {2.4}Trenutno stanje u svijetu}{10}
-\contentsline {subsubsection}{D-Wave}{10}
-\contentsline {subsubsection}{IBM}{10}
-\contentsline {chapter}{\numberline {3}Genetski algoritam inspiriran kvantnom mehanikom}{11}
-\contentsline {paragraph}{}{11}
-\contentsline {section}{\numberline {3.1}Klasi\IeC {\v c}ni genetski algoritam (CGA)}{11}
-\contentsline {subsection}{\numberline {3.1.1}Dijelovi}{11}
-\contentsline {subsubsection}{Genotip}{11}
-\contentsline {subsubsection}{Operator kri\IeC {\v z}anja}{12}
-\contentsline {subsubsection}{Operator mutacije}{12}
-\contentsline {subsection}{\numberline {3.1.2}Pseudokod}{12}
-\contentsline {section}{\numberline {3.2}Kvantni genetski algoritam (QGA)}{13}
-\contentsline {subsection}{\numberline {3.2.1}Dijelovi}{13}
-\contentsline {subsubsection}{Kvantni genotip (kvantni registar)}{13}
-\contentsline {subsubsection}{Operator kvantnih rotacijskih vrata}{14}
-\contentsline {paragraph}{}{14}
-\contentsline {paragraph}{}{14}
-\contentsline {paragraph}{}{14}
-\contentsline {subsubsection}{Inicijalizator populacije}{14}
-\contentsline {paragraph}{}{14}
-\contentsline {subsubsection}{Operator mjerenja qubita}{15}
-\contentsline {subsection}{\numberline {3.2.2}Pseudokod}{15}
-\contentsline {section}{\numberline {3.3}Genetski algoritam inspiriran kvantnom mehanikom (GAIQM)}{16}
-\contentsline {subsection}{\numberline {3.3.1}Dijelovi}{16}
-\contentsline {subsubsection}{Kvantni genotip (kvantni registar)}{16}
-\contentsline {subsubsection}{Operator kvantnih rotacijskih vrata}{16}
-\contentsline {paragraph}{}{17}
-\contentsline {paragraph}{}{17}
-\contentsline {paragraph}{}{17}
-\contentsline {paragraph}{}{18}
-\contentsline {paragraph}{}{18}
-\contentsline {paragraph}{}{18}
-\contentsline {subsubsection}{Kvantni operator mutacije}{18}
+\contentsline {section}{\numberline {2.3}Kvantni algoritmi i kvantna ra\IeC {\v c}unala}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {section}{\numberline {2.4}Trenutno stanje u svijetu}{11}
+\contentsline {subsubsection}{D-Wave}{11}
+\contentsline {subsubsection}{IBM}{11}
+\contentsline {chapter}{\numberline {3}Genetski algoritam inspiriran kvantnom mehanikom}{12}
+\contentsline {paragraph}{}{12}
+\contentsline {section}{\numberline {3.1}Klasi\IeC {\v c}ni genetski algoritam (CGA)}{12}
+\contentsline {subsection}{\numberline {3.1.1}Dijelovi}{12}
+\contentsline {subsubsection}{Genotip}{12}
+\contentsline {subsubsection}{Operator kri\IeC {\v z}anja}{13}
+\contentsline {subsubsection}{Operator mutacije}{13}
+\contentsline {subsection}{\numberline {3.1.2}Pseudokod}{14}
+\contentsline {section}{\numberline {3.2}Kvantni genetski algoritam (QGA)}{15}
+\contentsline {subsection}{\numberline {3.2.1}Dijelovi}{15}
+\contentsline {subsubsection}{Kvantni genotip (kvantni registar)}{15}
+\contentsline {subsubsection}{Operator kvantnih rotacijskih vrata}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {subsubsection}{Inicijalizator populacije}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {subsubsection}{Operator mjerenja qubita}{16}
+\contentsline {subsection}{\numberline {3.2.2}Pseudokod}{17}
+\contentsline {section}{\numberline {3.3}Genetski algoritam inspiriran kvantnom mehanikom (GAIQM)}{18}
+\contentsline {subsection}{\numberline {3.3.1}Dijelovi}{18}
+\contentsline {subsubsection}{Kvantni genotip (kvantni registar)}{18}
+\contentsline {subsubsection}{Operator kvantnih rotacijskih vrata}{18}
 \contentsline {paragraph}{}{19}
 \contentsline {paragraph}{}{19}
-\contentsline {subsubsection}{Operator katastrofe}{19}
 \contentsline {paragraph}{}{19}
 \contentsline {paragraph}{}{20}
-\contentsline {subsubsection}{Inicijalizator populacije}{20}
-\contentsline {subsubsection}{Operator mjerenja}{20}
-\contentsline {subsection}{\numberline {3.3.2}Pseudokod}{21}
-\contentsline {section}{\numberline {3.4}Implementacija algoritma}{22}
-\contentsline {subsubsection}{Kvantni genotip (QuantumRegister)}{22}
+\contentsline {paragraph}{}{20}
+\contentsline {paragraph}{}{20}
+\contentsline {subsubsection}{Kvantni operator mutacije}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {subsubsection}{Operator katastrofe}{21}
+\contentsline {paragraph}{}{21}
 \contentsline {paragraph}{}{22}
-\contentsline {paragraph}{}{22}
-\contentsline {paragraph}{Napomena:}{23}
-\contentsline {subsubsection}{GAIQM}{23}
-\contentsline {paragraph}{}{23}
-\contentsline {paragraph}{Napomena:}{23}
-\contentsline {subsubsection}{MutQuantumInversion}{23}
-\contentsline {subsubsection}{MutQuantumSwap}{23}
-\contentsline {subsubsection}{QuantumRotationGate}{23}
-\contentsline {chapter}{\numberline {4}Eksperimenti}{24}
-\contentsline {section}{\numberline {4.1}Problem naprtnja\IeC {\v c}e}{24}
-\contentsline {subsection}{\numberline {4.1.1}Opis problema}{24}
-\contentsline {subsection}{\numberline {4.1.2}Rezultati}{24}
+\contentsline {subsubsection}{Inicijalizator populacije}{22}
+\contentsline {subsubsection}{Operator mjerenja}{22}
+\contentsline {subsection}{\numberline {3.3.2}Pseudokod}{23}
+\contentsline {section}{\numberline {3.4}Implementacija algoritma}{24}
+\contentsline {subsubsection}{Kvantni genotip (QuantumRegister)}{24}
 \contentsline {paragraph}{}{24}
+\contentsline {paragraph}{}{24}
+\contentsline {paragraph}{Napomena:}{25}
+\contentsline {subsubsection}{GAIQM}{25}
 \contentsline {paragraph}{}{25}
+\contentsline {paragraph}{Napomena:}{25}
+\contentsline {subsubsection}{MutQuantumInversion}{25}
+\contentsline {subsubsection}{MutQuantumSwap}{25}
+\contentsline {subsubsection}{QuantumRotationGate}{25}
+\contentsline {chapter}{\numberline {4}Eksperimenti}{26}
+\contentsline {section}{\numberline {4.1}Problem naprtnja\IeC {\v c}e}{26}
+\contentsline {subsection}{\numberline {4.1.1}Opis problema}{26}
+\contentsline {subsection}{\numberline {4.1.2}Rezultati}{26}
 \contentsline {paragraph}{}{26}
-\contentsline {subsection}{\numberline {4.1.3}Utjecaj parametara}{26}
-\contentsline {subsubsection}{Veli\IeC {\v c}ina populacije}{26}
-\contentsline {subsubsection}{Po\IeC {\v c}etni kut}{27}
 \contentsline {paragraph}{}{27}
-\contentsline {subsubsection}{Granice kuteva adaptivne metode zakreta}{28}
 \contentsline {paragraph}{}{28}
-\contentsline {subsubsection}{Operator katastrofe}{28}
-\contentsline {section}{\numberline {4.2}Tra\IeC {\v z}enje globalnog minimuma funkcije (FunctionMin)}{29}
-\contentsline {subsection}{\numberline {4.2.1}Opis problema}{29}
-\contentsline {paragraph}{}{29}
-\contentsline {subsection}{\numberline {4.2.2}Rezultati}{30}
+\contentsline {subsection}{\numberline {4.1.3}Utjecaj parametara}{28}
+\contentsline {subsubsection}{Veli\IeC {\v c}ina populacije}{29}
+\contentsline {subsubsection}{Po\IeC {\v c}etni kut}{30}
 \contentsline {paragraph}{}{30}
+\contentsline {subsubsection}{Granice kuteva adaptivne metode zakreta}{31}
 \contentsline {paragraph}{}{31}
-\contentsline {paragraph}{}{31}
-\contentsline {section}{\numberline {4.3}Regresija neuronske mre\IeC {\v z}e}{31}
-\contentsline {subsection}{\numberline {4.3.1}Opis problema}{31}
-\contentsline {paragraph}{}{31}
-\contentsline {subsection}{\numberline {4.3.2}Rezultati}{32}
+\contentsline {subsubsection}{Operator katastrofe}{31}
+\contentsline {section}{\numberline {4.2}Tra\IeC {\v z}enje globalnog minimuma funkcije (FunctionMin)}{32}
+\contentsline {subsection}{\numberline {4.2.1}Opis problema}{32}
 \contentsline {paragraph}{}{32}
-\contentsline {paragraph}{}{32}
-\contentsline {paragraph}{}{32}
-\contentsline {chapter}{\numberline {5}Mogu\IeC {\'c}e nadogradnje}{33}
-\contentsline {section}{\numberline {5.1}Paralelizacija}{33}
-\contentsline {section}{\numberline {5.2}Podr\IeC {\v z}avanje vi\IeC {\v s}e-genotipskih jedinki}{33}
-\contentsline {section}{\numberline {5.3}Ubrzanje algoritma domenom cijelih brojeva}{33}
+\contentsline {subsection}{\numberline {4.2.2}Rezultati}{33}
 \contentsline {paragraph}{}{33}
 \contentsline {paragraph}{}{34}
-\contentsline {chapter}{\numberline {6}Zaklju\IeC {\v c}ak}{35}
+\contentsline {paragraph}{}{34}
+\contentsline {section}{\numberline {4.3}Regresija neuronske mre\IeC {\v z}e}{34}
+\contentsline {subsection}{\numberline {4.3.1}Opis problema}{34}
+\contentsline {paragraph}{}{34}
+\contentsline {subsection}{\numberline {4.3.2}Rezultati}{35}
 \contentsline {paragraph}{}{35}
 \contentsline {paragraph}{}{35}
 \contentsline {paragraph}{}{35}
-\contentsline {chapter}{Literatura}{36}
-\contentsline {chapter}{\numberline {A}Parametri}{38}
+\contentsline {chapter}{\numberline {5}Mogu\IeC {\'c}e nadogradnje}{36}
+\contentsline {section}{\numberline {5.1}Paralelizacija}{36}
+\contentsline {section}{\numberline {5.2}Podr\IeC {\v z}avanje vi\IeC {\v s}e-genotipskih jedinki}{36}
+\contentsline {section}{\numberline {5.3}Ubrzanje algoritma domenom cijelih brojeva}{36}
+\contentsline {paragraph}{}{36}
+\contentsline {paragraph}{}{37}
+\contentsline {chapter}{\numberline {6}Zaklju\IeC {\v c}ak}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {paragraph}{}{38}
+\contentsline {chapter}{Literatura}{39}
+\contentsline {chapter}{\numberline {A}Parametri}{41}

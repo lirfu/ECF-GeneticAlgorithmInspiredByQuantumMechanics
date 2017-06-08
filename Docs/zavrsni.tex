@@ -26,11 +26,13 @@
 
 \zahvala{
   
-Zahvaljujem svome mentoru prof. dr. sc. Domagoju Jakoboviću na pomoći i savjetima u razvoju rada te danoj mogućnosti vlastitog odabira teme. 
+Zahvaljujem mentoru prof. dr. sc. Domagoju Jakoboviću na nesebičnoj pomoći, poticaju i savjetima u razvoju rada te danoj mogućnosti odabira vlastite teme. 
 \\
 
-Zahvaljujem svojoj obitelji na podršci i strpljenju pogotovo tijekom kasnih noćnih sati. 
+Posebno zahvaljujem svojoj obitelji na podršci, razumijevanju i ljubavi tijekom školovanja te strpljenju tijekom kasnih noćnih sati. 
+\\
 
+Najtoplije zahvaljujem Karlu Kneževiću, mag. ing., te ostalim prijateljima, kolegicama i kolegama na korisnim savjetima i pomoći tijekom izrade završnog rada.
 }
 
 \tableofcontents
@@ -75,11 +77,11 @@ Iz primjera vidimo da se sustav (ili čestica) može nalaziti u superpoziciji do
 Kvantna dekoherencija je kolaps valne funkcije odnosno nepovratni gubitak pohranjene informacije zbog utjecaja okoline koja ga okružuje.
 U stvarnim kvantnim sustavima relativno je lako ostvariti superpoziciju, ali je veliki problem održati ju. Ovisno o tehnologiji sustava razni uvjeti moraju biti ostvareni kako bi se sustav izolirao od okoline i zaštitio integritet pohranjene informacije. Iz tog su razloga kvantni sustavi danas glomazni i zahtjevni za održavanje.
 
-\subsection{Spregnuta stanja \engl{entangled states}}
-Spregnuta kvantna stanja povezana su (spregnuta) ako rezultat mjerenja jednog kvantnog stanja utječe na rezultat mjerenja drugog kvantnog stanja. Zanimljivost te veze je da se "informacija" o rezultatu mjerenja jednog stanja u istom trenu prenese drugom stanju. Poznati paradoks koji opisuje tu pojavu je "Einstein–Podolsky–Rosen paradoks".
+\subsection{Spregnuta stanja}
+Spregnuta kvantna stanja  \engl{entangled quantum states} povezana su (spregnuta) ako rezultat mjerenja jednog kvantnog stanja utječe na rezultat mjerenja drugog kvantnog stanja. Zanimljivost te veze je da se "informacija" o rezultatu mjerenja jednog stanja u istom trenu prenese drugom stanju. Poznati paradoks koji opisuje tu pojavu je "Einstein–Podolsky–Rosen paradoks".
 
-\subsection{"No-cloning theorem"}
-Ovaj je teorem jedna velika zapreka u kvantnoj fizici. 
+\subsection{Teorem o nekloniranju}
+Teorem o nekloniranju \engl{no-cloning theorem} jedna je velika zapreka u kvantnoj fizici. 
 Njime se potvrđuje da nije moguće stvoriti identične kopije postojećeg kvantnog stanja. Želimo li stvoriti još jednu česticu nalik ovoj koju već imamo, moramo ponoviti čitav proces stvaranja te čestice. \cite{q_history}
 
 \paragraph{}
@@ -108,9 +110,11 @@ Kvantno stanje jednog qubita opisano je vektorom njegovog spina. Kvantno stanje 
 \paragraph{}
 Sustavi s kvantnim bitovima mogu biti definirani za proizvoljan brojevni sustav, no s obzirom na to da su današnja računala bazirana na binarnom brojevnom sustavu zanima nas definicija qubita s 2 stanja.
 
-\subsection{Blochova shema}
+\newpage
+
+\subsection{Blochova sfera}
 \paragraph{}
-Stanje qubita prikazujemo Blochovom shemom. Jedno kvantno stanje prikazujemo kao vektor iz središta sfere na njenu površinu. Stanja u kojima možemo pronaći qubit prikazujemo polovima sfere koje definiramo sjecištima sfere i z-osi. \citep{computer_scientist}\citep{qubit_geometry}
+Stanje qubita prikazujemo Blochovom sferom. Jedno kvantno stanje prikazujemo kao vektor iz središta sfere na njenu površinu. Stanja u kojima možemo pronaći qubit prikazujemo polovima sfere koje definiramo sjecištima sfere i z-osi. \citep{computer_scientist}\citep{qubit_geometry}
 
 \begin{center}
 \includegraphics[width=60mm, height=65mm]{bloch}
@@ -213,6 +217,8 @@ q_1 & q_2 & q_3 & \cdots & q_i & \cdots & q_n
 \end{align*}
 \caption{Registar qubita}
 \end{figure}
+
+\newpage
 
 Simulacija kvantnog registra koju implementiraju članci na koje sam naišao je klasični registar koji pohranjuje vjerojatnosne amplitude qubita pomoću kojih se određuju vjerojatnosti stanja. \citep{han_qga_combinat}\citep{han_analysis}\citep{han_phd}
 \begin{figure}[htb]
@@ -990,7 +996,7 @@ Operator katastrofe poziva se samo kada se ista vrijednost dobrote pojavi u $n$ 
 
 \clearpage
 
-\section{Traženje globalnog minimuma funkcije (FunctionMin)}
+\section{Traženje globalnog minimuma funkcije}
 \subsection{Opis problema}
 Zadane su netrivijalne višedimenzionalne funkcije kojima je potrebno pronaći minimum.
 Ovaj eksperiment koristi genotip $FloatingPoint$ za klasični algoritam te $QuantumRegister$ kao radni genotip.
@@ -1247,16 +1253,16 @@ $mut.quantum\_$ $swap$ & $double$ & 0.5 & Vjerojatnost poziva operatora \\ \bott
 \clearpage
 
 \begin{sazetak}
-Cilj rada je objasniti koncept pohrane i manipulacije podacima na kvantnim računalima, primjenu tih koncepata na genetski algoritam koji se izvršava na klasičnom računalu unutar razvojnog okruženja ECF. Algoritam je primijenjen na 3 različita problema (traženje minimuma, knapsack, regresija neuronske mreže). Rezultati ukazuju na primjenjivost algoritma u kombinatoričkoj optimizaciji s vrlo zahtjevnim evaluatorima.
+Cilj ovog rada je objasniti koncept pohrane i manipulacije podacima na kvantnim računalima, primjenu tih koncepata na genetski algoritam koji se izvršava na klasičnom računalu te implementaciju istog korištenjem programskog okvira za evolucijsko računanje (ECF). Algoritam je primijenjen na 3 različita problema (traženje minimuma, problem naprtnjače i regresija neuronske mreže). Rezultati ukazuju na primjenjivost algoritma u kombinatoričkoj optimizaciji s vrlo zahtjevnim evaluatorima.
 
-\kljucnerijeci{genetski algoritam, kvantna mehanika, qubit, knapsack, neuronska mreža.}
+\kljucnerijeci{genetski algoritam, kvantna mehanika, qubit, kvantni genetski algoritam, genetski algoritam inspiriran kvantnom mehanikom, kombinatorička optimizacija, problem naprtnjače, umjetna neuronska mreža, ECF}
 \end{sazetak}
 
 \engtitle{Genetic algorithm inspired by quantum mechanics}
 \begin{abstract}
-The goal of this paper is to explain the concept of data storage and manipulation on quantum computers, applying those concepts on a genetic algorithm that executes on a classical computer within the ECF. The algorithm was applied on 3 different problems (function minimum search, knapsack problem, regression of a neural network). The results indicate applicability of the algorithm in combinatorial optimization with very demanding evaluators.
+The goal of this paper is to explain the concept of data storage and manipulation on quantum computers, applying those concepts on a genetic algorithm that executes on a classical computer and describing it's implementation using the Evolutionary Computation Framework (ECF). The algorithm was applied on 3 different problems (function minimum search, knapsack problem and regression of a neural network). The results indicate applicability of the algorithm in combinatorial optimization with highly demanding evaluators.
 
-\keywords{genetic algorithm, quantum mechanics, qubit, knapsack, neural network.}
+\keywords{genetic algorithm, quantum mechanics, qubit, quantum genetic algorithm, genetic algorithm inspired by quantum mechanics, combinatorial optimization, knapsack problem, artificial neural network, ECF}
 \end{abstract}
 
 \end{document}
